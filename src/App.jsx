@@ -446,19 +446,17 @@ const SEED_EMPLOYEES = [
     eq:{self:{selfAwareness:5,selfRegulation:4,empathy:6,relationshipManagement:4,motivation:7},manager:{selfAwareness:4,selfRegulation:3,empathy:5,relationshipManagement:3,motivation:6},history:[{date:"Jan 2026",overall:5.0},{date:"Feb 2026",overall:5.2},{date:"Mar 2026",overall:5.4}],simulations:[],matchedMentorId:null,matchScore:0}},
 ];
 
-const SEED_MENTORS = [
-  { id:201, name:"Arjun Sharma", email:"arjun@mentor.com", password:"arjun123", role:"mentor", title:"Engineering Director", company:"TechCorp", experience:"14 years",
-    bio:"I've led engineering teams of 50+ across 3 continents. I specialise in helping engineers develop the confidence and presence they need to step into leadership.",
-    strengthTags:["Conflict Navigator","Executive Presence Coach","Resilience Driver"],
-    strengthScores:{selfAwareness:9,selfRegulation:9,empathy:7,relationshipManagement:9,motivation:8},
-    matchedMenteeIds:[], sessions:[], effectivenessRating:null},
-  { id:202, name:"Leila Hassan", email:"leila@mentor.com", password:"leila123", role:"mentor", title:"Chief People Officer", company:"ScaleUp Inc.", experience:"18 years",
-    bio:"I've built people functions from scratch at three startups. My passion is helping individuals understand their emotional patterns before those patterns hold them back.",
-    strengthTags:["Self-Awareness Champion","Empathy Builder","Conflict Navigator"],
-    strengthScores:{selfAwareness:10,selfRegulation:8,empathy:10,relationshipManagement:8,motivation:7},
+const SEED_MENTORS = [const SEED_MENTORS = [
+  { id:201, name:"Arjun Sharma", ...},
+  { id:202, name:"Leila Hassan", ...},
+  { id:203, name:"New Mentor Name", email:"email@example.com", password:"pass123", role:"mentor",
+    title:"Job Title", company:"Company", experience:"10 years",
+    bio:"Short bio here.",
+    strengthTags:["Conflict Navigator","Empathy Builder"],
+    strengthScores:{selfAwareness:8,selfRegulation:7,empathy:9,relationshipManagement:8,motivation:7},
     matchedMenteeIds:[], sessions:[], effectivenessRating:null},
 ];
-
+  
 
 const SEED_NOTIFICATIONS = [
   { id:1, to:"hr", from:"priya@company.com", title:"Self Gap Check Completed", body:"Priya Nair completed a self-initiated skill gap check for Senior Software Engineer.", time:"2h ago", read:false },
