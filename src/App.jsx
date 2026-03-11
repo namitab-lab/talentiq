@@ -6,87 +6,90 @@ const STYLES = `
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Epilogue:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap');
 *{margin:0;padding:0;box-sizing:border-box;}
 :root{
-  --bg:#f4f3ef;--surface:#fff;--surface2:#eeecea;--border:#e0ddd5;--border2:#ccc9bf;
-  --ink:#0d0d0b;--ink2:#38382f;--muted:#888878;
-  --teal:#005f52;--teal-mid:#007a6a;--teal-light:#e5f2ef;
-  --amber:#b86e00;--amber-light:#fdf0e0;
-  --red:#b83232;--red-light:#fdeaea;
+  --bg:#fafaf8;--surface:#ffffff;--surface2:#f4f3f0;--border:#e8e8e4;--border2:#d4d3ce;
+  --ink:#1a1a1a;--ink2:#2d2d2d;--muted:#6b7280;
+  --navy:#0f1f3d;--navy-mid:#1a3358;--navy-light:#eef1f7;
+  --gold:#c9a84c;--gold-mid:#d4a843;--gold-light:#fdf6e3;
+  --red:#c0392b;--red-light:#fdeaea;
   --green:#1a6e42;--green-light:#e5f2eb;
+  --amber:#b86e00;--amber-light:#fdf0e0;
   --blue:#1a3f8f;--blue-light:#e5ecf8;
   --purple:#5a2d8f;--purple-light:#f0eafc;
-  --shadow:0 1px 3px rgba(0,0,0,0.05),0 4px 12px rgba(0,0,0,0.04);
-  --shadow-md:0 4px 20px rgba(0,0,0,0.09);
+  --shadow:0 1px 3px rgba(0,0,0,0.04),0 4px 12px rgba(0,0,0,0.04);
+  --shadow-md:0 4px 20px rgba(0,0,0,0.08);
 }
 body{background:var(--bg);color:var(--ink);font-family:'Epilogue',sans-serif;min-height:100vh;}
 button,input,select,textarea{font-family:'Epilogue',sans-serif;}
 
 /* LOGIN */
 .login-wrap{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;}
-.login-left{background:var(--ink);display:flex;flex-direction:column;justify-content:space-between;padding:48px;position:relative;overflow:hidden;}
-.login-left::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 60%,rgba(0,95,82,0.35) 0%,transparent 65%);}
+.login-left{background:var(--navy);display:flex;flex-direction:column;justify-content:space-between;padding:48px;position:relative;overflow:hidden;}
+.login-left::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 60%,rgba(201,168,76,0.18) 0%,transparent 65%);}
+.login-left::after{content:'';position:absolute;bottom:0;right:0;width:320px;height:320px;border-radius:50%;background:rgba(255,255,255,0.02);transform:translate(40%,40%);}
 .login-brand{position:relative;z-index:1;}
 .login-brand-name{font-family:'Syne',sans-serif;font-size:28px;font-weight:800;color:#fff;letter-spacing:-0.02em;}
-.login-brand-name span{color:#4ecfb8;}
-.login-brand-tag{font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-top:4px;}
+.login-brand-name span{color:var(--gold);}
+.login-brand-tag{font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-top:4px;}
 .login-hero{position:relative;z-index:1;}
 .login-hero h1{font-family:'Syne',sans-serif;font-size:42px;font-weight:800;color:#fff;line-height:1.1;margin-bottom:16px;}
-.login-hero h1 em{color:#4ecfb8;font-style:italic;font-family:'Epilogue',sans-serif;font-weight:300;}
-.login-hero p{font-size:14px;color:rgba(255,255,255,0.45);line-height:1.7;max-width:340px;}
+.login-hero h1 em{color:var(--gold);font-style:italic;font-family:'Epilogue',sans-serif;font-weight:300;}
+.login-hero p{font-size:14px;color:rgba(255,255,255,0.42);line-height:1.7;max-width:340px;}
 .login-badges{display:flex;gap:10px;flex-wrap:wrap;position:relative;z-index:1;}
-.login-badge{font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.5);border:1px solid rgba(255,255,255,0.12);padding:6px 14px;border-radius:20px;}
-.login-right{display:flex;align-items:center;justify-content:center;padding:48px;}
+.login-badge{font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.45);border:1px solid rgba(255,255,255,0.1);padding:6px 14px;border-radius:20px;}
+.login-right{display:flex;align-items:center;justify-content:center;padding:48px;background:var(--bg);}
 .login-card{width:100%;max-width:420px;}
-.login-card h2{font-family:'Syne',sans-serif;font-size:26px;font-weight:800;margin-bottom:6px;}
+.login-card h2{font-family:'Syne',sans-serif;font-size:26px;font-weight:800;margin-bottom:6px;color:var(--navy);}
 .login-card p{font-size:13px;color:var(--muted);margin-bottom:32px;line-height:1.6;}
 .role-pick{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:28px;}
 .role-btn{padding:18px 14px;border:1.5px solid var(--border);border-radius:10px;background:var(--surface);cursor:pointer;text-align:center;transition:all 0.15s;}
-.role-btn:hover{border-color:var(--teal);}
-.role-btn.selected{border-color:var(--teal);background:var(--teal-light);}
+.role-btn:hover{border-color:var(--navy);}
+.role-btn.selected{border-color:var(--navy);background:var(--navy-light);}
 .role-btn-icon{font-size:24px;margin-bottom:8px;}
 .role-btn-label{font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:var(--ink);}
 .role-btn-sub{font-size:11px;color:var(--muted);margin-top:2px;}
 
 /* LAYOUT */
 .app-shell{display:flex;min-height:100vh;}
-.sidebar{width:232px;flex-shrink:0;background:var(--ink);display:flex;flex-direction:column;position:sticky;top:0;height:100vh;overflow-y:auto;}
-.logo-wrap{padding:26px 22px 22px;border-bottom:1px solid rgba(255,255,255,0.07);}
-.logo-name{font-family:'Syne',sans-serif;font-size:17px;font-weight:800;color:#fff;}
-.logo-name span{color:#4ecfb8;}
-.logo-role{font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.28);margin-top:3px;}
-.nav-section{padding:18px 10px 6px;}
-.nav-section-lbl{font-size:9px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.25);padding:0 10px;margin-bottom:4px;}
-.nav-item{display:flex;align-items:center;gap:9px;padding:9px 10px;border-radius:7px;font-size:12px;font-weight:500;color:rgba(255,255,255,0.5);cursor:pointer;transition:all 0.12s;border:none;background:transparent;width:100%;text-align:left;}
-.nav-item:hover{background:rgba(255,255,255,0.05);color:rgba(255,255,255,0.82);}
-.nav-item.active{background:rgba(78,207,184,0.13);color:#4ecfb8;}
+.sidebar{width:236px;flex-shrink:0;background:var(--navy);display:flex;flex-direction:column;position:sticky;top:0;height:100vh;overflow-y:auto;}
+.logo-wrap{padding:26px 22px 20px;border-bottom:1px solid rgba(255,255,255,0.06);}
+.logo-name{font-family:'Syne',sans-serif;font-size:18px;font-weight:800;color:#fff;letter-spacing:-0.01em;}
+.logo-name span{color:var(--gold);}
+.logo-role{font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-top:3px;}
+.nav-section{padding:18px 12px 6px;}
+.nav-section-lbl{font-size:9px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.2);padding:0 8px;margin-bottom:4px;}
+.nav-item{display:flex;align-items:center;gap:9px;padding:9px 10px;border-radius:7px;font-size:12px;font-weight:500;color:rgba(255,255,255,0.45);cursor:pointer;transition:all 0.12s;border:none;background:transparent;width:100%;text-align:left;}
+.nav-item:hover{background:rgba(255,255,255,0.05);color:rgba(255,255,255,0.78);}
+.nav-item.active{background:rgba(201,168,76,0.12);color:var(--gold);}
 .nav-icon{font-size:14px;width:18px;text-align:center;flex-shrink:0;}
-.nav-pill{margin-left:auto;background:rgba(78,207,184,0.2);color:#4ecfb8;font-size:9px;font-weight:700;padding:2px 6px;border-radius:8px;}
-.nav-pill-red{margin-left:auto;background:rgba(184,50,50,0.25);color:#e07070;font-size:9px;font-weight:700;padding:2px 6px;border-radius:8px;}
-.sidebar-foot{margin-top:auto;padding:14px 10px;border-top:1px solid rgba(255,255,255,0.07);}
+.nav-pill{margin-left:auto;background:rgba(201,168,76,0.2);color:var(--gold);font-size:9px;font-weight:700;padding:2px 6px;border-radius:8px;}
+.nav-pill-red{margin-left:auto;background:rgba(192,57,43,0.25);color:#e07070;font-size:9px;font-weight:700;padding:2px 6px;border-radius:8px;}
+.sidebar-foot{margin-top:auto;padding:14px 12px;border-top:1px solid rgba(255,255,255,0.06);}
 .s-user{display:flex;align-items:center;gap:9px;}
 .s-avatar{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#fff;flex-shrink:0;}
 .s-name{font-size:12px;font-weight:600;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-.s-role{font-size:10px;color:rgba(255,255,255,0.3);}
-.logout-btn{background:none;border:none;color:rgba(255,255,255,0.25);font-size:11px;cursor:pointer;margin-left:auto;padding:4px;}
-.logout-btn:hover{color:rgba(255,255,255,0.6);}
+.s-role{font-size:10px;color:rgba(255,255,255,0.28);}
+.logout-btn{background:none;border:none;color:rgba(255,255,255,0.22);font-size:11px;cursor:pointer;margin-left:auto;padding:4px;}
+.logout-btn:hover{color:rgba(255,255,255,0.55);}
 .main{flex:1;min-width:0;display:flex;flex-direction:column;}
 .topbar{background:var(--surface);border-bottom:1px solid var(--border);padding:14px 28px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:50;}
-.topbar-title{font-family:'Syne',sans-serif;font-size:15px;font-weight:800;color:var(--ink);}
+.topbar-title{font-family:'Syne',sans-serif;font-size:15px;font-weight:800;color:var(--navy);}
 .topbar-sub{font-size:11px;color:var(--muted);margin-top:1px;}
 .page{padding:24px 28px;flex:1;}
 
 /* BUTTONS */
 .btn{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;padding:9px 18px;border:none;border-radius:7px;cursor:pointer;transition:all 0.13s;letter-spacing:0.01em;}
-.btn-primary{background:var(--teal);color:#fff;}.btn-primary:hover{background:var(--teal-mid);}
+.btn-primary{background:var(--navy);color:#fff;}.btn-primary:hover{background:var(--navy-mid);}
 .btn-secondary{background:var(--surface2);color:var(--ink2);border:1px solid var(--border);}.btn-secondary:hover{background:var(--border);}
 .btn-ghost{background:transparent;color:var(--muted);border:1px solid var(--border);}.btn-ghost:hover{color:var(--ink);border-color:var(--border2);}
-.btn-emp{background:var(--purple);color:#fff;}.btn-emp:hover{background:#4a2070;}
-.btn-danger{background:var(--red-light);color:var(--red);border:1px solid rgba(184,50,50,0.2);}
+.btn-gold{background:var(--gold);color:#fff;}.btn-gold:hover{background:var(--gold-mid);}
+.btn-emp{background:var(--navy);color:#fff;}.btn-emp:hover{background:var(--navy-mid);}
+.btn-danger{background:var(--red-light);color:var(--red);border:1px solid rgba(192,57,43,0.2);}
 .btn-sm{font-size:11px;padding:6px 13px;}.btn-xs{font-size:10px;padding:4px 9px;border-radius:5px;}
 
 /* CARDS */
 .card{background:var(--surface);border:1px solid var(--border);border-radius:10px;box-shadow:var(--shadow);}
 .card-hd{padding:16px 20px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;}
-.card-title{font-family:'Syne',sans-serif;font-size:13px;font-weight:700;}
+.card-title{font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:var(--navy);}
 .card-body{padding:20px;}
 
 /* STATS */
@@ -97,14 +100,15 @@ button,input,select,textarea{font-family:'Epilogue',sans-serif;}
 .stat-note{font-size:11px;color:var(--muted);}
 
 /* TAGS */
-.tag{display:inline-flex;align-items:center;font-size:10px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;padding:3px 8px;border-radius:4px;}
-.t-teal{background:var(--teal-light);color:var(--teal);}
+.tag{display:inline-flex;align-items:center;font-size:10px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;padding:3px 9px;border-radius:20px;}
+.t-teal{background:var(--navy-light);color:var(--navy);}
 .t-amber{background:var(--amber-light);color:var(--amber);}
 .t-red{background:var(--red-light);color:var(--red);}
 .t-green{background:var(--green-light);color:var(--green);}
 .t-blue{background:var(--blue-light);color:var(--blue);}
 .t-purple{background:var(--purple-light);color:var(--purple);}
 .t-gray{background:var(--surface2);color:var(--muted);}
+.t-gold{background:var(--gold-light);color:#8a6d1f;}
 
 /* TABLE */
 table{width:100%;border-collapse:collapse;}
@@ -117,36 +121,37 @@ tr:hover td{background:var(--surface2);}
 .form-group{margin-bottom:16px;}
 .form-lbl{display:block;font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink2);margin-bottom:6px;}
 .form-input,.form-select,.form-textarea{width:100%;background:var(--surface);border:1.5px solid var(--border);color:var(--ink);font-size:13px;padding:9px 13px;border-radius:7px;outline:none;transition:border-color 0.13s;appearance:none;}
-.form-input:focus,.form-select:focus,.form-textarea:focus{border-color:var(--teal);}
+.form-input:focus,.form-select:focus,.form-textarea:focus{border-color:var(--navy);}
 .form-select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 5 5-5' stroke='%23888' fill='none' stroke-width='1.5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:30px;}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
 .form-textarea{resize:vertical;min-height:100px;}
 
 /* PROGRESS */
-.prog{height:6px;background:var(--surface2);border-radius:3px;overflow:hidden;}
+.prog{height:6px;background:var(--surface2);border-radius:3px;overflow:hidden;border:1px solid var(--border);}
 .prog-fill{height:100%;border-radius:3px;transition:width 0.8s ease;}
 
 /* MODAL */
-.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.42);z-index:200;display:flex;align-items:center;justify-content:center;animation:fadeIn 0.18s ease;}
-.modal{background:var(--surface);border-radius:12px;box-shadow:0 20px 60px rgba(0,0,0,0.18);max-width:680px;width:92%;max-height:90vh;display:flex;flex-direction:column;animation:slideUp 0.2s ease;}
+.modal-overlay{position:fixed;inset:0;background:rgba(15,31,61,0.35);z-index:200;display:flex;align-items:center;justify-content:center;animation:fadeIn 0.18s ease;}
+.modal{background:var(--surface);border-radius:12px;box-shadow:0 20px 60px rgba(15,31,61,0.16);max-width:680px;width:92%;max-height:90vh;display:flex;flex-direction:column;animation:slideUp 0.2s ease;}
 .modal-wide{max-width:900px;}
 .modal-hd{padding:20px 24px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-shrink:0;}
-.modal-title{font-family:'Syne',sans-serif;font-size:15px;font-weight:700;}
+.modal-title{font-family:'Syne',sans-serif;font-size:15px;font-weight:700;color:var(--navy);}
 .modal-x{background:none;border:none;font-size:20px;color:var(--muted);cursor:pointer;}
 .modal-body{padding:24px;overflow-y:auto;flex:1;}
 .modal-ft{padding:16px 24px;border-top:1px solid var(--border);display:flex;gap:8px;justify-content:flex-end;flex-shrink:0;}
 
 /* TABS */
-.tabs{display:flex;gap:2px;background:var(--surface2);border-radius:8px;padding:3px;margin-bottom:20px;}
+.tabs{display:flex;gap:2px;background:var(--surface2);border-radius:8px;padding:3px;margin-bottom:20px;border:1px solid var(--border);}
 .tab-btn{flex:1;font-size:12px;font-weight:600;padding:7px 12px;border:none;border-radius:6px;cursor:pointer;color:var(--muted);background:transparent;transition:all 0.13s;}
-.tab-btn.active{background:var(--surface);color:var(--ink);box-shadow:var(--shadow);}
+.tab-btn.active{background:var(--surface);color:var(--navy);box-shadow:var(--shadow);}
 
 /* ALERTS */
 .alert{padding:11px 14px;border-radius:7px;font-size:12px;margin-bottom:14px;display:flex;align-items:flex-start;gap:8px;line-height:1.5;}
-.a-info{background:var(--blue-light);color:var(--blue);border:1px solid rgba(26,63,143,0.12);}
+.a-info{background:var(--navy-light);color:var(--navy);border:1px solid rgba(15,31,61,0.1);}
 .a-success{background:var(--green-light);color:var(--green);border:1px solid rgba(26,110,66,0.12);}
 .a-warn{background:var(--amber-light);color:var(--amber);border:1px solid rgba(184,110,0,0.12);}
 .a-purple{background:var(--purple-light);color:var(--purple);border:1px solid rgba(90,45,143,0.12);}
+.a-gold{background:var(--gold-light);color:#7a5f1f;border:1px solid rgba(201,168,76,0.2);}
 
 /* GAP ANALYSIS */
 .gap-row{margin-bottom:13px;}
@@ -157,41 +162,42 @@ tr:hover td{background:var(--surface2);}
 
 /* DEV PLAN */
 .dev-phase{border:1px solid var(--border);border-radius:8px;margin-bottom:10px;overflow:hidden;}
-.dev-ph-hd{background:var(--surface2);padding:11px 14px;display:flex;justify-content:space-between;align-items:center;}
-.dev-ph-title{font-family:'Syne',sans-serif;font-size:12px;font-weight:700;}
+.dev-ph-hd{background:var(--navy-light);padding:11px 14px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--border);}
+.dev-ph-title{font-family:'Syne',sans-serif;font-size:12px;font-weight:700;color:var(--navy);}
 .dev-ph-body{padding:14px;display:flex;flex-direction:column;gap:7px;}
 .dev-action{display:flex;gap:8px;font-size:12px;align-items:flex-start;line-height:1.5;}
-.dev-bullet{color:var(--teal);font-weight:700;flex-shrink:0;}
+.dev-bullet{color:var(--gold);font-weight:700;flex-shrink:0;}
 
 /* EMPLOYEE HERO */
-.emp-hero{background:linear-gradient(135deg,var(--ink) 0%,#1a2a28 100%);border-radius:12px;padding:28px 32px;margin-bottom:20px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:space-between;gap:20px;}
-.emp-hero::before{content:'';position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;background:rgba(78,207,184,0.08);}
+.emp-hero{background:linear-gradient(135deg,var(--navy) 0%,#1a2f5e 100%);border-radius:12px;padding:28px 32px;margin-bottom:20px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:space-between;gap:20px;}
+.emp-hero::before{content:'';position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;background:rgba(201,168,76,0.06);}
+.emp-hero::after{content:'';position:absolute;left:-40px;bottom:-40px;width:180px;height:180px;border-radius:50%;background:rgba(255,255,255,0.02);}
 .emp-hero-left{position:relative;z-index:1;}
-.emp-hero-greeting{font-size:12px;color:rgba(255,255,255,0.4);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:6px;}
+.emp-hero-greeting{font-size:12px;color:rgba(255,255,255,0.38);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:6px;}
 .emp-hero-name{font-family:'Syne',sans-serif;font-size:26px;font-weight:800;color:#fff;margin-bottom:4px;}
-.emp-hero-role{font-size:13px;color:rgba(255,255,255,0.5);}
+.emp-hero-role{font-size:13px;color:rgba(255,255,255,0.48);}
 .emp-hero-right{position:relative;z-index:1;text-align:center;flex-shrink:0;}
-.emp-score-ring{width:90px;height:90px;border-radius:50%;border:3px solid rgba(78,207,184,0.4);display:flex;flex-direction:column;align-items:center;justify-content:center;}
-.emp-score-num{font-family:'Syne',sans-serif;font-size:28px;font-weight:800;color:#4ecfb8;line-height:1;}
-.emp-score-lbl{font-size:9px;color:rgba(255,255,255,0.35);letter-spacing:0.1em;text-transform:uppercase;margin-top:2px;}
+.emp-score-ring{width:90px;height:90px;border-radius:50%;border:2px solid rgba(201,168,76,0.5);display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(201,168,76,0.06);}
+.emp-score-num{font-family:'Syne',sans-serif;font-size:28px;font-weight:800;color:var(--gold);line-height:1;}
+.emp-score-lbl{font-size:9px;color:rgba(255,255,255,0.32);letter-spacing:0.1em;text-transform:uppercase;margin-top:2px;}
 
 /* QUIZ */
 .quiz-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:28px;box-shadow:var(--shadow);}
-.quiz-q{font-family:'Syne',sans-serif;font-size:17px;font-weight:700;margin-bottom:6px;line-height:1.3;}
+.quiz-q{font-family:'Syne',sans-serif;font-size:17px;font-weight:700;margin-bottom:6px;line-height:1.3;color:var(--navy);}
 .quiz-options{display:flex;flex-direction:column;gap:8px;margin-bottom:24px;}
 .quiz-opt{border:1.5px solid var(--border);border-radius:8px;padding:13px 16px;cursor:pointer;transition:all 0.13s;text-align:left;font-size:13px;background:var(--surface);display:flex;align-items:center;gap:10px;}
-.quiz-opt:hover{border-color:var(--teal);}
-.quiz-opt.selected{border-color:var(--teal);background:var(--teal-light);color:var(--teal);font-weight:600;}
+.quiz-opt:hover{border-color:var(--navy);}
+.quiz-opt.selected{border-color:var(--navy);background:var(--navy-light);color:var(--navy);font-weight:600;}
 .quiz-radio{width:14px;height:14px;border:1.5px solid currentColor;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;}
-.quiz-opt.selected .quiz-radio::after{content:'';width:6px;height:6px;border-radius:50%;background:var(--teal);}
-.quiz-progress-bar{height:4px;background:var(--border);border-radius:2px;margin-bottom:20px;}
-.quiz-prog-fill{height:100%;background:var(--teal);border-radius:2px;transition:width 0.4s ease;}
+.quiz-opt.selected .quiz-radio::after{content:'';width:6px;height:6px;border-radius:50%;background:var(--navy);}
+.quiz-progress-bar{height:3px;background:var(--border);border-radius:2px;margin-bottom:20px;}
+.quiz-prog-fill{height:100%;background:var(--gold);border-radius:2px;transition:width 0.4s ease;}
 
 /* NOTIFICATIONS */
 .notif-item{display:flex;gap:12px;padding:14px 16px;border-bottom:1px solid var(--border);cursor:pointer;transition:background 0.12s;}
 .notif-item:hover{background:var(--surface2);}
-.notif-item.unread{background:var(--blue-light);}
-.notif-dot{width:8px;height:8px;border-radius:50%;background:var(--blue);flex-shrink:0;margin-top:4px;}
+.notif-item.unread{background:var(--navy-light);}
+.notif-dot{width:8px;height:8px;border-radius:50%;background:var(--navy);flex-shrink:0;margin-top:4px;}
 .notif-dot.read{background:var(--border2);}
 .notif-title{font-size:13px;font-weight:600;margin-bottom:3px;}
 .notif-sub{font-size:11px;color:var(--muted);line-height:1.5;}
@@ -199,7 +205,7 @@ tr:hover td{background:var(--surface2);}
 
 /* JD UPLOAD */
 .jd-drop{border:2px dashed var(--border2);border-radius:10px;padding:32px;text-align:center;cursor:pointer;transition:all 0.15s;}
-.jd-drop:hover,.jd-drop.dragover{border-color:var(--teal);background:var(--teal-light);}
+.jd-drop:hover,.jd-drop.dragover{border-color:var(--navy);background:var(--navy-light);}
 .jd-drop-icon{font-size:32px;margin-bottom:10px;}
 .jd-drop-text{font-size:13px;font-weight:600;margin-bottom:4px;}
 .jd-drop-sub{font-size:11px;color:var(--muted);}
@@ -208,75 +214,76 @@ tr:hover td{background:var(--surface2);}
 .wizard-steps{display:flex;align-items:center;gap:0;margin-bottom:28px;}
 .wizard-step{display:flex;flex-direction:column;align-items:center;flex:1;position:relative;}
 .wizard-step:not(:last-child)::after{content:'';position:absolute;top:14px;left:50%;width:100%;height:1px;background:var(--border);}
-.wizard-step.done::after{background:var(--teal);}
+.wizard-step.done::after{background:var(--gold);}
 .wizard-dot{width:28px;height:28px;border-radius:50%;border:2px solid var(--border);background:var(--surface);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:var(--muted);position:relative;z-index:1;transition:all 0.2s;}
-.wizard-step.active .wizard-dot{border-color:var(--teal);color:var(--teal);}
-.wizard-step.done .wizard-dot{border-color:var(--teal);background:var(--teal);color:#fff;}
+.wizard-step.active .wizard-dot{border-color:var(--navy);color:var(--navy);}
+.wizard-step.done .wizard-dot{border-color:var(--gold);background:var(--gold);color:#fff;}
 .wizard-lbl{font-size:10px;font-weight:600;color:var(--muted);margin-top:6px;text-align:center;}
-.wizard-step.active .wizard-lbl{color:var(--teal);}
+.wizard-step.active .wizard-lbl{color:var(--navy);}
+.wizard-step.done .wizard-lbl{color:var(--gold);}
 
 /* COMPARISON */
 .compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
-.compare-header{text-align:center;padding:16px;background:var(--surface2);border-radius:8px;margin-bottom:16px;}
-.compare-name{font-family:'Syne',sans-serif;font-size:15px;font-weight:800;}
+.compare-header{text-align:center;padding:16px;background:var(--navy-light);border-radius:8px;margin-bottom:16px;border:1px solid rgba(15,31,61,0.08);}
+.compare-name{font-family:'Syne',sans-serif;font-size:15px;font-weight:800;color:var(--navy);}
 .compare-score{font-family:'Syne',sans-serif;font-size:30px;font-weight:800;margin:4px 0;}
-.compare-bar-row{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
-.compare-bar-label{font-size:11px;width:120px;flex-shrink:0;}
-.compare-bar-track{flex:1;height:8px;background:var(--border);border-radius:4px;overflow:hidden;}
+.compare-bar-row{display:flex;align-items:center;gap:8px;margin-bottom:10px;}
+.compare-bar-label{font-size:11px;color:var(--muted);width:100px;flex-shrink:0;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;}
+.compare-bar-track{flex:1;height:7px;background:var(--border);border-radius:4px;overflow:hidden;}
 .compare-bar-fill{height:100%;border-radius:4px;transition:width 0.8s ease;}
 
-/* METHOD SELECTION */
-.method-cards{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:20px;}
-.method-card{border:2px solid var(--border);border-radius:12px;padding:24px 20px;cursor:pointer;transition:all 0.15s;text-align:center;background:var(--surface);}
-.method-card:hover{border-color:var(--teal);}
-.method-card.selected{border-color:var(--teal);background:var(--teal-light);}
-.method-card-icon{font-size:32px;margin-bottom:10px;}
-.method-card-title{font-family:'Syne',sans-serif;font-size:14px;font-weight:800;margin-bottom:6px;}
-.method-card-desc{font-size:11px;color:var(--muted);line-height:1.6;}
-.method-card.emp.selected{border-color:var(--purple);background:var(--purple-light);}
-.method-card.emp:hover{border-color:var(--purple);}
+/* TEST CARDS (Gap Wizard) */
+.test-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:24px;box-shadow:var(--shadow);}
+.test-type-badge{display:inline-block;font-size:11px;font-weight:600;padding:4px 10px;border-radius:5px;margin-bottom:14px;}
+.test-scenario-box{background:var(--navy-light);border:1px solid rgba(15,31,61,0.1);border-left:3px solid var(--navy);border-radius:7px;padding:12px 14px;font-size:12px;color:var(--ink2);margin-bottom:16px;line-height:1.6;}
+.test-q{font-family:'Syne',sans-serif;font-size:16px;font-weight:700;margin-bottom:18px;line-height:1.35;color:var(--navy);}
+.test-short-area{width:100%;background:var(--surface);border:1.5px solid var(--border);color:var(--ink);font-size:13px;padding:10px 13px;border-radius:7px;outline:none;min-height:100px;resize:vertical;transition:border-color 0.13s;font-family:'Epilogue',sans-serif;line-height:1.6;}
+.test-short-area:focus{border-color:var(--navy);}
+.test-dot-row{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px;}
+.test-dot{width:28px;height:28px;border-radius:50%;border:2px solid var(--border);background:var(--surface2);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--muted);transition:all 0.12s;}
+.test-dot.answered{background:var(--navy-light);border-color:var(--navy);color:var(--navy);}
+.test-dot.current{background:var(--navy);border-color:var(--navy);color:#fff;}
+.test-nav{display:flex;justify-content:space-between;}
 
-/* TEST UI */
-.test-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:28px;box-shadow:var(--shadow);}
-.test-type-badge{display:inline-flex;align-items:center;gap:5px;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:4px 10px;border-radius:20px;margin-bottom:14px;}
-.test-q{font-family:'Syne',sans-serif;font-size:16px;font-weight:700;line-height:1.4;margin-bottom:18px;}
-.test-scenario-box{background:var(--surface2);border-left:3px solid var(--amber);border-radius:0 7px 7px 0;padding:12px 14px;font-size:12px;color:var(--ink2);line-height:1.7;margin-bottom:18px;}
-.test-short-area{width:100%;min-height:100px;background:var(--surface);border:1.5px solid var(--border);border-radius:8px;padding:12px 14px;font-family:'Epilogue',sans-serif;font-size:13px;color:var(--ink);resize:vertical;outline:none;transition:border-color 0.13s;}
-.test-short-area:focus{border-color:var(--teal);}
-.test-nav{display:flex;align-items:center;justify-content:space-between;margin-top:22px;}
-.test-dot-row{display:flex;gap:5px;flex-wrap:wrap;justify-content:center;margin-bottom:18px;}
-.test-dot{width:10px;height:10px;border-radius:50%;border:1.5px solid var(--border);cursor:pointer;transition:all 0.12s;}
-.test-dot.answered{background:var(--teal);border-color:var(--teal);}
-.test-dot.current{border-color:var(--ink);transform:scale(1.25);}
+/* METHOD CARDS */
+.method-cards{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:22px;}
+.method-card{border:2px solid var(--border);border-radius:10px;padding:20px;cursor:pointer;transition:all 0.15s;background:var(--surface);}
+.method-card:hover{border-color:var(--navy);background:var(--navy-light);}
+.method-card.selected{border-color:var(--navy);background:var(--navy-light);}
+.method-card.emp:hover{border-color:var(--gold);background:var(--gold-light);}
+.method-card.emp.selected{border-color:var(--gold);background:var(--gold-light);}
+.method-card-icon{font-size:28px;margin-bottom:10px;}
+.method-card-title{font-family:'Syne',sans-serif;font-size:14px;font-weight:700;margin-bottom:6px;color:var(--navy);}
+.method-card-desc{font-size:12px;color:var(--muted);line-height:1.5;}
 
-/* PER-SKILL RESULT */
-.skill-result-card{border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-bottom:10px;}
-.skill-result-hd{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;border-bottom:1px solid var(--border);}
-.skill-result-body{padding:12px 16px;}
-.skill-rec{font-size:12px;color:var(--ink2);line-height:1.6;margin-top:8px;padding:8px 12px;background:var(--blue-light);border-radius:6px;}
+/* SKILL RESULT CARDS */
+.skill-result-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;margin-bottom:10px;overflow:hidden;}
+.skill-result-hd{display:flex;justify-content:space-between;align-items:center;padding:12px 14px;background:var(--surface2);border-bottom:1px solid var(--border);}
+.skill-result-body{padding:12px 14px;}
+.skill-rec{font-size:12px;color:var(--muted);background:var(--gold-light);border-radius:5px;padding:7px 10px;margin-top:6px;line-height:1.5;border:1px solid rgba(201,168,76,0.15);}
 
-/* EMPTY / LOADING */
-.empty{display:flex;flex-direction:column;align-items:center;padding:50px 30px;text-align:center;gap:8px;}
-.empty-icon{font-size:36px;margin-bottom:4px;}
-.empty-title{font-family:'Syne',sans-serif;font-size:15px;font-weight:700;color:var(--ink2);}
-.empty-desc{font-size:12px;color:var(--muted);max-width:300px;line-height:1.6;}
-.spinner{width:36px;height:36px;border:2px solid var(--border);border-top-color:var(--teal);border-radius:50%;animation:spin 0.8s linear infinite;}
+/* EMPTY STATE */
+.empty{text-align:center;padding:40px 20px;}
+.empty-icon{font-size:36px;margin-bottom:10px;opacity:0.35;}
+.empty-title{font-family:'Syne',sans-serif;font-size:15px;font-weight:700;color:var(--muted);}
+
+/* SPINNER */
+.spinner{width:28px;height:28px;border:2.5px solid var(--border);border-top-color:var(--navy);border-radius:50%;animation:spin 0.7s linear infinite;}
+.spinner-gold{border-top-color:var(--gold);}
 .spinner-purple{border-top-color:var(--purple);}
-.loading-state{display:flex;flex-direction:column;align-items:center;padding:60px;gap:14px;text-align:center;}
+.loading-state{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:60px 20px;text-align:center;}
 
-@keyframes spin{to{transform:rotate(360deg);}}
+/* ANIMATIONS */
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
-@keyframes slideUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
-.fade-in{animation:fadeIn 0.3s ease both;}
-::-webkit-scrollbar{width:5px;height:5px;}
-::-webkit-scrollbar-thumb{background:var(--border2);border-radius:3px;}
-@media(max-width:700px){.sidebar{display:none;}.stat-grid{grid-template-columns:1fr 1fr;}.page{padding:16px;}.form-row{grid-template-columns:1fr;}.login-wrap{grid-template-columns:1fr;}.login-left{display:none;}}
+@keyframes slideUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+.fade-in{animation:fadeIn 0.2s ease;}
 `;
 
-/* ─── API ────────────────────────────────────────────────────────────────── */
+/* ─── API ─────────────────────────────────────────────────────────────────── */
+const apiKey = "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";
 async function askClaude(system, user, maxTokens=1500) {
   try {
-    const apiKey = import.meta.env.VITE_ANTHROPIC_API_KEY;
     const res = await fetch("https://api.anthropic.com/v1/messages", {
       method: "POST",
       headers: {
@@ -349,7 +356,7 @@ function fitColor(s){return s>=80?"var(--green)":s>=60?"var(--amber)":"var(--red
 function fitTag(s){return s>=80?"t-green":s>=60?"t-amber":"t-red";}
 function fitLabel(s){return s>=85?"Excellent Fit":s>=70?"Good Fit":s>=55?"Partial Fit":"Gap Present";}
 function initials(n){return n.split(" ").map(w=>w[0]).join("").toUpperCase().slice(0,2);}
-function avatarBg(n){const c=["#005f52","#1a3f8f","#5a2d8f","#b86e00","#1a6e42","#b83232"];return c[n.charCodeAt(0)%c.length];}
+function avatarBg(n){const c=["#0f1f3d","#1a3f8f","#5a2d8f","#c9a84c","#1a6e42","#b86e00"];return c[n.charCodeAt(0)%c.length];}
 
 /* ─── PERSISTENCE ────────────────────────────────────────────────────────── */
 function loadState(key, fallback) {
@@ -390,7 +397,7 @@ export default function TalentIQ() {
         ? <HRApp session={session} positions={positions} setPositions={setPositions} employees={employees} setEmployees={setEmployees} notifications={notifications} setNotifications={setNotifications} addNotification={addNotification} showToast={showToast} logout={logout} updateEmployee={updateEmployee}/>
         : <EmployeeApp session={session} positions={positions} employees={employees} updateEmployee={updateEmployee} notifications={notifications} setNotifications={setNotifications} addNotification={addNotification} showToast={showToast} logout={logout}/>
       }
-      {toast&&<div style={{position:"fixed",bottom:20,right:20,background:"var(--ink)",color:"#fff",padding:"11px 18px",borderRadius:8,fontSize:12,fontWeight:600,zIndex:999,animation:"slideUp 0.2s ease",boxShadow:"0 8px 24px rgba(0,0,0,0.2)"}}>✓ {toast}</div>}
+      {toast&&<div style={{position:"fixed",bottom:20,right:20,background:avatarBg("N"),color:"#fff",padding:"11px 20px",borderRadius:8,fontSize:12,fontWeight:600,zIndex:999,animation:"slideUp 0.2s ease",boxShadow:"0 8px 24px rgba(15,31,61,0.25)",display:"flex",alignItems:"center",gap:8}}><span style={{color:"var(--gold)"}}>✓</span>{toast}</div>}
     </>
   );
 }
@@ -417,8 +424,11 @@ function LoginScreen({employees,onLogin}){
       <style>{STYLES}</style>
       <div className="login-wrap">
         <div className="login-left">
-          <div className="login-brand"><div className="login-brand-name">Talent<span>IQ</span></div><div className="login-brand-tag">HR Intelligence Platform v2</div></div>
-          <div className="login-hero"><h1>Your career,<br/><em>intelligently</em><br/>navigated.</h1><p>AI-powered skill assessment, gap analysis, and development planning — for HR and employees alike.</p></div>
+          <div className="login-brand"><div className="login-brand-name">Talent<span>IQ</span></div><div className="login-brand-tag">HR Intelligence Platform</div></div>
+          <div className="login-hero">
+            <h1>Your career,<br/><em>intelligently</em><br/>navigated.</h1>
+            <p>AI-powered skill assessment, gap analysis, and development planning — built for HR and employees alike.</p>
+          </div>
           <div className="login-badges">{["JD-Based Skill Extraction","Role-Based Access","Self Gap Analysis","MDP Linked to Gaps","Progress Tracking"].map(b=><div className="login-badge" key={b}>{b}</div>)}</div>
         </div>
         <div className="login-right">
@@ -436,7 +446,7 @@ function LoginScreen({employees,onLogin}){
             <div className="form-group"><label className="form-lbl">Email</label><input className="form-input" type="email" placeholder={role==="hr"?"hr@company.com":"priya@company.com"} value={email} onChange={e=>setEmail(e.target.value)}/></div>
             <div className="form-group"><label className="form-lbl">Password</label><input className="form-input" type="password" placeholder="••••••••" value={pw} onChange={e=>setPw(e.target.value)} onKeyDown={e=>e.key==="Enter"&&login()}/></div>
             <button className="btn btn-primary" style={{width:"100%",justifyContent:"center",padding:"12px"}} onClick={login}>Sign In →</button>
-            <div style={{marginTop:14,padding:12,background:"var(--surface2)",borderRadius:8,fontSize:11,color:"var(--muted)",lineHeight:1.7}}><strong style={{color:"var(--ink2)"}}>Demo:</strong> HR: hr@company.com / hr123 · Employee: priya@company.com / priya123</div>
+            <div style={{marginTop:14,padding:12,background:"var(--surface2)",borderRadius:8,fontSize:11,color:"var(--muted)",lineHeight:1.7,border:"1px solid var(--border)"}}><strong style={{color:"var(--navy)"}}>Demo:</strong> HR: hr@company.com / hr123 · Employee: priya@company.com / priya123</div>
           </div>
         </div>
       </div>
@@ -483,7 +493,7 @@ function HRApp({session,positions,setPositions,employees,setEmployees,notificati
         </div>
         <div className="sidebar-foot">
           <div className="s-user">
-            <div className="s-avatar" style={{background:"var(--teal)"}}>HR</div>
+            <div className="s-avatar" style={{background:"var(--gold)"}}><span style={{color:avatarBg("N")}}>HR</span></div>
             <div><div className="s-name">{session.user.name}</div><div className="s-role">Administrator</div></div>
             <button className="logout-btn" onClick={logout}>⏻</button>
           </div>
@@ -525,8 +535,8 @@ function HRDashboard({positions,employees,open,setView}){
     <div>
       <div className="stat-grid">
         {[
-          {lbl:"Total Employees",val:employees.length,note:"Internal & external",color:"var(--teal)"},
-          {lbl:"Positions",val:positions.length,note:"Active benchmarks",color:"var(--blue)"},
+          {lbl:"Total Employees",val:employees.length,note:"Internal & external",color:"var(--navy)"},
+          {lbl:"Positions",val:positions.length,note:"Active benchmarks",color:"var(--gold)"},
           {lbl:"Avg Fit Score",val:`${avgFit}%`,note:avgFit>=70?"Above threshold":"Needs attention",color:fitColor(avgFit)},
           {lbl:"Self Gap Checks",val:selfChecks,note:"Employee initiated",color:"var(--purple)"},
         ].map(s=>(
@@ -543,9 +553,10 @@ function HRDashboard({positions,employees,open,setView}){
           <div className="card-hd"><div className="card-title">Recent Employees</div><button className="btn btn-ghost btn-sm" onClick={()=>setView("employees")}>All →</button></div>
           {employees.slice(0,4).map(e=>{
             const p=positions.find(x=>x.id===e.positionId);const fit=calcFit(e,p);
-            return <div key={e.id} onClick={()=>open("viewEmp",e)} style={{display:"flex",alignItems:"center",gap:10,padding:"11px 16px",borderBottom:"1px solid var(--border)",cursor:"pointer"}}>
+            return <div key={e.id} onClick={()=>open("viewEmp",e)} style={{display:"flex",alignItems:"center",gap:10,padding:"11px 16px",borderBottom:"1px solid var(--border)",cursor:"pointer",transition:"background 0.1s"}}
+              onMouseOver={ev=>ev.currentTarget.style.background="var(--surface2)"} onMouseOut={ev=>ev.currentTarget.style.background=""}>
               <div className="s-avatar" style={{background:avatarBg(e.name),width:34,height:34,borderRadius:8,fontSize:11}}>{initials(e.name)}</div>
-              <div style={{flex:1}}><div style={{fontSize:12,fontWeight:600}}>{e.name}</div><div style={{fontSize:11,color:"var(--muted)"}}>{p?.title||"—"}</div></div>
+              <div style={{flex:1}}><div style={{fontSize:12,fontWeight:600,color:avatarBg(e.name)==="var(--navy)"||true?undefined:undefined}}>{e.name}</div><div style={{fontSize:11,color:"var(--muted)"}}>{p?.title||"—"}</div></div>
               <span className={`tag ${fitTag(fit)}`}>{fit}%</span>
             </div>;
           })}
@@ -556,9 +567,9 @@ function HRDashboard({positions,employees,open,setView}){
             <ResponsiveContainer width="100%" height={210}>
               <RadarChart data={positions[0]?.criteria.map(c=>({subject:c.skill.split(" ").slice(0,2).join(" "),Required:c.required,Avg:Math.round(employees.filter(e=>e.positionId===1).reduce((s,e)=>s+(e.scores?.[c.skill]||0),0)/Math.max(1,employees.filter(e=>e.positionId===1).length))}))}>
                 <PolarGrid stroke="var(--border)"/><PolarAngleAxis dataKey="subject" tick={{fill:"var(--muted)",fontSize:10,fontFamily:"Epilogue"}}/>
-                <Radar name="Required" dataKey="Required" stroke="var(--border2)" fill="var(--border2)" fillOpacity={0.3}/>
-                <Radar name="Avg" dataKey="Avg" stroke="var(--teal)" fill="var(--teal)" fillOpacity={0.18} strokeWidth={2}/>
-                <Tooltip contentStyle={{fontFamily:"Epilogue",fontSize:11}}/>
+                <Radar name="Required" dataKey="Required" stroke="var(--border2)" fill="var(--border2)" fillOpacity={0.25}/>
+                <Radar name="Avg" dataKey="Avg" stroke="var(--navy)" fill="var(--navy)" fillOpacity={0.15} strokeWidth={2}/>
+                <Tooltip contentStyle={{fontFamily:"Epilogue",fontSize:11,borderRadius:6,border:"1px solid var(--border)"}}/>
               </RadarChart>
             </ResponsiveContainer>
           </div>
@@ -580,7 +591,7 @@ function HRPositions({positions,employees,open}){
             <div className="card-hd">
               <div>
                 <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:3}}>
-                  <span style={{fontFamily:"Syne",fontSize:14,fontWeight:700}}>{pos.title}</span>
+                  <span style={{fontFamily:"Syne",fontSize:14,fontWeight:700,color:"var(--navy)"}}>{pos.title}</span>
                   <span className="tag t-blue">{pos.department}</span>
                   <span className="tag t-gray">{pos.level}</span>
                 </div>
@@ -591,14 +602,14 @@ function HRPositions({positions,employees,open}){
                 <button className="btn btn-secondary btn-sm" onClick={()=>open("viewPos",pos)}>Details →</button>
               </div>
             </div>
-            {pos.jdText&&<div style={{padding:"10px 20px",background:"var(--surface2)",borderBottom:"1px solid var(--border)",fontSize:12,color:"var(--muted)"}}>📄 JD: {pos.jdText.slice(0,120)}…</div>}
+            {pos.jdText&&<div style={{padding:"10px 20px",background:"var(--navy-light)",borderBottom:"1px solid var(--border)",fontSize:12,color:"var(--navy)",borderLeft:"3px solid var(--navy)"}}>📄 {pos.jdText.slice(0,120)}…</div>}
             <div className="card-body">
               <div style={{display:"flex",flexWrap:"wrap",gap:6}}>
                 {pos.criteria.map(c=>(
-                  <div key={c.skill} style={{display:"flex",alignItems:"center",gap:6,background:"var(--surface2)",border:"1px solid var(--border)",borderRadius:6,padding:"5px 10px"}}>
+                  <div key={c.skill} style={{display:"flex",alignItems:"center",gap:6,background:"var(--surface2)",border:"1px solid var(--border)",borderRadius:20,padding:"5px 12px"}}>
                     <span style={{fontSize:11,fontWeight:500}}>{c.skill}</span>
                     <span className={`tag ${WC[c.weight]}`} style={{fontSize:9}}>{c.weight}</span>
-                    <span style={{fontSize:11,color:"var(--teal)",fontWeight:700}}>{c.required}%</span>
+                    <span style={{fontSize:11,color:"var(--navy)",fontWeight:700}}>{c.required}%</span>
                   </div>
                 ))}
               </div>
@@ -629,7 +640,7 @@ function HREmployees({employees,positions,open}){
                 <div><div style={{fontWeight:600,fontSize:12}}>{e.name}</div><div style={{fontSize:10,color:"var(--muted)"}}>{e.role}</div></div>
               </div></td>
               <td><span className={`tag ${e.type==="Internal"?"t-teal":"t-blue"}`}>{e.type}</span></td>
-              <td style={{fontSize:11}}>{p?.title||"—"}</td>
+              <td style={{fontSize:11,color:"var(--muted)"}}>{p?.title||"—"}</td>
               <td><div style={{display:"flex",alignItems:"center",gap:7}}>
                 <div style={{flex:1,maxWidth:70}}><div className="prog"><div className="prog-fill" style={{width:`${fit}%`,background:fitColor(fit)}}/></div></div>
                 <span style={{fontSize:11,fontWeight:700,color:fitColor(fit)}}>{fit}%</span>
@@ -685,14 +696,11 @@ function HRCompare({employees,positions}){
                     <span className={`tag ${fitTag(fit)}`}>{fitLabel(fit)}</span>
                   </div>
                   {allSkills.map(skill=>{
-                    const v=emp.scores?.[skill]||0;
-                    const req=pos.criteria.find(c=>c.skill===skill)?.required||0;
+                    const v=emp.scores?.[skill]||0;const req=pos.criteria.find(c=>c.skill===skill)?.required||0;
                     return(
                       <div className="compare-bar-row" key={skill}>
                         <div className="compare-bar-label">{skill.split(" ").slice(0,2).join(" ")}</div>
-                        <div className="compare-bar-track">
-                          <div className="compare-bar-fill" style={{width:`${v}%`,background:v>=req?"var(--green)":v>=req*0.75?"var(--amber)":"var(--red)"}}/>
-                        </div>
+                        <div className="compare-bar-track"><div className="compare-bar-fill" style={{width:`${v}%`,background:v>=req?"var(--green)":v>=req*0.75?"var(--amber)":"var(--red)"}}/></div>
                         <span style={{fontSize:11,fontWeight:700,color:v>=req?"var(--green)":"var(--red)",minWidth:30,textAlign:"right"}}>{v}%</span>
                       </div>
                     );
@@ -701,15 +709,13 @@ function HRCompare({employees,positions}){
               );
             })}
           </div>
-          {/* Winner */}
           <div className="card" style={{marginTop:16}}>
             <div className="card-body" style={{textAlign:"center"}}>
               {calcFit(empA,pos)>calcFit(empB,pos)
                 ? <div><span style={{fontSize:20}}>🏆</span> <strong>{empA.name}</strong> is the stronger candidate with <strong style={{color:"var(--green)"}}>{calcFit(empA,pos)}%</strong> vs {empB.name}'s {calcFit(empB,pos)}%</div>
                 : calcFit(empB,pos)>calcFit(empA,pos)
                 ? <div><span style={{fontSize:20}}>🏆</span> <strong>{empB.name}</strong> is the stronger candidate with <strong style={{color:"var(--green)"}}>{calcFit(empB,pos)}%</strong> vs {empA.name}'s {calcFit(empA,pos)}%</div>
-                : <div>Both candidates are equally matched at {calcFit(empA,pos)}%</div>
-              }
+                : <div>Both candidates are equally matched at {calcFit(empA,pos)}%</div>}
             </div>
           </div>
         </div>
@@ -744,9 +750,9 @@ function HRTeam({employees,positions}){
             <ResponsiveContainer width="100%" height={240}>
               <BarChart data={internal.map(e=>({name:e.name.split(" ")[0],fit:calcFit(e,positions.find(p=>p.id===e.positionId))}))}>
                 <XAxis dataKey="name" tick={{fontSize:11}}/><YAxis domain={[0,100]} tick={{fontSize:10}}/>
-                <Tooltip contentStyle={{fontFamily:"Epilogue",fontSize:11}}/>
+                <Tooltip contentStyle={{fontFamily:"Epilogue",fontSize:11,borderRadius:6,border:"1px solid var(--border)"}}/>
                 <Bar dataKey="fit" radius={[4,4,0,0]}>
-                  {internal.map((e,i)=><Cell key={i} fill={fitColor(calcFit(e,positions.find(p=>p.id===e.positionId)))}/>)}
+                  {internal.map((e,i)=><Cell key={i} fill={calcFit(e,positions.find(p=>p.id===e.positionId))>=80?"var(--green)":calcFit(e,positions.find(p=>p.id===e.positionId))>=60?"var(--gold)":"var(--red)"}/>)}
                 </Bar>
               </BarChart>
             </ResponsiveContainer>
@@ -763,7 +769,7 @@ function HRTeam({employees,positions}){
                 <td style={{fontWeight:600,fontSize:12}}>{e.name}</td>
                 {allSkills.slice(0,6).map(s=>{const v=e.scores?.[s];
                   return v===undefined?<td key={s} style={{color:"var(--muted)"}}>—</td>:
-                  <td key={s}><div style={{background:fitColor(v)+"22",color:fitColor(v),fontWeight:700,fontSize:11,padding:"2px 7px",borderRadius:4,display:"inline-block"}}>{v}%</div></td>;
+                  <td key={s}><div style={{background:fitColor(v)+"22",color:fitColor(v),fontWeight:700,fontSize:11,padding:"2px 9px",borderRadius:20,display:"inline-block"}}>{v}%</div></td>;
                 })}
               </tr>
             ))}</tbody>
@@ -778,7 +784,7 @@ function HRTeam({employees,positions}){
 function HRReports({employees,positions}){
   const fitDist=[
     {lbl:"Excellent (85–100%)",count:employees.filter(e=>calcFit(e,positions.find(p=>p.id===e.positionId))>=85).length,color:"var(--green)"},
-    {lbl:"Good (70–84%)",count:employees.filter(e=>{const f=calcFit(e,positions.find(p=>p.id===e.positionId));return f>=70&&f<85;}).length,color:"var(--teal)"},
+    {lbl:"Good (70–84%)",count:employees.filter(e=>{const f=calcFit(e,positions.find(p=>p.id===e.positionId));return f>=70&&f<85;}).length,color:"var(--navy)"},
     {lbl:"Partial (55–69%)",count:employees.filter(e=>{const f=calcFit(e,positions.find(p=>p.id===e.positionId));return f>=55&&f<70;}).length,color:"var(--amber)"},
     {lbl:"Gap (<55%)",count:employees.filter(e=>calcFit(e,positions.find(p=>p.id===e.positionId))<55).length,color:"var(--red)"},
   ];
@@ -788,7 +794,7 @@ function HRReports({employees,positions}){
         <div className="card"><div className="card-hd"><div className="card-title">Fit Distribution</div></div>
           <div className="card-body">{fitDist.map(d=>(
             <div key={d.lbl} style={{display:"flex",alignItems:"center",gap:12,marginBottom:14}}>
-              <div style={{flex:1}}><div style={{fontSize:12,marginBottom:5}}>{d.lbl}</div>
+              <div style={{flex:1}}><div style={{fontSize:12,marginBottom:5,color:"var(--ink2)"}}>{d.lbl}</div>
                 <div className="prog"><div style={{height:"100%",width:`${Math.round(d.count/Math.max(1,employees.length)*100)}%`,background:d.color,borderRadius:3}}/></div>
               </div>
               <div style={{fontFamily:"Syne",fontSize:22,fontWeight:800,color:d.color,minWidth:22}}>{d.count}</div>
@@ -813,7 +819,7 @@ function HRReports({employees,positions}){
             return <tr key={e.id}>
               <td style={{fontWeight:600}}>{e.name}</td>
               <td><span className={`tag ${e.type==="Internal"?"t-teal":"t-blue"}`}>{e.type}</span></td>
-              <td style={{fontSize:11}}>{p?.title||"—"}</td>
+              <td style={{fontSize:11,color:"var(--muted)"}}>{p?.title||"—"}</td>
               <td><span style={{fontWeight:700,color:fitColor(fit)}}>{fit}%</span></td>
               <td><span className={`tag ${fitTag(fit)}`}>{fitLabel(fit)}</span></td>
               <td><span className={`tag ${e.devPlan?"t-green":"t-gray"}`}>{e.devPlan?"Ready":"Pending"}</span></td>
@@ -853,7 +859,7 @@ function HRNotifications({notifications,markAllRead}){
   );
 }
 
-/* ─── NEW POSITION MODAL (with JD upload) ─────────────────────────────────── */
+/* ─── NEW POSITION MODAL ─────────────────────────────────────────────────── */
 function NewPositionModal({onClose,onSave,existing}){
   const [tab,setTab]=useState("details");
   const [form,setForm]=useState(existing||{title:"",department:"",level:"",type:"Internal & External",jdText:"",description:""});
@@ -896,7 +902,6 @@ function NewPositionModal({onClose,onSave,existing}){
       <div className="modal-body">
         <div className="tabs">{["details","jd","criteria"].map(t=><button key={t} className={`tab-btn ${tab===t?"active":""}`} onClick={()=>setTab(t)}>{t==="details"?"1. Details":t==="jd"?"2. Job Description":"3. Skills"}</button>)}</div>
         {err&&<div className="alert a-warn">{err}</div>}
-
         {tab==="details"&&<>
           <div className="form-group"><label className="form-lbl">Job Title *</label><input className="form-input" placeholder="e.g. Senior Product Manager" value={form.title} onChange={e=>setForm({...form,title:e.target.value})}/></div>
           <div className="form-row">
@@ -917,7 +922,6 @@ function NewPositionModal({onClose,onSave,existing}){
             </select>
           </div>
         </>}
-
         {tab==="jd"&&<>
           <div className="tabs" style={{marginBottom:16}}>
             <button className={`tab-btn ${jdMode==="paste"?"active":""}`} onClick={()=>setJdMode("paste")}>📝 Paste Text</button>
@@ -936,9 +940,8 @@ function NewPositionModal({onClose,onSave,existing}){
             </div>
             {form.jdText&&<div className="alert a-success" style={{marginTop:12}}><span>✓</span>File loaded — {form.jdText.length} characters</div>}
           </>}
-          {form.jdText&&<div style={{marginTop:12,padding:"10px 14px",background:"var(--surface2)",borderRadius:7,fontSize:12,color:"var(--muted)",lineHeight:1.6,maxHeight:100,overflow:"auto"}}>{form.jdText.slice(0,300)}…</div>}
+          {form.jdText&&<div style={{marginTop:12,padding:"10px 14px",background:"var(--navy-light)",borderRadius:7,fontSize:12,color:"var(--navy)",lineHeight:1.6,maxHeight:100,overflow:"auto",border:"1px solid rgba(15,31,61,0.1)"}}>{form.jdText.slice(0,300)}…</div>}
         </>}
-
         {tab==="criteria"&&<>
           <button className="btn btn-primary" style={{width:"100%",justifyContent:"center",marginBottom:14}} onClick={aiSuggest} disabled={loading}>
             {loading?"⏳ AI is analysing job description…":"✦ Extract Skills from Job Description"}
@@ -951,7 +954,7 @@ function NewPositionModal({onClose,onSave,existing}){
                 {WEIGHTS.map(w=><option key={w}>{w}</option>)}
               </select>
               <input type="number" min={10} max={100} value={c.required} onChange={e=>setCriteria(cr=>cr.map((x,j)=>j===i?{...x,required:Number(e.target.value)}:x))} style={{width:55,fontSize:12,padding:"4px 8px",border:"1px solid var(--border)",borderRadius:5}}/>
-              <span style={{fontSize:11,color:"var(--teal)",fontWeight:700,minWidth:20}}>%</span>
+              <span style={{fontSize:11,color:"var(--navy)",fontWeight:700,minWidth:20}}>%</span>
               <button style={{background:"none",border:"none",color:"var(--muted)",cursor:"pointer",fontSize:16}} onClick={()=>setCriteria(cr=>cr.filter((_,j)=>j!==i))}>×</button>
             </div>
           ))}
@@ -1019,9 +1022,9 @@ function NewEmployeeModal({onClose,onSave,positions}){
             <div className="alert a-info"><span>ℹ</span>Rate the candidate on each skill for <strong>{selPos.title}</strong>.</div>
             {selPos.criteria.map(c=>(
               <div className="form-group" key={c.skill}>
-                <label className="form-lbl" style={{display:"flex",justifyContent:"space-between"}}><span>{c.skill}</span><span style={{color:"var(--teal)",fontWeight:700}}>Required: {c.required}%</span></label>
+                <label className="form-lbl" style={{display:"flex",justifyContent:"space-between"}}><span>{c.skill}</span><span style={{color:"var(--navy)",fontWeight:700}}>Required: {c.required}%</span></label>
                 <div style={{display:"flex",gap:12,alignItems:"center"}}>
-                  <input type="range" min={0} max={100} value={scores[c.skill]||0} onChange={e=>setScores(s=>({...s,[c.skill]:Number(e.target.value)}))} style={{flex:1,accentColor:"var(--teal)"}}/>
+                  <input type="range" min={0} max={100} value={scores[c.skill]||0} onChange={e=>setScores(s=>({...s,[c.skill]:Number(e.target.value)}))} style={{flex:1,accentColor:"var(--navy)"}}/>
                   <span style={{fontFamily:"Syne",fontSize:15,fontWeight:800,color:fitColor(scores[c.skill]||0),minWidth:40,textAlign:"right"}}>{scores[c.skill]||0}%</span>
                 </div>
               </div>
@@ -1072,7 +1075,7 @@ function HREmployeeDetail({employee,positions,onClose,updateEmployee,addNotifica
       <div className="modal-body">
         <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:10,marginBottom:20}}>
           {[{lbl:"Fit Score",val:`${fit}%`,color:fitColor(fit)},{lbl:"Status",val:fitLabel(fit),color:fitColor(fit)},{lbl:"Self Checks",val:employee.selfGapChecks?.length||0,color:"var(--purple)"},{lbl:"Quizzes",val:employee.quizHistory?.length||0,color:"var(--blue)"}].map(s=>(
-            <div key={s.lbl} style={{background:"var(--surface2)",borderRadius:8,padding:"11px 12px",textAlign:"center"}}>
+            <div key={s.lbl} style={{background:"var(--navy-light)",borderRadius:8,padding:"11px 12px",textAlign:"center",border:"1px solid rgba(15,31,61,0.08)"}}>
               <div style={{fontSize:9,fontWeight:700,letterSpacing:"0.1em",textTransform:"uppercase",color:"var(--muted)",marginBottom:4}}>{s.lbl}</div>
               <div style={{fontFamily:"Syne",fontSize:14,fontWeight:800,color:s.color}}>{s.val}</div>
             </div>
@@ -1089,13 +1092,12 @@ function HREmployeeDetail({employee,positions,onClose,updateEmployee,addNotifica
             </div>;
           })}
         </div>}
-        {/* Self gap checks */}
         {employee.selfGapChecks?.length>0&&<div style={{marginBottom:20}}>
           <div style={{fontSize:10,fontWeight:700,letterSpacing:"0.12em",textTransform:"uppercase",color:"var(--muted)",marginBottom:12}}>Employee Self-Gap Checks</div>
           {employee.selfGapChecks.map((g,i)=>(
-            <div key={i} style={{background:"var(--purple-light)",border:"1px solid rgba(90,45,143,0.15)",borderRadius:8,padding:"12px 14px",marginBottom:8}}>
+            <div key={i} style={{background:"var(--gold-light)",border:"1px solid rgba(201,168,76,0.2)",borderRadius:8,padding:"12px 14px",marginBottom:8}}>
               <div style={{display:"flex",justifyContent:"space-between",marginBottom:4}}>
-                <span style={{fontSize:12,fontWeight:600,color:"var(--purple)"}}>{g.targetRole}</span>
+                <span style={{fontSize:12,fontWeight:600,color:"#7a5f1f"}}>{g.targetRole}</span>
                 <span style={{fontSize:10,color:"var(--muted)"}}>{g.date}</span>
               </div>
               <div style={{fontSize:11,color:"var(--muted)"}}>Fit: <strong style={{color:fitColor(g.fit)}}>{g.fit}%</strong> · {g.gaps} gaps identified</div>
@@ -1110,7 +1112,7 @@ function HREmployeeDetail({employee,positions,onClose,updateEmployee,addNotifica
           {loading&&<div style={{display:"flex",gap:12,alignItems:"center",padding:20,justifyContent:"center"}}><div className="spinner"/><div style={{fontSize:13,color:"var(--muted)"}}>Crafting plan based on skill gaps…</div></div>}
           {devPlan&&!loading&&devPlan.phases?.map((ph,i)=>(
             <div className="dev-phase" key={i}>
-              <div className="dev-ph-hd"><div className="dev-ph-title">{ph.title}</div><span className="tag t-teal">{ph.timeline}</span></div>
+              <div className="dev-ph-hd"><div className="dev-ph-title">{ph.title}</div><span className="tag t-gold">{ph.timeline}</span></div>
               <div className="dev-ph-body">{ph.actions?.map((a,j)=><div className="dev-action" key={j}><span className="dev-bullet">→</span><span>{a}</span></div>)}</div>
             </div>
           ))}
@@ -1138,10 +1140,10 @@ function PositionDetailModal({position,employees,onClose,onEdit}){
         {position.criteria.map(c=>(
           <div key={c.skill} style={{display:"flex",alignItems:"center",gap:10,padding:"9px 0",borderBottom:"1px solid var(--border)"}}>
             <div style={{flex:1}}><div style={{fontSize:12,fontWeight:500,marginBottom:4}}>{c.skill}</div>
-              <div className="prog"><div className="prog-fill" style={{width:`${c.required}%`,background:"var(--teal)"}}/></div>
+              <div className="prog"><div className="prog-fill" style={{width:`${c.required}%`,background:"var(--navy)"}}/></div>
             </div>
             <span className={`tag ${WC[c.weight]}`}>{c.weight}</span>
-            <span style={{fontFamily:"Syne",fontSize:15,fontWeight:800,color:"var(--teal)",minWidth:40,textAlign:"right"}}>{c.required}%</span>
+            <span style={{fontFamily:"Syne",fontSize:15,fontWeight:800,color:"var(--navy)",minWidth:40,textAlign:"right"}}>{c.required}%</span>
           </div>
         ))}
         {pc.length>0&&<div style={{marginTop:20}}>
@@ -1229,22 +1231,22 @@ function EmpHome({emp,pos,fit,setView,unread}){
           <div className="emp-hero-name">{emp.name}</div>
           <div className="emp-hero-role">{emp.role} · {emp.department} · {emp.experience}</div>
           <div style={{marginTop:14,display:"flex",gap:8,flexWrap:"wrap"}}>
-            <span className="tag t-teal">{emp.type}</span>
-            {pos&&<span className="tag" style={{background:"rgba(255,255,255,0.08)",color:"rgba(255,255,255,0.5)"}}>{pos.title}</span>}
-            {unread>0&&<span className="tag" style={{background:"rgba(184,50,50,0.3)",color:"#ff9090"}}>{unread} new notification{unread>1?"s":""}</span>}
+            <span className="tag" style={{background:"rgba(201,168,76,0.18)",color:"var(--gold)",borderRadius:20}}>{emp.type}</span>
+            {pos&&<span className="tag" style={{background:"rgba(255,255,255,0.07)",color:"rgba(255,255,255,0.45)",borderRadius:20}}>{pos.title}</span>}
+            {unread>0&&<span className="tag" style={{background:"rgba(192,57,43,0.25)",color:"#ff9090",borderRadius:20}}>{unread} new notification{unread>1?"s":""}</span>}
           </div>
         </div>
         <div className="emp-hero-right">
           <div className="emp-score-ring"><div className="emp-score-num">{fit}%</div><div className="emp-score-lbl">Fit Score</div></div>
-          <div style={{fontSize:11,color:"rgba(255,255,255,0.4)",marginTop:8}}>{fitLabel(fit)}</div>
+          <div style={{fontSize:11,color:"rgba(255,255,255,0.35)",marginTop:8}}>{fitLabel(fit)}</div>
         </div>
       </div>
       <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:12,marginBottom:20}}>
         {[
-          {val:pos?.criteria.length||0,lbl:"Skills Tracked",color:"var(--teal)"},
+          {val:pos?.criteria.length||0,lbl:"Skills Tracked",color:"var(--navy)"},
           {val:gaps.length,lbl:"Skill Gaps",color:gaps.length>0?"var(--amber)":"var(--green)"},
           {val:emp.quizHistory?.length||0,lbl:"Assessments",color:"var(--purple)"},
-          {val:emp.selfGapChecks?.length||0,lbl:"Gap Checks",color:"var(--blue)"},
+          {val:emp.selfGapChecks?.length||0,lbl:"Gap Checks",color:"var(--gold)"},
         ].map(s=>(
           <div key={s.lbl} style={{background:"var(--surface)",border:"1px solid var(--border)",borderRadius:10,padding:"16px",textAlign:"center",boxShadow:"var(--shadow)"}}>
             <div style={{fontFamily:"Syne",fontSize:24,fontWeight:800,color:s.color,marginBottom:4}}>{s.val}</div>
@@ -1268,9 +1270,9 @@ function EmpHome({emp,pos,fit,setView,unread}){
           <div className="card-hd"><div className="card-title">Quick Actions</div></div>
           <div className="card-body" style={{display:"flex",flexDirection:"column",gap:10}}>
             {[
-              {icon:"⊘",label:"Check skill gap for next role",sub:"AI-powered gap analysis for your goals",view:"gap",color:"var(--blue)"},
+              {icon:"⊘",label:"Check skill gap for next role",sub:"AI-powered gap analysis for your goals",view:"gap",color:"var(--navy)"},
               {icon:"◈",label:"Take a self-assessment",sub:"Quiz yourself on role-specific skills",view:"quiz",color:"var(--purple)"},
-              {icon:"⊕",label:"View development plan",sub:"Your AI-generated growth roadmap",view:"devplan",color:"var(--teal)"},
+              {icon:"⊕",label:"View development plan",sub:"Your AI-generated growth roadmap",view:"devplan",color:"var(--gold)"},
             ].map(a=>(
               <button key={a.label} onClick={()=>setView(a.view)} style={{display:"flex",gap:12,alignItems:"center",padding:"11px 12px",border:"1px solid var(--border)",borderRadius:8,background:"var(--surface2)",cursor:"pointer",textAlign:"left",transition:"all 0.13s"}}
                 onMouseOver={e=>e.currentTarget.style.borderColor=a.color} onMouseOut={e=>e.currentTarget.style.borderColor="var(--border)"}>
@@ -1296,9 +1298,9 @@ function EmpSkills({emp,pos,fit}){
             <ResponsiveContainer width="100%" height={240}>
               <RadarChart data={radarData}>
                 <PolarGrid stroke="var(--border)"/><PolarAngleAxis dataKey="subject" tick={{fill:"var(--muted)",fontSize:10,fontFamily:"Epilogue"}}/>
-                <Radar name="Required" dataKey="Required" stroke="var(--border2)" fill="var(--border2)" fillOpacity={0.25}/>
-                <Radar name="My Score" dataKey="Mine" stroke="var(--teal)" fill="var(--teal)" fillOpacity={0.2} strokeWidth={2}/>
-                <Tooltip contentStyle={{fontFamily:"Epilogue",fontSize:11}}/>
+                <Radar name="Required" dataKey="Required" stroke="var(--border2)" fill="var(--border2)" fillOpacity={0.2}/>
+                <Radar name="My Score" dataKey="Mine" stroke="var(--navy)" fill="var(--navy)" fillOpacity={0.15} strokeWidth={2}/>
+                <Tooltip contentStyle={{fontFamily:"Epilogue",fontSize:11,borderRadius:6,border:"1px solid var(--border)"}}/>
               </RadarChart>
             </ResponsiveContainer>
           </div>
@@ -1323,20 +1325,17 @@ function EmpSkills({emp,pos,fit}){
 
 /* ─── EMPLOYEE SELF GAP WIZARD ───────────────────────────────────────────── */
 function EmpGapWizard({emp,positions,updateEmployee,addNotification,showToast}){
-  const [step,setStep]=useState(1); // 1=goal, 2=method, 3=assessment, 4=results
+  const [step,setStep]=useState(1);
   const [goalType,setGoalType]=useState("existing");
   const [selectedPos,setSelectedPos]=useState("");
   const [customGoal,setCustomGoal]=useState("");
   const [criteria,setCriteria]=useState([]);
-  const [method,setMethod]=useState(""); // "self-rate" | "test"
-  // Self-rate state
+  const [method,setMethod]=useState("");
   const [selfScores,setSelfScores]=useState({});
-  // Test state
   const [questions,setQuestions]=useState([]);
   const [currentQ,setCurrentQ]=useState(0);
-  const [testAnswers,setTestAnswers]=useState({}); // {qId: value}
-  const [testStage,setTestStage]=useState("questions"); // questions | scoring
-  // Results
+  const [testAnswers,setTestAnswers]=useState({});
+  const [testStage,setTestStage]=useState("questions");
   const [loading,setLoading]=useState(false);
   const [loadingMsg,setLoadingMsg]=useState("");
   const [results,setResults]=useState(null);
@@ -1345,7 +1344,6 @@ function EmpGapWizard({emp,positions,updateEmployee,addNotification,showToast}){
   const WIZARD_STEPS=["Define Goal","Choose Method","Assessment","Results & MDP"];
   const targetRole=goalType==="existing"?positions.find(p=>p.id===Number(selectedPos))?.title:customGoal;
 
-  /* ── STEP 1 helpers ── */
   async function generateCriteriaForCustomGoal(){
     if(!customGoal.trim())return;
     setLoading(true);setLoadingMsg("AI is analysing your career goal…");
@@ -1357,8 +1355,7 @@ function EmpGapWizard({emp,positions,updateEmployee,addNotification,showToast}){
     if(r?.criteria){
       setCriteria(r.criteria);
       const s={};r.criteria.forEach(c=>{s[c.skill]=emp.scores?.[c.skill]||50;});
-      setSelfScores(s);
-      setStep(2);
+      setSelfScores(s);setStep(2);
     }
   }
 
@@ -1367,18 +1364,15 @@ function EmpGapWizard({emp,positions,updateEmployee,addNotification,showToast}){
     if(!pos)return;
     setCriteria(pos.criteria);
     const s={};pos.criteria.forEach(c=>{s[c.skill]=emp.scores?.[c.skill]||50;});
-    setSelfScores(s);
-    setStep(2);
+    setSelfScores(s);setStep(2);
   }
 
-  /* ── STEP 3a — Self-rate → analyze ── */
   async function analyzeFromSelfRate(){
     setLoading(true);setLoadingMsg("Analysing gaps & building your MDP…");
     const skillScores={};criteria.forEach(c=>{skillScores[c.skill]=selfScores[c.skill]||0;});
     await runGapAnalysis(skillScores);
   }
 
-  /* ── STEP 3b — Generate test questions ── */
   async function generateTestQuestions(){
     setLoading(true);setLoadingMsg("AI is generating your test questions…");
     const skillList=criteria.map(c=>c.skill).join(", ");
@@ -1394,90 +1388,62 @@ Distribute across all skills. Make questions practical and realistic. No markdow
     );
     setLoading(false);
     if(r?.questions&&r.questions.length>0){
-      setQuestions(r.questions);
-      setCurrentQ(0);
-      setTestAnswers({});
-      setTestStage("questions");
-      setStep(3);
+      setQuestions(r.questions);setCurrentQ(0);setTestAnswers({});setTestStage("questions");setStep(3);
     }
   }
 
-  /* ── STEP 3b — Score test answers ── */
   async function submitTest(){
     setLoading(true);setLoadingMsg("AI is scoring your answers…");
-
-    // Score MCQ/scenario automatically
     const autoScored={};
-    questions.forEach(q=>{
-      if(q.type!=="short"){
-        const ans=testAnswers[q.id];
-        autoScored[q.id]=(ans!==undefined&&ans===q.correct)?100:0;
-      }
-    });
-
-    // Score short answers via AI
+    questions.forEach(q=>{if(q.type!=="short"){const ans=testAnswers[q.id];autoScored[q.id]=(ans!==undefined&&ans===q.correct)?100:0;}});
     const shortQs=questions.filter(q=>q.type==="short"&&testAnswers[q.id]!==undefined);
     let shortScores={};
     if(shortQs.length>0){
       const payload=shortQs.map(q=>({id:q.id,question:q.question,model_answer:q.model_answer,employee_answer:testAnswers[q.id]||""}));
       const r=await askClaude(
         `Score these short answer responses for accuracy, completeness and professional understanding. Return ONLY valid JSON: {"scores":[{"id":1,"score":70,"feedback":"1 sentence feedback"}]} score is 0-100. Be fair but rigorous. No markdown.`,
-        JSON.stringify(payload),
-        1200
+        JSON.stringify(payload),1200
       );
       if(r?.scores)r.scores.forEach(s=>{shortScores[s.id]={score:s.score,feedback:s.feedback};});
     }
-
-    // Map scores to skills
     const skillScoreMap={};const skillCountMap={};
     questions.forEach(q=>{
       const score=q.type==="short"?(shortScores[q.id]?.score||0):autoScored[q.id];
       if(!skillScoreMap[q.skill]){skillScoreMap[q.skill]=0;skillCountMap[q.skill]=0;}
-      skillScoreMap[q.skill]+=score;
-      skillCountMap[q.skill]+=1;
+      skillScoreMap[q.skill]+=score;skillCountMap[q.skill]+=1;
     });
     const computedSkillScores={};
     Object.keys(skillScoreMap).forEach(sk=>{computedSkillScores[sk]=Math.round(skillScoreMap[sk]/skillCountMap[sk]);});
-    // For skills with no test questions, use self-score as fallback
     criteria.forEach(c=>{if(computedSkillScores[c.skill]===undefined)computedSkillScores[c.skill]=selfScores[c.skill]||50;});
-
     await runGapAnalysis(computedSkillScores,{shortScores,autoScored});
   }
 
-  /* ── Shared gap analysis + MDP generation ── */
   async function runGapAnalysis(skillScores,testData=null){
     const gaps=criteria.map(c=>({skill:c.skill,required:c.required,actual:skillScores[c.skill]||0,gap:Math.max(0,c.required-(skillScores[c.skill]||0)),weight:c.weight}));
     const fitScore=Math.round(
       criteria.reduce((s,c)=>{const a=skillScores[c.skill]||0;const w=c.weight==="Critical"?3:c.weight==="High"?2:1;return s+(Math.min(a/c.required,1))*w;},0)/
       Math.max(1,criteria.reduce((s,c)=>s+(c.weight==="Critical"?3:c.weight==="High"?2:1),0))*100
     );
-
     setLoadingMsg("Generating your personalised MDP…");
     const r=await askClaude(
       `You are a talent development coach. Analyse skill gaps and produce a development plan. Return ONLY valid JSON:
 {"summary":"2 sentence overall summary","skill_analysis":[{"skill":"Name","score":75,"required":80,"recommendation":"1 sentence specific action to close this gap"}],"certifications":[{"name":"Name","provider":"Provider","why":"Why this cert closes a specific gap","priority":"High|Medium"}],"phases":[{"title":"Phase Title","timeline":"Month X-Y","actions":["action 1","action 2","action 3"]}]}
 — skill_analysis for ALL skills including ones with no gap, 3 certs tied to gaps, 4 phases. Tie every action to specific skills. No markdown.`,
-      `Employee: ${emp.name}, Role: ${emp.role}, Target: ${targetRole}, Fit: ${fitScore}%, All skills: ${JSON.stringify(gaps)}`,
-      2000
+      `Employee: ${emp.name}, Role: ${emp.role}, Target: ${targetRole}, Fit: ${fitScore}%, All skills: ${JSON.stringify(gaps)}`,2000
     );
     setLoading(false);
     if(r){
       const gapCheck={targetRole,fit:fitScore,gaps:gaps.filter(g=>g.gap>0).length,date:new Date().toLocaleDateString(),method:testData?"test":"self-rate"};
       updateEmployee(emp.id,{selfGapChecks:[...(emp.selfGapChecks||[]),gapCheck]});
       addNotification("hr",emp.email,"Self Gap Check Completed",`${emp.name} completed a skill gap check for "${targetRole}" via ${testData?"AI-proctored test":"self-rating"}. Fit score: ${fitScore}%.`);
-      setResults({gaps,fitScore,skillScores,testData});
-      setMdp(r);
-      setStep(4);
-      showToast("Gap analysis complete!");
+      setResults({gaps,fitScore,skillScores,testData});setMdp(r);setStep(4);showToast("Gap analysis complete!");
     }
   }
 
   function reset(){setStep(1);setResults(null);setMdp(null);setCriteria([]);setQuestions([]);setTestAnswers({});setMethod("");setSelectedPos("");setCustomGoal("");}
 
-  /* ── RENDER ── */
   return(
     <div style={{maxWidth:720,margin:"0 auto"}}>
-      {/* Wizard Steps */}
       <div className="wizard-steps" style={{marginBottom:28}}>
         {WIZARD_STEPS.map((s,i)=>(
           <div key={i} className={`wizard-step ${step>i+1?"done":step===i+1?"active":""}`}>
@@ -1487,7 +1453,6 @@ Distribute across all skills. Make questions practical and realistic. No markdow
         ))}
       </div>
 
-      {/* ── Step 1: Define Goal ── */}
       {step===1&&!loading&&(
         <div className="quiz-card">
           <div className="quiz-q">What role do you want to assess yourself for?</div>
@@ -1509,14 +1474,13 @@ Distribute across all skills. Make questions practical and realistic. No markdow
           {goalType==="custom"&&<>
             <div className="form-group">
               <label className="form-lbl">Describe Your Career Goal</label>
-              <textarea className="form-textarea" placeholder="e.g. I want to move from Software Engineer to Engineering Manager. Or: I want to transition into Data Science from my current analytics role." value={customGoal} onChange={e=>setCustomGoal(e.target.value)}/>
+              <textarea className="form-textarea" placeholder="e.g. I want to move from Software Engineer to Engineering Manager…" value={customGoal} onChange={e=>setCustomGoal(e.target.value)}/>
             </div>
-            <button className="btn btn-emp" style={{width:"100%",justifyContent:"center"}} onClick={generateCriteriaForCustomGoal} disabled={!customGoal.trim()}>✦ AI Generate Skill Criteria →</button>
+            <button className="btn btn-primary" style={{width:"100%",justifyContent:"center"}} onClick={generateCriteriaForCustomGoal} disabled={!customGoal.trim()}>✦ AI Generate Skill Criteria →</button>
           </>}
         </div>
       )}
 
-      {/* ── Step 2: Choose Method ── */}
       {step===2&&!loading&&(
         <div className="quiz-card">
           <div className="quiz-q">How would you like to assess your skills?</div>
@@ -1532,18 +1496,17 @@ Distribute across all skills. Make questions practical and realistic. No markdow
               <div className="method-card-icon">🧪</div>
               <div className="method-card-title">Take a Test</div>
               <div className="method-card-desc">AI generates scenario, multiple choice and written questions. Your answers are scored objectively.</div>
-              {method==="test"&&<div className="tag t-purple" style={{marginTop:10}}>Selected ✓</div>}
+              {method==="test"&&<div className="tag t-gold" style={{marginTop:10}}>Selected ✓</div>}
             </div>
           </div>
           {method&&<div style={{display:"flex",gap:10}}>
             <button className="btn btn-ghost" onClick={()=>setStep(1)}>← Back</button>
             {method==="self-rate"&&<button className="btn btn-primary" style={{flex:1,justifyContent:"center"}} onClick={()=>setStep(3)}>Next: Rate My Skills →</button>}
-            {method==="test"&&<button className="btn btn-emp" style={{flex:1,justifyContent:"center"}} onClick={generateTestQuestions}>✦ Generate My Test →</button>}
+            {method==="test"&&<button className="btn btn-primary" style={{flex:1,justifyContent:"center"}} onClick={generateTestQuestions}>✦ Generate My Test →</button>}
           </div>}
         </div>
       )}
 
-      {/* ── Step 3a: Self-Rate ── */}
       {step===3&&method==="self-rate"&&!loading&&(
         <div className="quiz-card">
           <div className="quiz-q">Rate your current skill levels</div>
@@ -1552,10 +1515,10 @@ Distribute across all skills. Make questions practical and realistic. No markdow
             <div className="form-group" key={c.skill}>
               <label className="form-lbl" style={{display:"flex",justifyContent:"space-between"}}>
                 <span>{c.skill} <span className={`tag ${WC[c.weight]}`} style={{fontSize:9}}>{c.weight}</span></span>
-                <span style={{color:"var(--teal)"}}>Required: {c.required}%</span>
+                <span style={{color:"var(--navy)"}}>Required: {c.required}%</span>
               </label>
               <div style={{display:"flex",gap:12,alignItems:"center"}}>
-                <input type="range" min={0} max={100} value={selfScores[c.skill]||0} onChange={e=>setSelfScores(s=>({...s,[c.skill]:Number(e.target.value)}))} style={{flex:1,accentColor:"var(--teal)"}}/>
+                <input type="range" min={0} max={100} value={selfScores[c.skill]||0} onChange={e=>setSelfScores(s=>({...s,[c.skill]:Number(e.target.value)}))} style={{flex:1,accentColor:"var(--navy)"}}/>
                 <span style={{fontFamily:"Syne",fontSize:15,fontWeight:800,color:fitColor(selfScores[c.skill]||0),minWidth:40,textAlign:"right"}}>{selfScores[c.skill]||0}%</span>
               </div>
             </div>
@@ -1567,34 +1530,27 @@ Distribute across all skills. Make questions practical and realistic. No markdow
         </div>
       )}
 
-      {/* ── Step 3b: Test questions ── */}
       {step===3&&method==="test"&&!loading&&questions.length>0&&testStage==="questions"&&(()=>{
         const q=questions[currentQ];
         const isAnswered=testAnswers[q.id]!==undefined;
         const allAnswered=questions.every(q=>testAnswers[q.id]!==undefined);
         return(
           <div style={{maxWidth:640,margin:"0 auto"}}>
-            {/* Progress dots */}
             <div className="test-dot-row">
               {questions.map((qq,i)=>(
-                <div key={qq.id} className={`test-dot ${testAnswers[qq.id]!==undefined?"answered":""} ${i===currentQ?"current":""}`} onClick={()=>setCurrentQ(i)} title={`Q${i+1}: ${qq.skill}`}/>
+                <div key={qq.id} className={`test-dot ${testAnswers[qq.id]!==undefined?"answered":""} ${i===currentQ?"current":""}`} onClick={()=>setCurrentQ(i)}>{i+1}</div>
               ))}
             </div>
             <div style={{display:"flex",justifyContent:"space-between",fontSize:11,color:"var(--muted)",marginBottom:16}}>
               <span>Question {currentQ+1} of {questions.length}</span>
-              <span style={{color:"var(--purple)",fontWeight:600}}>{Object.keys(testAnswers).length}/{questions.length} answered</span>
+              <span style={{color:"var(--navy)",fontWeight:600}}>{Object.keys(testAnswers).length}/{questions.length} answered</span>
             </div>
             <div className="test-card">
-              {/* Type badge */}
               {q.type==="mcq"&&<div className="test-type-badge t-teal">📋 Multiple Choice · {q.skill}</div>}
               {q.type==="scenario"&&<div className="test-type-badge t-amber">🏢 Scenario · {q.skill}</div>}
               {q.type==="short"&&<div className="test-type-badge t-purple">✏️ Short Answer · {q.skill}</div>}
-
               {q.type==="scenario"&&q.scenario_context&&<div className="test-scenario-box">{q.scenario_context}</div>}
-
               <div className="test-q">{q.question}</div>
-
-              {/* MCQ / Scenario options */}
               {(q.type==="mcq"||q.type==="scenario")&&<div className="quiz-options">
                 {q.options?.map((opt,i)=>(
                   <button key={i} className={`quiz-opt ${testAnswers[q.id]===i?"selected":""}`} onClick={()=>setTestAnswers(a=>({...a,[q.id]:i}))}>
@@ -1602,42 +1558,32 @@ Distribute across all skills. Make questions practical and realistic. No markdow
                   </button>
                 ))}
               </div>}
-
-              {/* Short answer */}
               {q.type==="short"&&<>
                 <textarea className="test-short-area" placeholder="Write your answer here (2–3 sentences)…" value={testAnswers[q.id]||""} onChange={e=>setTestAnswers(a=>({...a,[q.id]:e.target.value}))}/>
                 <div style={{fontSize:11,color:"var(--muted)",marginTop:6}}>Tip: focus on practical, specific examples from your experience.</div>
               </>}
             </div>
-
             <div className="test-nav" style={{marginTop:16}}>
               <button className="btn btn-ghost btn-sm" onClick={()=>setCurrentQ(i=>Math.max(0,i-1))} disabled={currentQ===0}>← Prev</button>
               {currentQ<questions.length-1
                 ? <button className="btn btn-secondary btn-sm" onClick={()=>setCurrentQ(i=>i+1)} disabled={!isAnswered}>Next →</button>
-                : <button className="btn btn-emp btn-sm" onClick={submitTest} disabled={!allAnswered} style={{opacity:allAnswered?1:0.5}}>
+                : <button className="btn btn-primary btn-sm" onClick={submitTest} disabled={!allAnswered} style={{opacity:allAnswered?1:0.5}}>
                     {allAnswered?"✦ Submit & Score Test →":"Answer all questions first"}
                   </button>
               }
             </div>
-            {!allAnswered&&<div style={{textAlign:"center",marginTop:12,fontSize:11,color:"var(--muted)"}}>
-              Click the dots above to jump between questions
-            </div>}
           </div>
         );
       })()}
 
-      {/* ── Loading ── */}
-      {loading&&<div className="loading-state"><div className={`spinner ${method==="test"?"spinner-purple":""}`}/><div style={{fontFamily:"Syne",fontSize:18,fontWeight:700}}>{loadingMsg||"Please wait…"}</div></div>}
+      {loading&&<div className="loading-state"><div className="spinner"/><div style={{fontFamily:"Syne",fontSize:18,fontWeight:700,color:"var(--navy)"}}>{loadingMsg||"Please wait…"}</div></div>}
 
-      {/* ── Step 4: Results ── */}
       {step===4&&results&&mdp&&(
         <div>
           <div className="alert a-success" style={{marginBottom:20}}>
             <span>✓</span>
             {results.testData?"AI-scored test complete!":"Self-assessment complete!"} Your results and MDP are below.
           </div>
-
-          {/* Score hero */}
           <div className="card" style={{marginBottom:16}}>
             <div className="card-body" style={{display:"flex",alignItems:"center",gap:28}}>
               <div style={{textAlign:"center",flexShrink:0}}>
@@ -1647,13 +1593,11 @@ Distribute across all skills. Make questions practical and realistic. No markdow
               </div>
               <div style={{flex:1}}>
                 <div style={{fontSize:12,fontWeight:700,color:"var(--muted)",marginBottom:4,textTransform:"uppercase",letterSpacing:"0.08em"}}>Target Role</div>
-                <div style={{fontFamily:"Syne",fontSize:17,fontWeight:800,marginBottom:8}}>{targetRole}</div>
+                <div style={{fontFamily:"Syne",fontSize:17,fontWeight:800,marginBottom:8,color:"var(--navy)"}}>{targetRole}</div>
                 <div style={{fontSize:13,color:"var(--muted)",lineHeight:1.65}}>{mdp.summary}</div>
               </div>
             </div>
           </div>
-
-          {/* Per-skill breakdown */}
           <div style={{marginBottom:8,fontSize:10,fontWeight:700,letterSpacing:"0.12em",textTransform:"uppercase",color:"var(--muted)"}}>Skill-by-Skill Breakdown</div>
           <div style={{marginBottom:16}}>
             {results.gaps.map(g=>{
@@ -1683,13 +1627,12 @@ Distribute across all skills. Make questions practical and realistic. No markdow
             })}
           </div>
 
-          {/* Certifications */}
           {mdp.certifications?.length>0&&<div className="card" style={{marginBottom:16}}>
             <div className="card-hd"><div className="card-title">Recommended Certifications</div></div>
             <div className="card-body">
               {mdp.certifications.map((c,i)=>(
                 <div key={i} style={{display:"flex",gap:12,padding:"10px 0",borderBottom:"1px solid var(--border)"}}>
-                  <div style={{fontFamily:"Syne",fontSize:22,fontWeight:800,color:"var(--teal)",minWidth:28}}>{String(i+1).padStart(2,"0")}</div>
+                  <div style={{fontFamily:"Syne",fontSize:22,fontWeight:800,color:"var(--gold)",minWidth:28}}>{String(i+1).padStart(2,"0")}</div>
                   <div style={{flex:1}}><div style={{fontSize:13,fontWeight:600,marginBottom:3}}>{c.name}</div><div style={{fontSize:11,color:"var(--muted)"}}>{c.provider} · {c.why}</div></div>
                   <span className={`tag ${c.priority==="High"?"t-amber":"t-teal"}`}>{c.priority}</span>
                 </div>
@@ -1697,13 +1640,12 @@ Distribute across all skills. Make questions practical and realistic. No markdow
             </div>
           </div>}
 
-          {/* MDP Phases */}
           <div className="card">
             <div className="card-hd"><div className="card-title">Your MDP — Linked to Skill Gaps</div></div>
             <div className="card-body">
               {mdp.phases?.map((ph,i)=>(
                 <div className="dev-phase" key={i}>
-                  <div className="dev-ph-hd"><div className="dev-ph-title">{ph.title}</div><span className="tag t-teal">{ph.timeline}</span></div>
+                  <div className="dev-ph-hd"><div className="dev-ph-title">{ph.title}</div><span className="tag t-gold">{ph.timeline}</span></div>
                   <div className="dev-ph-body">{ph.actions?.map((a,j)=><div className="dev-action" key={j}><span className="dev-bullet">→</span><span>{a}</span></div>)}</div>
                 </div>
               ))}
@@ -1754,20 +1696,20 @@ function EmpQuiz({emp,pos,updateEmployee,showToast}){
     <div><div className="quiz-card" style={{maxWidth:600,margin:"0 auto",textAlign:"center"}}>
       <div style={{fontSize:36,marginBottom:16}}>◈</div>
       <div className="quiz-q">Skill Self-Assessment Quiz</div>
-      <div style={{fontSize:13,color:"var(--muted)",margin:"10px 0 24px",lineHeight:1.7,maxWidth:420,margin:"10px auto 24px"}}>AI-generated questions tailored to your role as <strong>{pos?.title||"your position"}</strong>.</div>
+      <div style={{fontSize:13,color:"var(--muted)",margin:"10px auto 24px",lineHeight:1.7,maxWidth:420}}>AI-generated questions tailored to your role as <strong>{pos?.title||"your position"}</strong>.</div>
       {emp.quizHistory?.length>0&&<div className="alert a-success" style={{marginBottom:20,textAlign:"left"}}><span>✓</span>Last score: <strong>{emp.quizHistory[emp.quizHistory.length-1]?.score}%</strong></div>}
-      <button className="btn btn-emp" style={{padding:"12px 32px"}} onClick={startQuiz} disabled={!pos}>Start Quiz →</button>
+      <button className="btn btn-primary" style={{padding:"12px 32px"}} onClick={startQuiz} disabled={!pos}>Start Quiz →</button>
     </div></div>
   );
 
   if(stage==="loading")return(
-    <div className="loading-state"><div className="spinner spinner-purple"/><div style={{fontFamily:"Syne",fontSize:18,fontWeight:700}}>Generating questions…</div></div>
+    <div className="loading-state"><div className="spinner"/><div style={{fontFamily:"Syne",fontSize:18,fontWeight:700,color:"var(--navy)"}}>Generating questions…</div></div>
   );
 
   if(stage==="quiz"&&questions[current])return(
     <div style={{maxWidth:620,margin:"0 auto"}}>
       <div className="quiz-progress-bar"><div className="quiz-prog-fill" style={{width:`${(current/questions.length)*100}%`}}/></div>
-      <div style={{fontSize:11,color:"var(--muted)",marginBottom:20}}>Question {current+1} of {questions.length} · <strong>{questions[current].skill}</strong></div>
+      <div style={{fontSize:11,color:"var(--muted)",marginBottom:20}}>Question {current+1} of {questions.length} · <strong style={{color:"var(--navy)"}}>{questions[current].skill}</strong></div>
       <div className="quiz-card">
         <div className="quiz-q">{questions[current].question}</div>
         <div style={{fontSize:12,color:"var(--muted)",marginBottom:20}}>Select the best answer</div>
@@ -1787,12 +1729,12 @@ function EmpQuiz({emp,pos,updateEmployee,showToast}){
       <div className="quiz-card">
         <div style={{fontSize:40,marginBottom:16}}>🎯</div>
         <div className="quiz-q">Assessment Complete!</div>
-        <div style={{display:"inline-flex",flexDirection:"column",alignItems:"center",justifyContent:"center",width:100,height:100,borderRadius:"50%",border:`3px solid ${fitColor(results.score)}`,margin:"20px auto"}}>
+        <div style={{display:"inline-flex",flexDirection:"column",alignItems:"center",justifyContent:"center",width:100,height:100,borderRadius:"50%",border:`2px solid ${fitColor(results.score)}`,margin:"20px auto",background:fitColor(results.score)+"12"}}>
           <div style={{fontFamily:"Syne",fontSize:30,fontWeight:800,color:fitColor(results.score),lineHeight:1}}>{results.score}%</div>
           <div style={{fontSize:10,color:"var(--muted)"}}>Score</div>
         </div>
         <div style={{fontSize:14,color:"var(--muted)",margin:"16px 0 24px"}}>{results.correct} of {results.total} correct</div>
-        <button className="btn btn-emp" onClick={()=>setStage("intro")}>Take Another</button>
+        <button className="btn btn-primary" onClick={()=>setStage("intro")}>Take Another</button>
       </div>
     </div>
   );
@@ -1810,8 +1752,8 @@ function EmpProgress({emp,pos,fit}){
           <ResponsiveContainer width="100%" height={220}>
             <LineChart data={log}>
               <XAxis dataKey="date" tick={{fontSize:11}}/><YAxis domain={[0,100]} tick={{fontSize:10}}/>
-              <Tooltip contentStyle={{fontFamily:"Epilogue",fontSize:11}}/>
-              <Line type="monotone" dataKey="score" stroke="var(--teal)" strokeWidth={2.5} dot={{fill:"var(--teal)",r:4}}/>
+              <Tooltip contentStyle={{fontFamily:"Epilogue",fontSize:11,borderRadius:6,border:"1px solid var(--border)"}}/>
+              <Line type="monotone" dataKey="score" stroke="var(--navy)" strokeWidth={2.5} dot={{fill:"var(--gold)",stroke:"var(--navy)",r:4,strokeWidth:2}}/>
             </LineChart>
           </ResponsiveContainer>
         </div>
@@ -1871,13 +1813,13 @@ function EmpDevPlan({emp,pos,fit,updateEmployee,showToast}){
     <div>
       {!devPlan&&!loading&&<div className="card" style={{marginBottom:16}}>
         <div className="card-body" style={{textAlign:"center",padding:"36px 24px"}}>
-          <div style={{fontSize:36,marginBottom:12}}>⊕</div>
-          <div style={{fontFamily:"Syne",fontSize:18,fontWeight:700,marginBottom:8}}>Your Personal Development Plan</div>
+          <div style={{width:64,height:64,borderRadius:16,background:"var(--navy-light)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:28,margin:"0 auto 16px"}}>⊕</div>
+          <div style={{fontFamily:"Syne",fontSize:18,fontWeight:700,marginBottom:8,color:"var(--navy)"}}>Your Personal Development Plan</div>
           <div style={{fontSize:13,color:"var(--muted)",marginBottom:24,lineHeight:1.7,maxWidth:420,margin:"0 auto 24px"}}>AI will analyse your skill gaps and generate a tailored MDP directly linked to your weakest areas.</div>
-          <button className="btn btn-emp" style={{padding:"12px 32px"}} onClick={generate}>✦ Generate My MDP</button>
+          <button className="btn btn-primary" style={{padding:"12px 32px"}} onClick={generate}>✦ Generate My MDP</button>
         </div>
       </div>}
-      {loading&&<div className="loading-state"><div className="spinner spinner-purple"/><div style={{fontFamily:"Syne",fontSize:18,fontWeight:700}}>Building your MDP…</div></div>}
+      {loading&&<div className="loading-state"><div className="spinner"/><div style={{fontFamily:"Syne",fontSize:18,fontWeight:700,color:"var(--navy)"}}>Building your MDP…</div></div>}
       {devPlan&&!loading&&<>
         <div className="alert a-success" style={{marginBottom:16}}><span>✓</span>Your development plan is ready — actions are linked to your specific skill gaps.</div>
         {devPlan.certifications?.length>0&&<div className="card" style={{marginBottom:16}}>
@@ -1885,7 +1827,7 @@ function EmpDevPlan({emp,pos,fit,updateEmployee,showToast}){
           <div className="card-body">
             {devPlan.certifications.map((c,i)=>(
               <div key={i} style={{display:"flex",gap:12,padding:"10px 0",borderBottom:"1px solid var(--border)"}}>
-                <div style={{fontFamily:"Syne",fontSize:22,fontWeight:800,color:"var(--teal)",minWidth:28}}>{String(i+1).padStart(2,"0")}</div>
+                <div style={{fontFamily:"Syne",fontSize:22,fontWeight:800,color:"var(--gold)",minWidth:28}}>{String(i+1).padStart(2,"0")}</div>
                 <div style={{flex:1}}><div style={{fontSize:13,fontWeight:600,marginBottom:3}}>{c.name}</div><div style={{fontSize:11,color:"var(--muted)"}}>{c.provider} · {c.why}</div></div>
                 <span className={`tag ${c.priority==="High"?"t-amber":"t-teal"}`}>{c.priority}</span>
               </div>
@@ -1897,7 +1839,7 @@ function EmpDevPlan({emp,pos,fit,updateEmployee,showToast}){
           <div className="card-body">
             {devPlan.phases?.map((ph,i)=>(
               <div className="dev-phase" key={i}>
-                <div className="dev-ph-hd"><div className="dev-ph-title">{ph.title}</div><span className="tag t-teal">{ph.timeline}</span></div>
+                <div className="dev-ph-hd"><div className="dev-ph-title">{ph.title}</div><span className="tag t-gold">{ph.timeline}</span></div>
                 <div className="dev-ph-body">{ph.actions?.map((a,j)=><div className="dev-action" key={j}><span className="dev-bullet">→</span><span>{a}</span></div>)}</div>
               </div>
             ))}
