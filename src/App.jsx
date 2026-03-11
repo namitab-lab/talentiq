@@ -446,17 +446,19 @@ const SEED_EMPLOYEES = [
     eq:{self:{selfAwareness:5,selfRegulation:4,empathy:6,relationshipManagement:4,motivation:7},manager:{selfAwareness:4,selfRegulation:3,empathy:5,relationshipManagement:3,motivation:6},history:[{date:"Jan 2026",overall:5.0},{date:"Feb 2026",overall:5.2},{date:"Mar 2026",overall:5.4}],simulations:[],matchedMentorId:null,matchScore:0}},
 ];
 
-const SEED_MENTORS = [const SEED_MENTORS = [
-  { id:201, name:"Arjun Sharma", ...},
-  { id:202, name:"Leila Hassan", ...},
-  { id:203, name:"New Mentor Name", email:"email@example.com", password:"pass123", role:"mentor",
-    title:"Job Title", company:"Company", experience:"10 years",
-    bio:"Short bio here.",
-    strengthTags:["Conflict Navigator","Empathy Builder"],
-    strengthScores:{selfAwareness:8,selfRegulation:7,empathy:9,relationshipManagement:8,motivation:7},
+const SEED_MENTORS = [
+  { id:201, name:"Arjun Sharma", email:"arjun@mentor.com", password:"arjun123", role:"mentor", title:"Engineering Director", company:"TechCorp", experience:"14 years",
+    bio:"I've led engineering teams of 50+ across 3 continents. I specialise in helping engineers develop the confidence and presence they need to step into leadership.",
+    strengthTags:["Conflict Navigator","Executive Presence Coach","Resilience Driver"],
+    strengthScores:{selfAwareness:9,selfRegulation:9,empathy:7,relationshipManagement:9,motivation:8},
+    matchedMenteeIds:[], sessions:[], effectivenessRating:null},
+  { id:202, name:"Leila Hassan", email:"leila@mentor.com", password:"leila123", role:"mentor", title:"Chief People Officer", company:"ScaleUp Inc.", experience:"18 years",
+    bio:"I've built people functions from scratch at three startups. My passion is helping individuals understand their emotional patterns before those patterns hold them back.",
+    strengthTags:["Self-Awareness Champion","Empathy Builder","Conflict Navigator"],
+    strengthScores:{selfAwareness:10,selfRegulation:8,empathy:10,relationshipManagement:8,motivation:7},
     matchedMenteeIds:[], sessions:[], effectivenessRating:null},
 ];
-  
+
 
 const SEED_NOTIFICATIONS = [
   { id:1, to:"hr", from:"priya@company.com", title:"Self Gap Check Completed", body:"Priya Nair completed a self-initiated skill gap check for Senior Software Engineer.", time:"2h ago", read:false },
@@ -506,7 +508,10 @@ export default function TalentIQ() {
   const showToast=msg=>{setToast(msg);setTimeout(()=>setToast(null),3000);};
   const logout=()=>{saveState("tiq_session",null);setSession(null);};
   const updateEmployee=(id,patch)=>setEmployees(es=>es.map(e=>e.id===id?{...e,...patch}:e));
-  const updateMentor=(id,patch)=>setMentors(ms=>ms.map(m=>m.id===id?{...m,...patch}:m));
+  const updateMentor=(id,patch,isNew=false)=>{
+    if(isNew) setMentors(ms=>[...ms,patch]);
+    else setMentors(ms=>ms.map(m=>m.id===id?{...m,...patch}:m));
+  };
 
   const addNotification=(to,from,title,body)=>{
     const n={id:Date.now(),to,from,title,body,time:"Just now",read:false};
@@ -593,6 +598,7 @@ function LoginScreen({employees,mentors,onLogin}){
 /* ════════════ HR APP ══════════════════════════════════════════════════════ */
 function HRApp({session,positions,setPositions,employees,setEmployees,mentors,setMentors,notifications,setNotifications,addNotification,showToast,logout,updateEmployee,updateMentor}){
   const [view,setView]=useState("dashboard");
+  const [addMentorOpen,setAddMentorOpen]=useState(false);
   const [modal,setModal]=useState(null);
   const [selected,setSelected]=useState(null);
   const unread=notifications.filter(n=>n.to==="hr"&&!n.read).length;
@@ -645,6 +651,7 @@ function HRApp({session,positions,setPositions,employees,setEmployees,mentors,se
           <div style={{display:"flex",gap:8}}>
             {view==="positions"&&<button className="btn btn-primary btn-sm" onClick={()=>open("newPos")}>＋ New Position</button>}
             {view==="employees"&&<button className="btn btn-primary btn-sm" onClick={()=>open("newEmp")}>＋ Add Employee</button>}
+            {view==="mentors"&&<button className="btn btn-primary btn-sm" onClick={()=>setAddMentorOpen(true)}>＋ Add Mentor</button>}
           </div>
         </div>
         <div className="page fade-in" key={view}>
@@ -652,7 +659,7 @@ function HRApp({session,positions,setPositions,employees,setEmployees,mentors,se
           {view==="positions"&&<HRPositions positions={positions} employees={employees} open={open}/>}
           {view==="employees"&&<HREmployees employees={employees} positions={positions} open={open}/>}
           {view==="eq"&&<HREQAnalytics employees={employees} mentors={mentors} updateEmployee={updateEmployee} showToast={showToast}/>}
-          {view==="mentors"&&<HRMentorManagement employees={employees} mentors={mentors} updateEmployee={updateEmployee} updateMentor={updateMentor} addNotification={addNotification} showToast={showToast}/>}
+          {view==="mentors"&&<HRMentorManagement employees={employees} mentors={mentors} updateEmployee={updateEmployee} updateMentor={updateMentor} addNotification={addNotification} showToast={showToast} addMentorOpen={addMentorOpen} setAddMentorOpen={setAddMentorOpen}/>}
           {view==="compare"&&<HRCompare employees={employees} positions={positions}/>}
           {view==="team"&&<HRTeam employees={employees} positions={positions}/>}
           {view==="reports"&&<HRReports employees={employees} positions={positions}/>}
@@ -1104,8 +1111,23 @@ function HREQAnalytics({employees,mentors,updateEmployee,showToast}){
 }
 
 /* ─── HR MENTOR MANAGEMENT ───────────────────────────────────────────────── */
-function HRMentorManagement({employees,mentors,updateEmployee,updateMentor,addNotification,showToast}){
+function HRMentorManagement({employees,mentors,updateEmployee,updateMentor,addNotification,showToast,addMentorOpen,setAddMentorOpen}){
   const [selectedEmp,setSelectedEmp]=useState(null);
+  const [newMentor,setNewMentor]=useState({name:"",email:"",password:"",title:"",company:"",experience:"",bio:"",strengthTags:[],strengthScores:{selfAwareness:7,selfRegulation:7,empathy:7,relationshipManagement:7,motivation:7}});
+  const ALL_TAGS=["Self-Awareness Champion","Conflict Navigator","Empathy Builder","Executive Presence Coach","Resilience Driver"];
+
+  function toggleTag(tag){
+    setNewMentor(m=>({...m,strengthTags:m.strengthTags.includes(tag)?m.strengthTags.filter(t=>t!==tag):[...m.strengthTags,tag]}));
+  }
+
+  function saveMentor(){
+    if(!newMentor.name||!newMentor.email||!newMentor.password){showToast("Name, email and password required");return;}
+    const mentor={...newMentor,id:Date.now(),role:"mentor",matchedMenteeIds:[],sessions:[],effectivenessRating:null};
+    updateMentor(null,mentor,true);
+    showToast(`${newMentor.name} added as mentor!`);
+    setAddMentorOpen(false);
+    setNewMentor({name:"",email:"",password:"",title:"",company:"",experience:"",bio:"",strengthTags:[],strengthScores:{selfAwareness:7,selfRegulation:7,empathy:7,relationshipManagement:7,motivation:7}});
+  }
 
   function calcMatchScore(emp,mentor){
     const self=emp.eq?.self||{};const mgr=emp.eq?.manager||{};
@@ -1234,6 +1256,48 @@ function HRMentorManagement({employees,mentors,updateEmployee,updateMentor,addNo
             })}
           </div>
           <div className="modal-ft"><button className="btn btn-ghost" onClick={()=>setSelectedEmp(null)}>Cancel</button></div>
+        </div></div>
+      )}
+
+      {addMentorOpen&&(
+        <div className="modal-overlay"><div className="modal">
+          <div className="modal-hd"><div className="modal-title">Add New Mentor</div><button className="modal-x" onClick={()=>setAddMentorOpen(false)}>×</button></div>
+          <div className="modal-body">
+            <div className="form-row">
+              <div className="form-group"><label className="form-lbl">Full Name *</label><input className="form-input" placeholder="e.g. Arjun Sharma" value={newMentor.name} onChange={e=>setNewMentor(m=>({...m,name:e.target.value}))}/></div>
+              <div className="form-group"><label className="form-lbl">Email *</label><input className="form-input" type="email" placeholder="arjun@email.com" value={newMentor.email} onChange={e=>setNewMentor(m=>({...m,email:e.target.value}))}/></div>
+            </div>
+            <div className="form-row">
+              <div className="form-group"><label className="form-lbl">Password *</label><input className="form-input" type="text" placeholder="They'll use this to log in" value={newMentor.password} onChange={e=>setNewMentor(m=>({...m,password:e.target.value}))}/></div>
+              <div className="form-group"><label className="form-lbl">Job Title</label><input className="form-input" placeholder="e.g. Engineering Director" value={newMentor.title} onChange={e=>setNewMentor(m=>({...m,title:e.target.value}))}/></div>
+            </div>
+            <div className="form-row">
+              <div className="form-group"><label className="form-lbl">Company</label><input className="form-input" placeholder="e.g. TechCorp" value={newMentor.company} onChange={e=>setNewMentor(m=>({...m,company:e.target.value}))}/></div>
+              <div className="form-group"><label className="form-lbl">Experience</label><input className="form-input" placeholder="e.g. 12 years" value={newMentor.experience} onChange={e=>setNewMentor(m=>({...m,experience:e.target.value}))}/></div>
+            </div>
+            <div className="form-group"><label className="form-lbl">Bio</label><textarea className="form-textarea" placeholder="A short bio about this mentor's background and focus…" value={newMentor.bio} onChange={e=>setNewMentor(m=>({...m,bio:e.target.value}))} style={{minHeight:70}}/></div>
+            <div className="form-group">
+              <label className="form-lbl">EQ Strength Tags (select up to 3)</label>
+              <div style={{display:"flex",flexWrap:"wrap",gap:6,marginTop:4}}>
+                {ALL_TAGS.map(tag=>(
+                  <button key={tag} className={`btn btn-sm ${newMentor.strengthTags.includes(tag)?"btn-primary":"btn-ghost"}`} onClick={()=>toggleTag(tag)} style={{borderRadius:20}}>{tag}</button>
+                ))}
+              </div>
+            </div>
+            <div className="form-group">
+              <label className="form-lbl">EQ Strength Scores (1–10)</label>
+              {EQ_DIMS.map(dim=>(
+                <div key={dim.key} className="eq-slider-wrap" style={{marginBottom:10}}>
+                  <div className="eq-slider-hd"><span className="eq-slider-label" style={{fontSize:12}}>{dim.label}</span><span className="eq-slider-val">{newMentor.strengthScores[dim.key]}/10</span></div>
+                  <input type="range" min={1} max={10} value={newMentor.strengthScores[dim.key]} className="eq-slider" onChange={e=>setNewMentor(m=>({...m,strengthScores:{...m.strengthScores,[dim.key]:Number(e.target.value)}}))}/>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="modal-ft">
+            <button className="btn btn-ghost" onClick={()=>setAddMentorOpen(false)}>Cancel</button>
+            <button className="btn btn-primary" onClick={saveMentor}>Add Mentor →</button>
+          </div>
         </div></div>
       )}
     </div>
