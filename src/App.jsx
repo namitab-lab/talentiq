@@ -273,6 +273,62 @@ tr:hover td{background:var(--surface2);}
 .spinner-purple{border-top-color:var(--purple);}
 .loading-state{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:60px 20px;text-align:center;}
 
+/* EQ SLIDER */
+.eq-slider-wrap{margin-bottom:18px;}
+.eq-slider-hd{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;}
+.eq-slider-label{font-size:13px;font-weight:600;color:var(--navy);}
+.eq-slider-val{font-family:'Syne',sans-serif;font-size:18px;font-weight:800;color:var(--gold);}
+.eq-slider{-webkit-appearance:none;width:100%;height:6px;border-radius:3px;background:var(--border);outline:none;cursor:pointer;}
+.eq-slider::-webkit-slider-thumb{-webkit-appearance:none;width:20px;height:20px;border-radius:50%;background:var(--navy);border:3px solid var(--gold);cursor:pointer;}
+.eq-dim-desc{font-size:11px;color:var(--muted);margin-top:4px;line-height:1.5;}
+
+/* EQ RADAR */
+.eq-profile-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.eq-dim-row{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--border);}
+.eq-dim-name{font-size:12px;font-weight:600;min-width:160px;color:var(--navy);}
+.eq-bar-wrap{flex:1;display:flex;gap:6px;flex-direction:column;}
+.eq-bar-track{height:6px;background:var(--border);border-radius:3px;overflow:hidden;}
+.eq-bar-self{height:100%;border-radius:3px;background:var(--navy);}
+.eq-bar-mgr{height:100%;border-radius:3px;background:var(--gold);}
+.eq-scores{display:flex;gap:8px;align-items:center;}
+.eq-score-self{font-size:11px;font-weight:700;color:var(--navy);}
+.eq-score-mgr{font-size:11px;font-weight:700;color:#8a6d1f;}
+.eq-gap-badge{font-size:10px;padding:2px 7px;border-radius:10px;font-weight:700;}
+
+/* SIMULATION */
+.sim-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:24px;box-shadow:var(--shadow);}
+.sim-scenario{background:var(--navy-light);border-left:3px solid var(--navy);border-radius:7px;padding:14px 16px;font-size:13px;line-height:1.7;color:var(--ink2);margin-bottom:20px;}
+.sim-question{font-family:'Syne',sans-serif;font-size:16px;font-weight:700;color:var(--navy);margin-bottom:16px;line-height:1.35;}
+.sim-opt{border:1.5px solid var(--border);border-radius:8px;padding:13px 16px;cursor:pointer;transition:all 0.13s;text-align:left;font-size:13px;background:var(--surface);display:flex;align-items:flex-start;gap:10px;margin-bottom:8px;width:100%;}
+.sim-opt:hover{border-color:var(--navy);background:var(--navy-light);}
+.sim-opt.selected{border-color:var(--gold);background:var(--gold-light);font-weight:600;}
+.sim-opt-letter{width:22px;height:22px;border-radius:50%;background:var(--surface2);border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--muted);flex-shrink:0;margin-top:1px;}
+.sim-opt.selected .sim-opt-letter{background:var(--gold);border-color:var(--gold);color:#fff;}
+.sim-result{background:var(--gold-light);border:1px solid rgba(201,168,76,0.25);border-radius:8px;padding:14px 16px;margin-top:16px;}
+.sim-result-title{font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:var(--navy);margin-bottom:4px;}
+.sim-result-body{font-size:12px;color:var(--ink2);line-height:1.6;}
+
+/* MENTOR MATCH CARD */
+.mentor-match-card{background:var(--surface);border:1.5px solid var(--border);border-radius:12px;padding:22px;box-shadow:var(--shadow);}
+.mentor-match-card.top{border-color:var(--gold);background:linear-gradient(135deg,#fffdf5 0%,var(--surface) 100%);}
+.mentor-score-ring{width:64px;height:64px;border-radius:50%;border:2.5px solid var(--gold);display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--gold-light);flex-shrink:0;}
+.mentor-score-num{font-family:'Syne',sans-serif;font-size:18px;font-weight:800;color:var(--navy);line-height:1;}
+.mentor-score-lbl{font-size:8px;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;}
+.mentor-tag{display:inline-block;font-size:10px;font-weight:700;padding:3px 9px;border-radius:12px;background:var(--navy-light);color:var(--navy);margin:3px 3px 3px 0;}
+.why-matched{background:var(--navy-light);border-radius:7px;padding:12px 14px;margin-top:12px;}
+.why-matched-title{font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--navy);margin-bottom:6px;}
+.why-matched-item{font-size:12px;color:var(--ink2);padding:3px 0;display:flex;gap:6px;line-height:1.5;}
+
+/* MENTOR PORTAL */
+.mentee-profile-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:18px;display:flex;gap:14px;align-items:flex-start;cursor:pointer;transition:all 0.13s;}
+.mentee-profile-card:hover{border-color:var(--navy);background:var(--navy-light);}
+.session-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:14px;margin-bottom:8px;}
+.session-dim-tag{font-size:10px;font-weight:700;padding:3px 9px;border-radius:12px;background:var(--navy);color:var(--gold);display:inline-block;margin-right:5px;}
+
+/* HR EQ */
+.eq-heatmap-cell{width:44px;height:44px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#fff;}
+.eq-heatmap{display:grid;gap:4px;}
+
 /* ANIMATIONS */
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
 @keyframes slideUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
@@ -321,20 +377,88 @@ const SEED_POSITIONS = [
     criteria:[{skill:"Product Strategy",required:80,weight:"Critical"},{skill:"Stakeholder Management",required:75,weight:"High"},{skill:"Data Analysis",required:70,weight:"High"},{skill:"User Research",required:65,weight:"High"},{skill:"Roadmap Planning",required:75,weight:"Critical"},{skill:"Cross-functional Leadership",required:70,weight:"Medium"}]},
 ];
 
+const EQ_DIMS = [
+  {key:"selfAwareness",label:"Self-Awareness",desc:"Understanding own emotions, triggers, and patterns"},
+  {key:"selfRegulation",label:"Self-Regulation",desc:"Managing emotions and responses under pressure"},
+  {key:"empathy",label:"Empathy",desc:"Reading others' emotions and perspectives accurately"},
+  {key:"relationshipManagement",label:"Relationship Management",desc:"Navigating conflict and building trust"},
+  {key:"motivation",label:"Motivation",desc:"Inner drive and resilience through setbacks"},
+];
+
+const SIMULATIONS = [
+  {id:"s1",category:"Conflict",title:"The Disagreement in the Meeting",
+   scenario:"During a team meeting, a colleague publicly challenges your technical decision in front of senior leadership. Their tone is dismissive and they interrupt you twice.",
+   question:"What do you do?",
+   options:[
+     {letter:"A",text:"Let it go for now and speak to them privately afterward to address the tone.",eqMap:{selfRegulation:9,empathy:7,relationshipManagement:8}},
+     {letter:"B",text:"Firmly but calmly respond in the meeting — your reasoning is sound and the team deserves clarity.",eqMap:{selfAwareness:8,selfRegulation:6,motivation:7}},
+     {letter:"C",text:"Go quiet and defer the discussion — conflict in front of leadership is never a good idea.",eqMap:{selfRegulation:4,selfAwareness:4,empathy:5}},
+   ]},
+  {id:"s2",category:"Feedback",title:"The Tough Feedback Conversation",
+   scenario:"A junior team member's work has been consistently below expectations for 6 weeks. They're clearly trying hard but the output just isn't landing. You need to give them feedback.",
+   question:"How do you approach it?",
+   options:[
+     {letter:"A",text:"Wait a bit longer — they seem to be improving and feedback might knock their confidence.",eqMap:{empathy:5,relationshipManagement:4,selfRegulation:5}},
+     {letter:"B",text:"Have a direct, private conversation — share specific examples, be honest about the impact, and ask what they need from you.",eqMap:{empathy:9,relationshipManagement:9,selfAwareness:8}},
+     {letter:"C",text:"Raise it in the next team retrospective so the group can address quality standards together.",eqMap:{empathy:3,relationshipManagement:3,selfRegulation:5}},
+   ]},
+  {id:"s3",category:"Leadership",title:"The Demoralised Team",
+   scenario:"Your team just had a project cancelled after 3 months of work. Morale is low. Two strong team members are quietly looking for other jobs. You have a team meeting in an hour.",
+   question:"How do you open the meeting?",
+   options:[
+     {letter:"A",text:"Acknowledge the loss directly — name how hard the team worked, validate the disappointment, then talk about what's next.",eqMap:{empathy:9,selfAwareness:8,motivation:9,relationshipManagement:8}},
+     {letter:"B",text:"Stay positive — focus on new opportunities ahead and what the team learned from the experience.",eqMap:{motivation:6,empathy:5,selfAwareness:5}},
+     {letter:"C",text:"Keep it brief and businesslike — dwelling on it won't help, and the team needs direction, not processing time.",eqMap:{empathy:3,selfAwareness:4,motivation:5}},
+   ]},
+  {id:"s4",category:"Executive Presence",title:"Disagreeing With a Senior Leader",
+   scenario:"In a leadership meeting, the VP proposes a direction that you believe is wrong — and you have data to back your view. Others in the room are nodding along.",
+   question:"What do you do?",
+   options:[
+     {letter:"A",text:"Raise your concern respectfully in the meeting — share your data, frame it as wanting to stress-test the idea, and invite discussion.",eqMap:{selfAwareness:9,selfRegulation:8,motivation:9,empathy:7}},
+     {letter:"B",text:"Say nothing in the meeting — schedule a private conversation with the VP afterward to share your view.",eqMap:{selfRegulation:6,empathy:6,selfAwareness:6}},
+     {letter:"C",text:"Go along with the direction — you may be missing context and it's not your call.",eqMap:{selfAwareness:3,motivation:3,selfRegulation:4}},
+   ]},
+  {id:"s5",category:"Self-Awareness",title:"The Critical Performance Review",
+   scenario:"Your manager gives you a review that is significantly more negative than you expected. Some of the feedback feels unfair, but some of it resonates uncomfortably.",
+   question:"What is your immediate internal response?",
+   options:[
+     {letter:"A",text:"Feel defensive — you've been working extremely hard and this doesn't reflect the full picture.",eqMap:{selfAwareness:4,selfRegulation:4,empathy:5}},
+     {letter:"B",text:"Sit with the discomfort — try to separate your emotional reaction from the content and identify what rings true.",eqMap:{selfAwareness:9,selfRegulation:9,empathy:7}},
+     {letter:"C",text:"Ask for specific examples for each point so you can assess it objectively before forming a view.",eqMap:{selfAwareness:8,selfRegulation:7,motivation:8}},
+   ]},
+];
+
 const SEED_EMPLOYEES = [
   { id:101, name:"Priya Nair", role:"Senior Engineer", email:"priya@company.com", password:"priya123", type:"Internal", positionId:1, department:"Engineering", experience:"6 years",
     scores:{"System Design":82,"Programming Proficiency":88,"Code Review & Mentoring":65,"Problem Solving":78,"Communication":72,"Agile/Scrum":70},
     quizHistory:[], devPlan:null, certifications:null, selfGapChecks:[],
-    progressLog:[{date:"Jan",score:64},{date:"Feb",score:68},{date:"Mar",score:72},{date:"Apr",score:76},{date:"May",score:80},{date:"Jun",score:82}]},
+    progressLog:[{date:"Jan",score:64},{date:"Feb",score:68},{date:"Mar",score:72},{date:"Apr",score:76},{date:"May",score:80},{date:"Jun",score:82}],
+    eq:{self:{selfAwareness:6,selfRegulation:5,empathy:7,relationshipManagement:4,motivation:8},manager:{selfAwareness:5,selfRegulation:4,empathy:6,relationshipManagement:3,motivation:7},history:[{date:"Jan 2026",overall:5.8},{date:"Feb 2026",overall:6.1},{date:"Mar 2026",overall:6.4}],simulations:[],matchedMentorId:null,matchScore:0}},
   { id:102, name:"James Okafor", role:"Product Lead", email:"james@company.com", password:"james123", type:"Internal", positionId:2, department:"Product", experience:"5 years",
     scores:{"Product Strategy":75,"Stakeholder Management":80,"Data Analysis":68,"User Research":72,"Roadmap Planning":78,"Cross-functional Leadership":65},
     quizHistory:[], devPlan:null, certifications:null, selfGapChecks:[],
-    progressLog:[{date:"Jan",score:60},{date:"Feb",score:63},{date:"Mar",score:66},{date:"Apr",score:70},{date:"May",score:73},{date:"Jun",score:75}]},
+    progressLog:[{date:"Jan",score:60},{date:"Feb",score:63},{date:"Mar",score:66},{date:"Apr",score:70},{date:"May",score:73},{date:"Jun",score:75}],
+    eq:{self:{selfAwareness:7,selfRegulation:6,empathy:5,relationshipManagement:7,motivation:6},manager:{selfAwareness:6,selfRegulation:5,empathy:5,relationshipManagement:6,motivation:6},history:[{date:"Jan 2026",overall:6.0},{date:"Feb 2026",overall:6.2},{date:"Mar 2026",overall:6.5}],simulations:[],matchedMentorId:null,matchScore:0}},
   { id:103, name:"Sofia Mendez", role:"Junior Engineer", email:"sofia@company.com", password:"sofia123", type:"Internal", positionId:1, department:"Engineering", experience:"2 years",
     scores:{"System Design":50,"Programming Proficiency":70,"Code Review & Mentoring":42,"Problem Solving":65,"Communication":58,"Agile/Scrum":60},
     quizHistory:[], devPlan:null, certifications:null, selfGapChecks:[],
-    progressLog:[{date:"Jan",score:42},{date:"Feb",score:45},{date:"Mar",score:48},{date:"Apr",score:51},{date:"May",score:56},{date:"Jun",score:58}]},
+    progressLog:[{date:"Jan",score:42},{date:"Feb",score:45},{date:"Mar",score:48},{date:"Apr",score:51},{date:"May",score:56},{date:"Jun",score:58}],
+    eq:{self:{selfAwareness:5,selfRegulation:4,empathy:6,relationshipManagement:4,motivation:7},manager:{selfAwareness:4,selfRegulation:3,empathy:5,relationshipManagement:3,motivation:6},history:[{date:"Jan 2026",overall:5.0},{date:"Feb 2026",overall:5.2},{date:"Mar 2026",overall:5.4}],simulations:[],matchedMentorId:null,matchScore:0}},
 ];
+
+const SEED_MENTORS = [
+  { id:201, name:"Arjun Sharma", email:"arjun@mentor.com", password:"arjun123", role:"mentor", title:"Engineering Director", company:"TechCorp", experience:"14 years",
+    bio:"I've led engineering teams of 50+ across 3 continents. I specialise in helping engineers develop the confidence and presence they need to step into leadership.",
+    strengthTags:["Conflict Navigator","Executive Presence Coach","Resilience Driver"],
+    strengthScores:{selfAwareness:9,selfRegulation:9,empathy:7,relationshipManagement:9,motivation:8},
+    matchedMenteeIds:[], sessions:[], effectivenessRating:null},
+  { id:202, name:"Leila Hassan", email:"leila@mentor.com", password:"leila123", role:"mentor", title:"Chief People Officer", company:"ScaleUp Inc.", experience:"18 years",
+    bio:"I've built people functions from scratch at three startups. My passion is helping individuals understand their emotional patterns before those patterns hold them back.",
+    strengthTags:["Self-Awareness Champion","Empathy Builder","Conflict Navigator"],
+    strengthScores:{selfAwareness:10,selfRegulation:8,empathy:10,relationshipManagement:8,motivation:7},
+    matchedMenteeIds:[], sessions:[], effectivenessRating:null},
+];
+
 
 const SEED_NOTIFICATIONS = [
   { id:1, to:"hr", from:"priya@company.com", title:"Self Gap Check Completed", body:"Priya Nair completed a self-initiated skill gap check for Senior Software Engineer.", time:"2h ago", read:false },
@@ -371,39 +495,44 @@ export default function TalentIQ() {
   const [session, setSession] = useState(()=>loadState("tiq_session",null));
   const [positions, setPositions] = useState(()=>loadState("tiq_positions",SEED_POSITIONS));
   const [employees, setEmployees] = useState(()=>loadState("tiq_employees",SEED_EMPLOYEES));
+  const [mentors, setMentors] = useState(()=>loadState("tiq_mentors",SEED_MENTORS));
   const [notifications, setNotifications] = useState(()=>loadState("tiq_notifications",SEED_NOTIFICATIONS));
   const [toast, setToast] = useState(null);
 
   useEffect(()=>saveState("tiq_session",session),[session]);
   useEffect(()=>saveState("tiq_positions",positions),[positions]);
   useEffect(()=>saveState("tiq_employees",employees),[employees]);
+  useEffect(()=>saveState("tiq_mentors",mentors),[mentors]);
   useEffect(()=>saveState("tiq_notifications",notifications),[notifications]);
 
   const showToast=msg=>{setToast(msg);setTimeout(()=>setToast(null),3000);};
   const logout=()=>{saveState("tiq_session",null);setSession(null);};
   const updateEmployee=(id,patch)=>setEmployees(es=>es.map(e=>e.id===id?{...e,...patch}:e));
+  const updateMentor=(id,patch)=>setMentors(ms=>ms.map(m=>m.id===id?{...m,...patch}:m));
 
   const addNotification=(to,from,title,body)=>{
     const n={id:Date.now(),to,from,title,body,time:"Just now",read:false};
     setNotifications(ns=>[n,...ns]);
   };
 
-  if(!session) return <LoginScreen employees={employees} onLogin={s=>{saveState("tiq_session",s);setSession(s);}}/>;
+  if(!session) return <LoginScreen employees={employees} mentors={mentors} onLogin={s=>{saveState("tiq_session",s);setSession(s);}}/>;
 
   return (
     <>
       <style>{STYLES}</style>
       {session.role==="hr"
-        ? <HRApp session={session} positions={positions} setPositions={setPositions} employees={employees} setEmployees={setEmployees} notifications={notifications} setNotifications={setNotifications} addNotification={addNotification} showToast={showToast} logout={logout} updateEmployee={updateEmployee}/>
-        : <EmployeeApp session={session} positions={positions} employees={employees} updateEmployee={updateEmployee} notifications={notifications} setNotifications={setNotifications} addNotification={addNotification} showToast={showToast} logout={logout}/>
+        ? <HRApp session={session} positions={positions} setPositions={setPositions} employees={employees} setEmployees={setEmployees} mentors={mentors} setMentors={setMentors} notifications={notifications} setNotifications={setNotifications} addNotification={addNotification} showToast={showToast} logout={logout} updateEmployee={updateEmployee} updateMentor={updateMentor}/>
+        : session.role==="mentor"
+        ? <MentorApp session={session} mentors={mentors} employees={employees} updateMentor={updateMentor} updateEmployee={updateEmployee} notifications={notifications} setNotifications={setNotifications} addNotification={addNotification} showToast={showToast} logout={logout}/>
+        : <EmployeeApp session={session} positions={positions} employees={employees} mentors={mentors} updateEmployee={updateEmployee} notifications={notifications} setNotifications={setNotifications} addNotification={addNotification} showToast={showToast} logout={logout}/>
       }
-      {toast&&<div style={{position:"fixed",bottom:20,right:20,background:avatarBg("N"),color:"#fff",padding:"11px 20px",borderRadius:8,fontSize:12,fontWeight:600,zIndex:999,animation:"slideUp 0.2s ease",boxShadow:"0 8px 24px rgba(15,31,61,0.25)",display:"flex",alignItems:"center",gap:8}}><span style={{color:"var(--gold)"}}>✓</span>{toast}</div>}
+      {toast&&<div style={{position:"fixed",bottom:20,right:20,background:"var(--navy)",color:"#fff",padding:"11px 20px",borderRadius:8,fontSize:12,fontWeight:600,zIndex:999,animation:"slideUp 0.2s ease",boxShadow:"0 8px 24px rgba(15,31,61,0.25)",display:"flex",alignItems:"center",gap:8}}><span style={{color:"var(--gold)"}}>✓</span>{toast}</div>}
     </>
   );
 }
 
 /* ─── LOGIN ──────────────────────────────────────────────────────────────── */
-function LoginScreen({employees,onLogin}){
+function LoginScreen({employees,mentors,onLogin}){
   const [role,setRole]=useState("hr");
   const [email,setEmail]=useState("");
   const [pw,setPw]=useState("");
@@ -413,6 +542,10 @@ function LoginScreen({employees,onLogin}){
     if(role==="hr"){
       if(email==="hr@company.com"&&pw==="hr123") onLogin({role:"hr",user:{name:"HR Admin",email}});
       else setErr("Try: hr@company.com / hr123");
+    } else if(role==="mentor"){
+      const m=mentors.find(m=>m.email===email&&m.password===pw);
+      if(m) onLogin({role:"mentor",user:m});
+      else setErr("Try: arjun@mentor.com / arjun123");
     } else {
       const emp=employees.find(e=>e.email===email&&e.password===pw);
       if(emp) onLogin({role:"employee",user:emp});
@@ -427,26 +560,31 @@ function LoginScreen({employees,onLogin}){
           <div className="login-brand"><div className="login-brand-name">Talent<span>IQ</span></div><div className="login-brand-tag">HR Intelligence Platform</div></div>
           <div className="login-hero">
             <h1>Your career,<br/><em>intelligently</em><br/>navigated.</h1>
-            <p>AI-powered skill assessment, gap analysis, and development planning — built for HR and employees alike.</p>
+            <p>AI-powered skill assessment, EQ profiling, mentor matching, and development planning — built for HR, employees, and mentors.</p>
           </div>
-          <div className="login-badges">{["JD-Based Skill Extraction","Role-Based Access","Self Gap Analysis","MDP Linked to Gaps","Progress Tracking"].map(b=><div className="login-badge" key={b}>{b}</div>)}</div>
+          <div className="login-badges">{["EQ Assessment","360° Profiling","Mentor Matching","Skill Gap Analysis","Growth Analytics"].map(b=><div className="login-badge" key={b}>{b}</div>)}</div>
         </div>
         <div className="login-right">
           <div className="login-card">
             <h2>Welcome back</h2>
             <p>Sign in to access your TalentIQ dashboard.</p>
-            <div className="role-pick">
-              {[{id:"hr",icon:"◈",label:"HR / Admin",sub:"Full platform access"},{id:"employee",icon:"◎",label:"Employee",sub:"Personal dashboard"}].map(r=>(
+            <div style={{display:"grid",gridTemplateColumns:"1fr 1fr 1fr",gap:8,marginBottom:24}}>
+              {[{id:"hr",icon:"◈",label:"HR / Admin",sub:"Full platform"},{id:"employee",icon:"◎",label:"Employee",sub:"My dashboard"},{id:"mentor",icon:"⊕",label:"Mentor",sub:"Mentor portal"}].map(r=>(
                 <div key={r.id} className={`role-btn ${role===r.id?"selected":""}`} onClick={()=>setRole(r.id)}>
                   <div className="role-btn-icon">{r.icon}</div><div className="role-btn-label">{r.label}</div><div className="role-btn-sub">{r.sub}</div>
                 </div>
               ))}
             </div>
             {err&&<div className="alert a-warn" style={{marginBottom:14}}><span>⚠</span>{err}</div>}
-            <div className="form-group"><label className="form-lbl">Email</label><input className="form-input" type="email" placeholder={role==="hr"?"hr@company.com":"priya@company.com"} value={email} onChange={e=>setEmail(e.target.value)}/></div>
+            <div className="form-group"><label className="form-lbl">Email</label><input className="form-input" type="email" placeholder={role==="hr"?"hr@company.com":role==="mentor"?"arjun@mentor.com":"priya@company.com"} value={email} onChange={e=>setEmail(e.target.value)}/></div>
             <div className="form-group"><label className="form-lbl">Password</label><input className="form-input" type="password" placeholder="••••••••" value={pw} onChange={e=>setPw(e.target.value)} onKeyDown={e=>e.key==="Enter"&&login()}/></div>
             <button className="btn btn-primary" style={{width:"100%",justifyContent:"center",padding:"12px"}} onClick={login}>Sign In →</button>
-            <div style={{marginTop:14,padding:12,background:"var(--surface2)",borderRadius:8,fontSize:11,color:"var(--muted)",lineHeight:1.7,border:"1px solid var(--border)"}}><strong style={{color:"var(--navy)"}}>Demo:</strong> HR: hr@company.com / hr123 · Employee: priya@company.com / priya123</div>
+            <div style={{marginTop:14,padding:12,background:"var(--surface2)",borderRadius:8,fontSize:11,color:"var(--muted)",lineHeight:1.7,border:"1px solid var(--border)"}}>
+              <strong style={{color:"var(--navy)"}}>Demo accounts:</strong><br/>
+              HR: hr@company.com / hr123<br/>
+              Employee: priya@company.com / priya123<br/>
+              Mentor: arjun@mentor.com / arjun123
+            </div>
           </div>
         </div>
       </div>
@@ -455,7 +593,7 @@ function LoginScreen({employees,onLogin}){
 }
 
 /* ════════════ HR APP ══════════════════════════════════════════════════════ */
-function HRApp({session,positions,setPositions,employees,setEmployees,notifications,setNotifications,addNotification,showToast,logout,updateEmployee}){
+function HRApp({session,positions,setPositions,employees,setEmployees,mentors,setMentors,notifications,setNotifications,addNotification,showToast,logout,updateEmployee,updateMentor}){
   const [view,setView]=useState("dashboard");
   const [modal,setModal]=useState(null);
   const [selected,setSelected]=useState(null);
@@ -464,18 +602,22 @@ function HRApp({session,positions,setPositions,employees,setEmployees,notificati
   const close=()=>{setModal(null);setSelected(null);};
   const addPos=pos=>{setPositions(p=>[...p,{...pos,id:Date.now()}]);close();showToast("Position created");};
   const updatePos=pos=>{setPositions(ps=>ps.map(p=>p.id===pos.id?pos:p));close();showToast("Position updated");};
-  const addEmp=emp=>{setEmployees(e=>[...e,{...emp,id:Date.now(),quizHistory:[],devPlan:null,certifications:null,selfGapChecks:[],progressLog:[]}]);close();showToast("Employee added");};
+  const addEmp=emp=>{setEmployees(e=>[...e,{...emp,id:Date.now(),quizHistory:[],devPlan:null,certifications:null,selfGapChecks:[],progressLog:[],eq:{self:{selfAwareness:0,selfRegulation:0,empathy:0,relationshipManagement:0,motivation:0},manager:{selfAwareness:0,selfRegulation:0,empathy:0,relationshipManagement:0,motivation:0},history:[],simulations:[],matchedMentorId:null,matchScore:0}}]);close();showToast("Employee added");};
   const markAllRead=()=>setNotifications(ns=>ns.map(n=>n.to==="hr"?{...n,read:true}:n));
 
   const NAV=[
     {id:"dashboard",icon:"⊞",label:"Dashboard"},
     {id:"positions",icon:"◈",label:"Positions",badge:positions.length},
     {id:"employees",icon:"◎",label:"Employees",badge:employees.length},
+    {id:"eq",icon:"◑",label:"EQ Analytics"},
+    {id:"mentors",icon:"⊕",label:"Mentor Management"},
     {id:"compare",icon:"⇄",label:"Compare"},
     {id:"team",icon:"⊕",label:"Team Overview"},
     {id:"reports",icon:"↗",label:"Reports"},
     {id:"notifications",icon:"🔔",label:"Notifications",badgeRed:unread},
   ];
+
+  const titles={dashboard:"HR Dashboard",positions:"Positions & Skill Criteria",employees:"Employees & Candidates",eq:"EQ Analytics",mentors:"Mentor Management",compare:"Candidate Comparison",team:"Team Overview",reports:"Reports",notifications:"Notifications"};
 
   return(
     <div className="app-shell fade-in">
@@ -493,7 +635,7 @@ function HRApp({session,positions,setPositions,employees,setEmployees,notificati
         </div>
         <div className="sidebar-foot">
           <div className="s-user">
-            <div className="s-avatar" style={{background:"var(--gold)"}}><span style={{color:avatarBg("N")}}>HR</span></div>
+            <div className="s-avatar" style={{background:"var(--gold)"}}><span style={{color:"var(--navy)"}}>HR</span></div>
             <div><div className="s-name">{session.user.name}</div><div className="s-role">Administrator</div></div>
             <button className="logout-btn" onClick={logout}>⏻</button>
           </div>
@@ -501,7 +643,7 @@ function HRApp({session,positions,setPositions,employees,setEmployees,notificati
       </aside>
       <div className="main">
         <div className="topbar">
-          <div><div className="topbar-title">{{dashboard:"HR Dashboard",positions:"Positions & Skill Criteria",employees:"Employees & Candidates",compare:"Candidate Comparison",team:"Team Overview",reports:"Reports",notifications:"Notifications"}[view]}</div><div className="topbar-sub">TalentIQ HR Platform</div></div>
+          <div><div className="topbar-title">{titles[view]}</div><div className="topbar-sub">TalentIQ HR Platform</div></div>
           <div style={{display:"flex",gap:8}}>
             {view==="positions"&&<button className="btn btn-primary btn-sm" onClick={()=>open("newPos")}>＋ New Position</button>}
             {view==="employees"&&<button className="btn btn-primary btn-sm" onClick={()=>open("newEmp")}>＋ Add Employee</button>}
@@ -511,6 +653,8 @@ function HRApp({session,positions,setPositions,employees,setEmployees,notificati
           {view==="dashboard"&&<HRDashboard positions={positions} employees={employees} open={open} setView={setView}/>}
           {view==="positions"&&<HRPositions positions={positions} employees={employees} open={open}/>}
           {view==="employees"&&<HREmployees employees={employees} positions={positions} open={open}/>}
+          {view==="eq"&&<HREQAnalytics employees={employees} mentors={mentors} updateEmployee={updateEmployee} showToast={showToast}/>}
+          {view==="mentors"&&<HRMentorManagement employees={employees} mentors={mentors} updateEmployee={updateEmployee} updateMentor={updateMentor} addNotification={addNotification} showToast={showToast}/>}
           {view==="compare"&&<HRCompare employees={employees} positions={positions}/>}
           {view==="team"&&<HRTeam employees={employees} positions={positions}/>}
           {view==="reports"&&<HRReports employees={employees} positions={positions}/>}
@@ -829,6 +973,271 @@ function HRReports({employees,positions}){
           })}</tbody>
         </table>
       </div>
+    </div>
+  );
+}
+
+/* ─── HR EQ ANALYTICS ────────────────────────────────────────────────────── */
+function HREQAnalytics({employees,mentors,updateEmployee,showToast}){
+  const [selectedEmp,setSelectedEmp]=useState(null);
+  const [mgrScores,setMgrScores]=useState({selfAwareness:5,selfRegulation:5,empathy:5,relationshipManagement:5,motivation:5});
+  const [saving,setSaving]=useState(false);
+
+  function openRate(emp){
+    setSelectedEmp(emp);
+    setMgrScores(emp.eq?.manager||{selfAwareness:5,selfRegulation:5,empathy:5,relationshipManagement:5,motivation:5});
+  }
+
+  function saveManagerScores(){
+    setSaving(true);
+    const newEq={...(selectedEmp.eq||{}),manager:mgrScores,history:[...(selectedEmp.eq?.history||[]),{date:new Date().toLocaleDateString("en-US",{month:"short",year:"numeric"}),overall:Math.round(Object.values(mgrScores).reduce((a,b)=>a+b,0)/5*10)/10}]};
+    updateEmployee(selectedEmp.id,{eq:newEq});
+    setSaving(false);setSelectedEmp(null);showToast("Manager EQ scores saved");
+  }
+
+  function calcOverall(scores){return scores?Math.round(Object.values(scores).reduce((a,b)=>a+b,0)/5*10)/10:0;}
+  function eqColor(v){return v>=8?"var(--green)":v>=6?"var(--gold)":v>=4?"var(--amber)":"var(--red)";}
+
+  return(
+    <div>
+      <div className="alert a-info" style={{marginBottom:20}}><span>◑</span>Rate employees on each EQ dimension as their manager. Employees rate themselves — the 360° gap reveals blind spots neither party can see alone.</div>
+      <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:16,marginBottom:16}}>
+        <div className="card">
+          <div className="card-hd"><div className="card-title">Team EQ Overview</div></div>
+          <div className="card-body">
+            {EQ_DIMS.map(dim=>{
+              const vals=employees.map(e=>e.eq?.self?.[dim.key]||0).filter(v=>v>0);
+              const avg=vals.length?Math.round(vals.reduce((a,b)=>a+b,0)/vals.length*10)/10:0;
+              const mgrVals=employees.map(e=>e.eq?.manager?.[dim.key]||0).filter(v=>v>0);
+              const mgrAvg=mgrVals.length?Math.round(mgrVals.reduce((a,b)=>a+b,0)/mgrVals.length*10)/10:0;
+              return(
+                <div key={dim.key} style={{marginBottom:14}}>
+                  <div style={{display:"flex",justifyContent:"space-between",marginBottom:5}}>
+                    <span style={{fontSize:12,fontWeight:600}}>{dim.label}</span>
+                    <div style={{display:"flex",gap:10}}>
+                      <span style={{fontSize:11,color:"var(--navy)",fontWeight:700}}>Self: {avg||"—"}</span>
+                      <span style={{fontSize:11,color:"#8a6d1f",fontWeight:700}}>Mgr: {mgrAvg||"—"}</span>
+                    </div>
+                  </div>
+                  <div style={{height:6,background:"var(--border)",borderRadius:3,overflow:"hidden",marginBottom:3}}>
+                    <div style={{height:"100%",width:`${avg*10}%`,background:"var(--navy)",borderRadius:3}}/>
+                  </div>
+                  <div style={{height:4,background:"var(--border)",borderRadius:3,overflow:"hidden"}}>
+                    <div style={{height:"100%",width:`${mgrAvg*10}%`,background:"var(--gold)",borderRadius:3}}/>
+                  </div>
+                </div>
+              );
+            })}
+            <div style={{display:"flex",gap:14,marginTop:8,fontSize:11}}>
+              <span style={{display:"flex",alignItems:"center",gap:4}}><span style={{width:10,height:10,background:"var(--navy)",borderRadius:2,display:"inline-block"}}/> Self-rated</span>
+              <span style={{display:"flex",alignItems:"center",gap:4}}><span style={{width:10,height:10,background:"var(--gold)",borderRadius:2,display:"inline-block"}}/> Manager-rated</span>
+            </div>
+          </div>
+        </div>
+        <div className="card">
+          <div className="card-hd"><div className="card-title">360° Gap Flags</div></div>
+          <div className="card-body">
+            {employees.map(emp=>{
+              const self=emp.eq?.self;const mgr=emp.eq?.manager;
+              if(!self||!mgr) return null;
+              const gaps=EQ_DIMS.map(d=>({label:d.label,gap:Math.abs((self[d.key]||0)-(mgr[d.key]||0))})).filter(g=>g.gap>=3);
+              if(!gaps.length) return(
+                <div key={emp.id} style={{display:"flex",justifyContent:"space-between",padding:"8px 0",borderBottom:"1px solid var(--border)"}}>
+                  <span style={{fontSize:12,fontWeight:600}}>{emp.name}</span><span className="tag t-green">Aligned</span>
+                </div>
+              );
+              return(
+                <div key={emp.id} style={{padding:"10px 0",borderBottom:"1px solid var(--border)"}}>
+                  <div style={{display:"flex",justifyContent:"space-between",marginBottom:5}}>
+                    <span style={{fontSize:12,fontWeight:600}}>{emp.name}</span><span className="tag t-amber">{gaps.length} gap{gaps.length>1?"s":""}</span>
+                  </div>
+                  {gaps.map(g=><div key={g.label} style={{fontSize:11,color:"var(--amber)",marginLeft:8}}>⚠ {g.label}: {g.gap} point gap</div>)}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+
+      <div className="card">
+        <div className="card-hd"><div className="card-title">Rate Employee EQ (Manager View)</div></div>
+        <div className="card-body">
+          <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fill,minmax(280px,1fr))",gap:14}}>
+            {employees.map(emp=>{
+              const overall=calcOverall(emp.eq?.manager);
+              return(
+                <div key={emp.id} style={{border:"1px solid var(--border)",borderRadius:9,padding:14,background:"var(--surface)"}}>
+                  <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:10}}>
+                    <div style={{display:"flex",gap:9,alignItems:"center"}}>
+                      <div className="s-avatar" style={{background:avatarBg(emp.name),width:32,height:32,borderRadius:7,fontSize:11}}>{initials(emp.name)}</div>
+                      <div><div style={{fontSize:12,fontWeight:600}}>{emp.name}</div><div style={{fontSize:10,color:"var(--muted)"}}>{emp.role}</div></div>
+                    </div>
+                    <div style={{textAlign:"center"}}>
+                      <div style={{fontFamily:"Syne",fontSize:18,fontWeight:800,color:overall?eqColor(overall):"var(--muted)"}}>{overall||"—"}</div>
+                      <div style={{fontSize:9,color:"var(--muted)"}}>MGR EQ</div>
+                    </div>
+                  </div>
+                  <button className="btn btn-primary btn-sm" style={{width:"100%",justifyContent:"center"}} onClick={()=>openRate(emp)}>◑ Rate EQ</button>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+
+      {selectedEmp&&(
+        <div className="modal-overlay"><div className="modal">
+          <div className="modal-hd"><div className="modal-title">Manager EQ Rating — {selectedEmp.name}</div><button className="modal-x" onClick={()=>setSelectedEmp(null)}>×</button></div>
+          <div className="modal-body">
+            <div className="alert a-info" style={{marginBottom:16}}><span>ℹ</span>Rate from 1 (significant gap) to 10 (exceptional strength). Be honest — this creates the 360° view the mentoring system needs.</div>
+            {EQ_DIMS.map(dim=>(
+              <div key={dim.key} className="eq-slider-wrap">
+                <div className="eq-slider-hd"><span className="eq-slider-label">{dim.label}</span><span className="eq-slider-val">{mgrScores[dim.key]}/10</span></div>
+                <input type="range" min={1} max={10} value={mgrScores[dim.key]} className="eq-slider" onChange={e=>setMgrScores(s=>({...s,[dim.key]:Number(e.target.value)}))}/>
+                <div className="eq-dim-desc">{dim.desc}</div>
+              </div>
+            ))}
+          </div>
+          <div className="modal-ft"><button className="btn btn-ghost" onClick={()=>setSelectedEmp(null)}>Cancel</button><button className="btn btn-primary" onClick={saveManagerScores} disabled={saving}>Save Ratings</button></div>
+        </div></div>
+      )}
+    </div>
+  );
+}
+
+/* ─── HR MENTOR MANAGEMENT ───────────────────────────────────────────────── */
+function HRMentorManagement({employees,mentors,updateEmployee,updateMentor,addNotification,showToast}){
+  const [selectedEmp,setSelectedEmp]=useState(null);
+
+  function calcMatchScore(emp,mentor){
+    const self=emp.eq?.self||{};const mgr=emp.eq?.manager||{};
+    const mStr=mentor.strengthScores||{};
+    let eqGapScore=0;
+    EQ_DIMS.forEach(d=>{
+      const empScore=(self[d.key]||0+mgr[d.key]||0)/2;
+      const mentorStr=mStr[d.key]||5;
+      const gap=Math.max(0,10-empScore);
+      eqGapScore+=gap*(mentorStr/10);
+    });
+    const simScore=emp.eq?.simulations?.length>0?70:50;
+    return Math.min(99,Math.round(eqGapScore*6+simScore*0.4));
+  }
+
+  function matchMentee(emp,mentor){
+    const score=calcMatchScore(emp,mentor);
+    updateEmployee(emp.id,{eq:{...emp.eq,matchedMentorId:mentor.id,matchScore:score}});
+    updateMentor(mentor.id,{matchedMenteeIds:[...(mentor.matchedMenteeIds||[]),emp.id]});
+    addNotification(emp.email,"hr","Mentor Match Found",`You've been matched with ${mentor.name} — your EQ-based mentor. Check your Mentor tab to view your match.`);
+    addNotification(mentor.email,"hr","New Mentee Match",`You've been matched with ${emp.name}. Log in to your Mentor Portal to view their profile and accept or pass.`);
+    showToast(`${emp.name} matched with ${mentor.name}`);
+    setSelectedEmp(null);
+  }
+
+  function unmatch(emp){
+    const mId=emp.eq?.matchedMentorId;
+    if(mId){const m=mentors.find(x=>x.id===mId);if(m)updateMentor(mId,{matchedMenteeIds:(m.matchedMenteeIds||[]).filter(id=>id!==emp.id)});}
+    updateEmployee(emp.id,{eq:{...emp.eq,matchedMentorId:null,matchScore:0}});
+    showToast("Match removed");
+  }
+
+  return(
+    <div>
+      <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:16,marginBottom:16}}>
+        <div className="card">
+          <div className="card-hd"><div className="card-title">Available Mentors</div></div>
+          <div className="card-body">
+            {mentors.map(m=>(
+              <div key={m.id} style={{padding:"12px 0",borderBottom:"1px solid var(--border)"}}>
+                <div style={{display:"flex",gap:10,alignItems:"flex-start"}}>
+                  <div className="s-avatar" style={{background:avatarBg(m.name),width:36,height:36,borderRadius:8,fontSize:12}}>{initials(m.name)}</div>
+                  <div style={{flex:1}}>
+                    <div style={{fontSize:13,fontWeight:600}}>{m.name}</div>
+                    <div style={{fontSize:11,color:"var(--muted)",marginBottom:6}}>{m.title} · {m.company}</div>
+                    <div style={{display:"flex",flexWrap:"wrap",gap:4}}>
+                      {m.strengthTags.map(t=><span key={t} className="mentor-tag">{t}</span>)}
+                    </div>
+                  </div>
+                  <div style={{textAlign:"center"}}>
+                    <div style={{fontFamily:"Syne",fontSize:16,fontWeight:800,color:"var(--navy)"}}>{(m.matchedMenteeIds||[]).length}</div>
+                    <div style={{fontSize:9,color:"var(--muted)"}}>MENTEES</div>
+                  </div>
+                </div>
+                <div style={{marginTop:10,display:"grid",gridTemplateColumns:"repeat(5,1fr)",gap:4}}>
+                  {EQ_DIMS.map(d=>(
+                    <div key={d.key} style={{textAlign:"center",background:"var(--navy-light)",borderRadius:5,padding:"4px 2px"}}>
+                      <div style={{fontFamily:"Syne",fontSize:13,fontWeight:800,color:"var(--navy)"}}>{m.strengthScores?.[d.key]||0}</div>
+                      <div style={{fontSize:8,color:"var(--muted)"}}>{d.label.split(" ")[0]}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="card">
+          <div className="card-hd"><div className="card-title">Employees — Match Status</div></div>
+          <div className="card-body">
+            {employees.map(emp=>{
+              const matched=mentors.find(m=>m.id===emp.eq?.matchedMentorId);
+              return(
+                <div key={emp.id} style={{padding:"10px 0",borderBottom:"1px solid var(--border)"}}>
+                  <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:matched?6:0}}>
+                    <div style={{display:"flex",gap:8,alignItems:"center"}}>
+                      <div className="s-avatar" style={{background:avatarBg(emp.name),width:28,height:28,borderRadius:6,fontSize:10}}>{initials(emp.name)}</div>
+                      <div><div style={{fontSize:12,fontWeight:600}}>{emp.name}</div><div style={{fontSize:10,color:"var(--muted)"}}>{emp.role}</div></div>
+                    </div>
+                    {matched
+                      ?<div style={{display:"flex",gap:6,alignItems:"center"}}>
+                        <span className="tag t-green">Matched</span>
+                        <button className="btn btn-danger btn-xs" onClick={()=>unmatch(emp)}>Remove</button>
+                       </div>
+                      :<button className="btn btn-primary btn-xs" onClick={()=>setSelectedEmp(emp)}>Match →</button>
+                    }
+                  </div>
+                  {matched&&<div style={{fontSize:11,color:"var(--muted)",marginLeft:36}}>Mentor: {matched.name} · Score: <strong style={{color:"var(--gold)"}}>{emp.eq?.matchScore}</strong></div>}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+
+      {selectedEmp&&(
+        <div className="modal-overlay"><div className="modal modal-wide">
+          <div className="modal-hd"><div><div className="modal-title">Match a Mentor — {selectedEmp.name}</div><div style={{fontSize:11,color:"var(--muted)",marginTop:2}}>Ranked by EQ compatibility score</div></div><button className="modal-x" onClick={()=>setSelectedEmp(null)}>×</button></div>
+          <div className="modal-body">
+            {mentors.map((m,i)=>{
+              const score=calcMatchScore(selectedEmp,m);
+              const self=selectedEmp.eq?.self||{};const mgr=selectedEmp.eq?.manager||{};
+              return(
+                <div key={m.id} className={`mentor-match-card ${i===0?"top":""}`} style={{marginBottom:12}}>
+                  <div style={{display:"flex",gap:14,alignItems:"flex-start"}}>
+                    <div className="mentor-score-ring"><div className="mentor-score-num">{score}</div><div className="mentor-score-lbl">Match</div></div>
+                    <div style={{flex:1}}>
+                      <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start"}}>
+                        <div>
+                          <div style={{fontFamily:"Syne",fontSize:15,fontWeight:700,color:"var(--navy)"}}>{m.name} {i===0&&<span className="tag t-gold" style={{fontSize:9,marginLeft:4}}>Best Match</span>}</div>
+                          <div style={{fontSize:11,color:"var(--muted)",marginBottom:6}}>{m.title} · {m.company}</div>
+                          <div>{m.strengthTags.map(t=><span key={t} className="mentor-tag">{t}</span>)}</div>
+                        </div>
+                        <button className="btn btn-gold btn-sm" onClick={()=>matchMentee(selectedEmp,m)}>Confirm Match</button>
+                      </div>
+                      <div className="why-matched">
+                        <div className="why-matched-title">Why This Match</div>
+                        {EQ_DIMS.filter(d=>{const s=(self[d.key]||0+mgr[d.key]||0)/2;return s<6&&(m.strengthScores?.[d.key]||0)>=8;}).map(d=>(
+                          <div key={d.key} className="why-matched-item"><span style={{color:"var(--gold)"}}>→</span><span><strong>{d.label}:</strong> {selectedEmp.name}'s average is {Math.round(((self[d.key]||0)+(mgr[d.key]||0))/2*10)/10}/10 — {m.name} scores {m.strengthScores?.[d.key]}/10 here.</span></div>
+                        ))}
+                        {EQ_DIMS.filter(d=>{const s=(self[d.key]||0+mgr[d.key]||0)/2;return s<6&&(m.strengthScores?.[d.key]||0)>=8;}).length===0&&<div className="why-matched-item"><span style={{color:"var(--gold)"}}>→</span><span>Good overall EQ compatibility across dimensions.</span></div>}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+          <div className="modal-ft"><button className="btn btn-ghost" onClick={()=>setSelectedEmp(null)}>Cancel</button></div>
+        </div></div>
+      )}
     </div>
   );
 }
@@ -1163,23 +1572,29 @@ function PositionDetailModal({position,employees,onClose,onEdit}){
 }
 
 /* ════════════ EMPLOYEE APP ════════════════════════════════════════════════ */
-function EmployeeApp({session,positions,employees,updateEmployee,notifications,setNotifications,addNotification,showToast,logout}){
+function EmployeeApp({session,positions,employees,mentors,updateEmployee,notifications,setNotifications,addNotification,showToast,logout}){
   const [view,setView]=useState("home");
   const emp=employees.find(e=>e.id===session.user.id)||session.user;
   const pos=positions.find(p=>p.id===emp.positionId);
   const fit=calcFit(emp,pos);
   const unread=notifications.filter(n=>n.to===emp.email&&!n.read).length;
   const markRead=()=>setNotifications(ns=>ns.map(n=>n.to===emp.email?{...n,read:true}:n));
+  const matchedMentor=mentors?.find(m=>m.id===emp.eq?.matchedMentorId);
 
   const NAV=[
     {id:"home",icon:"⊞",label:"My Dashboard"},
     {id:"skills",icon:"◎",label:"My Skills"},
     {id:"quiz",icon:"◈",label:"Self-Assessment"},
     {id:"gap",icon:"⊘",label:"Skill Gap Check"},
+    {id:"eq",icon:"◑",label:"EQ Profile"},
+    {id:"simulations",icon:"⊛",label:"Simulations"},
+    {id:"mentor",icon:"⊕",label:"My Mentor",badge:matchedMentor?1:0},
     {id:"progress",icon:"↗",label:"My Progress"},
     {id:"devplan",icon:"⊕",label:"Development Plan"},
     {id:"notif",icon:"🔔",label:"Notifications",badgeRed:unread},
   ];
+
+  const titles={home:"My Dashboard",skills:"My Skills",quiz:"Self-Assessment",gap:"Skill Gap Check",eq:"My EQ Profile",simulations:"Situational Simulations",mentor:"My Mentor",progress:"My Progress",devplan:"Development Plan",notif:"Notifications"};
 
   return(
     <div className="app-shell fade-in">
@@ -1190,6 +1605,7 @@ function EmployeeApp({session,positions,employees,updateEmployee,notifications,s
           {NAV.map(n=>(
             <button key={n.id} className={`nav-item ${view===n.id?"active":""}`} onClick={()=>setView(n.id)}>
               <span className="nav-icon">{n.icon}</span>{n.label}
+              {n.badge>0&&<span className="nav-pill">{n.badge}</span>}
               {n.badgeRed>0&&<span className="nav-pill-red">{n.badgeRed}</span>}
             </button>
           ))}
@@ -1204,13 +1620,16 @@ function EmployeeApp({session,positions,employees,updateEmployee,notifications,s
       </aside>
       <div className="main">
         <div className="topbar">
-          <div><div className="topbar-title">{{home:"My Dashboard",skills:"My Skills",quiz:"Self-Assessment",gap:"Skill Gap Check",progress:"My Progress",devplan:"Development Plan",notif:"Notifications"}[view]}</div><div className="topbar-sub">Your personal career intelligence</div></div>
+          <div><div className="topbar-title">{titles[view]}</div><div className="topbar-sub">Your personal career intelligence</div></div>
         </div>
         <div className="page fade-in" key={view}>
-          {view==="home"&&<EmpHome emp={emp} pos={pos} fit={fit} setView={setView} unread={unread}/>}
+          {view==="home"&&<EmpHome emp={emp} pos={pos} fit={fit} setView={setView} unread={unread} matchedMentor={matchedMentor}/>}
           {view==="skills"&&<EmpSkills emp={emp} pos={pos} fit={fit}/>}
           {view==="quiz"&&<EmpQuiz emp={emp} pos={pos} updateEmployee={updateEmployee} showToast={showToast}/>}
           {view==="gap"&&<EmpGapWizard emp={emp} positions={positions} updateEmployee={updateEmployee} addNotification={addNotification} showToast={showToast}/>}
+          {view==="eq"&&<EmpEQProfile emp={emp} updateEmployee={updateEmployee} showToast={showToast}/>}
+          {view==="simulations"&&<EmpSimulations emp={emp} updateEmployee={updateEmployee} showToast={showToast}/>}
+          {view==="mentor"&&<EmpMentor emp={emp} mentor={matchedMentor} notifications={notifications} addNotification={addNotification} showToast={showToast}/>}
           {view==="progress"&&<EmpProgress emp={emp} pos={pos} fit={fit}/>}
           {view==="devplan"&&<EmpDevPlan emp={emp} pos={pos} fit={fit} updateEmployee={updateEmployee} showToast={showToast}/>}
           {view==="notif"&&<EmpNotifications notifications={notifications} email={emp.email} markRead={markRead}/>}
@@ -1221,8 +1640,9 @@ function EmployeeApp({session,positions,employees,updateEmployee,notifications,s
 }
 
 /* ─── EMPLOYEE HOME ──────────────────────────────────────────────────────── */
-function EmpHome({emp,pos,fit,setView,unread}){
+function EmpHome({emp,pos,fit,setView,unread,matchedMentor}){
   const gaps=pos?.criteria.filter(c=>(emp.scores?.[c.skill]||0)<c.required)||[];
+  const eqOverall=emp.eq?.self?Math.round(Object.values(emp.eq.self).reduce((a,b)=>a+b,0)/5*10)/10:null;
   return(
     <div>
       <div className="emp-hero">
@@ -1233,20 +1653,27 @@ function EmpHome({emp,pos,fit,setView,unread}){
           <div style={{marginTop:14,display:"flex",gap:8,flexWrap:"wrap"}}>
             <span className="tag" style={{background:"rgba(201,168,76,0.18)",color:"var(--gold)",borderRadius:20}}>{emp.type}</span>
             {pos&&<span className="tag" style={{background:"rgba(255,255,255,0.07)",color:"rgba(255,255,255,0.45)",borderRadius:20}}>{pos.title}</span>}
+            {matchedMentor&&<span className="tag" style={{background:"rgba(201,168,76,0.25)",color:"var(--gold)",borderRadius:20}}>⊕ Mentor: {matchedMentor.name}</span>}
             {unread>0&&<span className="tag" style={{background:"rgba(192,57,43,0.25)",color:"#ff9090",borderRadius:20}}>{unread} new notification{unread>1?"s":""}</span>}
           </div>
         </div>
-        <div className="emp-hero-right">
-          <div className="emp-score-ring"><div className="emp-score-num">{fit}%</div><div className="emp-score-lbl">Fit Score</div></div>
-          <div style={{fontSize:11,color:"rgba(255,255,255,0.35)",marginTop:8}}>{fitLabel(fit)}</div>
+        <div className="emp-hero-right" style={{display:"flex",gap:12}}>
+          <div style={{textAlign:"center"}}>
+            <div className="emp-score-ring"><div className="emp-score-num">{fit}%</div><div className="emp-score-lbl">Fit Score</div></div>
+            <div style={{fontSize:11,color:"rgba(255,255,255,0.35)",marginTop:8}}>{fitLabel(fit)}</div>
+          </div>
+          {eqOverall&&<div style={{textAlign:"center"}}>
+            <div className="emp-score-ring" style={{borderColor:"rgba(201,168,76,0.8)"}}><div className="emp-score-num">{eqOverall}</div><div className="emp-score-lbl">EQ Score</div></div>
+            <div style={{fontSize:11,color:"rgba(255,255,255,0.35)",marginTop:8}}>Emotional IQ</div>
+          </div>}
         </div>
       </div>
       <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:12,marginBottom:20}}>
         {[
           {val:pos?.criteria.length||0,lbl:"Skills Tracked",color:"var(--navy)"},
           {val:gaps.length,lbl:"Skill Gaps",color:gaps.length>0?"var(--amber)":"var(--green)"},
-          {val:emp.quizHistory?.length||0,lbl:"Assessments",color:"var(--purple)"},
-          {val:emp.selfGapChecks?.length||0,lbl:"Gap Checks",color:"var(--gold)"},
+          {val:emp.eq?.simulations?.length||0,lbl:"Simulations",color:"var(--purple)"},
+          {val:matchedMentor?1:0,lbl:"Mentor Match",color:matchedMentor?"var(--gold)":"var(--muted)"},
         ].map(s=>(
           <div key={s.lbl} style={{background:"var(--surface)",border:"1px solid var(--border)",borderRadius:10,padding:"16px",textAlign:"center",boxShadow:"var(--shadow)"}}>
             <div style={{fontFamily:"Syne",fontSize:24,fontWeight:800,color:s.color,marginBottom:4}}>{s.val}</div>
@@ -1270,9 +1697,10 @@ function EmpHome({emp,pos,fit,setView,unread}){
           <div className="card-hd"><div className="card-title">Quick Actions</div></div>
           <div className="card-body" style={{display:"flex",flexDirection:"column",gap:10}}>
             {[
-              {icon:"⊘",label:"Check skill gap for next role",sub:"AI-powered gap analysis for your goals",view:"gap",color:"var(--navy)"},
-              {icon:"◈",label:"Take a self-assessment",sub:"Quiz yourself on role-specific skills",view:"quiz",color:"var(--purple)"},
-              {icon:"⊕",label:"View development plan",sub:"Your AI-generated growth roadmap",view:"devplan",color:"var(--gold)"},
+              {icon:"◑",label:"Complete EQ self-assessment",sub:"Rate yourself on 5 EQ dimensions",view:"eq",color:"var(--navy)"},
+              {icon:"⊛",label:"Try a situational simulation",sub:"See how you respond under pressure",view:"simulations",color:"var(--purple)"},
+              {icon:"⊕",label:matchedMentor?"View your mentor match":"Awaiting mentor match",sub:matchedMentor?`Matched with ${matchedMentor.name}`:"HR will match you soon",view:"mentor",color:"var(--gold)"},
+              {icon:"⊘",label:"Check skill gap for next role",sub:"AI-powered gap analysis",view:"gap",color:"var(--green)"},
             ].map(a=>(
               <button key={a.label} onClick={()=>setView(a.view)} style={{display:"flex",gap:12,alignItems:"center",padding:"11px 12px",border:"1px solid var(--border)",borderRadius:8,background:"var(--surface2)",cursor:"pointer",textAlign:"left",transition:"all 0.13s"}}
                 onMouseOver={e=>e.currentTarget.style.borderColor=a.color} onMouseOut={e=>e.currentTarget.style.borderColor="var(--border)"}>
@@ -1741,6 +2169,307 @@ function EmpQuiz({emp,pos,updateEmployee,showToast}){
   return null;
 }
 
+/* ─── EMPLOYEE EQ PROFILE ────────────────────────────────────────────────── */
+function EmpEQProfile({emp,updateEmployee,showToast}){
+  const eq=emp.eq||{self:{},manager:{},history:[],simulations:[]};
+  const [selfScores,setSelfScores]=useState({selfAwareness:eq.self?.selfAwareness||5,selfRegulation:eq.self?.selfRegulation||5,empathy:eq.self?.empathy||5,relationshipManagement:eq.self?.relationshipManagement||5,motivation:eq.self?.motivation||5});
+  const [saved,setSaved]=useState(!!eq.self?.selfAwareness);
+
+  function save(){
+    const overall=Math.round(Object.values(selfScores).reduce((a,b)=>a+b,0)/5*10)/10;
+    const newEq={...eq,self:selfScores,history:[...(eq.history||[]),{date:new Date().toLocaleDateString("en-US",{month:"short",year:"numeric"}),overall}]};
+    updateEmployee(emp.id,{eq:newEq});setSaved(true);showToast("EQ self-assessment saved!");
+  }
+
+  function eqColor(v){return v>=8?"var(--green)":v>=6?"var(--gold)":v>=4?"var(--amber)":"var(--red)";}
+  const overall=Math.round(Object.values(selfScores).reduce((a,b)=>a+b,0)/5*10)/10;
+  const mgrScores=eq.manager||{};
+  const hasMgr=Object.values(mgrScores).some(v=>v>0);
+
+  return(
+    <div>
+      <div className="alert a-info" style={{marginBottom:16}}><span>◑</span>Rate yourself honestly on each EQ dimension. Your manager will also rate you — the combined 360° view will be shared with your mentor to guide your sessions.</div>
+      <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:16,marginBottom:16}}>
+        <div className="card">
+          <div className="card-hd"><div className="card-title">Your EQ Self-Assessment</div></div>
+          <div className="card-body">
+            {EQ_DIMS.map(dim=>(
+              <div key={dim.key} className="eq-slider-wrap">
+                <div className="eq-slider-hd"><span className="eq-slider-label">{dim.label}</span><span className="eq-slider-val">{selfScores[dim.key]}/10</span></div>
+                <input type="range" min={1} max={10} value={selfScores[dim.key]} className="eq-slider" onChange={e=>setSelfScores(s=>({...s,[dim.key]:Number(e.target.value)}))}/>
+                <div className="eq-dim-desc">{dim.desc}</div>
+              </div>
+            ))}
+            <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginTop:8,paddingTop:12,borderTop:"1px solid var(--border)"}}>
+              <div><div style={{fontFamily:"Syne",fontSize:22,fontWeight:800,color:eqColor(overall)}}>{overall}/10</div><div style={{fontSize:10,color:"var(--muted)"}}>Overall EQ</div></div>
+              <button className="btn btn-primary" onClick={save}>Save Assessment</button>
+            </div>
+          </div>
+        </div>
+        <div className="card">
+          <div className="card-hd"><div className="card-title">360° View</div></div>
+          <div className="card-body">
+            {!hasMgr&&<div className="alert a-gold"><span>◑</span>Manager EQ scores not yet submitted. They'll appear here once your manager completes the rating.</div>}
+            {EQ_DIMS.map(dim=>{
+              const s=selfScores[dim.key]||0;const m=mgrScores[dim.key]||0;
+              const gap=hasMgr?Math.abs(s-m):null;
+              return(
+                <div key={dim.key} className="eq-dim-row">
+                  <div className="eq-dim-name">{dim.label}</div>
+                  <div className="eq-bar-wrap">
+                    <div style={{display:"flex",alignItems:"center",gap:4}}>
+                      <div style={{fontSize:9,color:"var(--muted)",width:28}}>Self</div>
+                      <div className="eq-bar-track" style={{flex:1}}><div className="eq-bar-self" style={{width:`${s*10}%`}}/></div>
+                      <span style={{fontSize:11,fontWeight:700,color:"var(--navy)",minWidth:20}}>{s}</span>
+                    </div>
+                    {hasMgr&&<div style={{display:"flex",alignItems:"center",gap:4}}>
+                      <div style={{fontSize:9,color:"var(--muted)",width:28}}>Mgr</div>
+                      <div className="eq-bar-track" style={{flex:1}}><div className="eq-bar-mgr" style={{width:`${m*10}%`}}/></div>
+                      <span style={{fontSize:11,fontWeight:700,color:"#8a6d1f",minWidth:20}}>{m}</span>
+                    </div>}
+                  </div>
+                  {hasMgr&&<span className={`eq-gap-badge ${gap>=3?"t-amber":gap>=1?"t-blue":"t-green"}`}>{gap>=3?"⚠":gap>=1?"△":"✓"}</span>}
+                </div>
+              );
+            })}
+            {hasMgr&&<div style={{marginTop:12,padding:10,background:"var(--gold-light)",borderRadius:7,fontSize:11,color:"var(--ink2)",lineHeight:1.6}}><strong style={{color:"var(--navy)"}}>360° Insight:</strong> Areas with a ⚠ gap (3+ points) often indicate blind spots — dimensions you see differently from how others experience you. These are the most valuable to work on with your mentor.</div>}
+          </div>
+        </div>
+      </div>
+      {(eq.history||[]).length>1&&(
+        <div className="card">
+          <div className="card-hd"><div className="card-title">EQ Growth Over Time</div></div>
+          <div className="card-body" style={{paddingTop:4}}>
+            <ResponsiveContainer width="100%" height={180}>
+              <LineChart data={eq.history}>
+                <XAxis dataKey="date" tick={{fontSize:11}}/><YAxis domain={[0,10]} tick={{fontSize:10}}/>
+                <Tooltip contentStyle={{fontFamily:"Epilogue",fontSize:11,borderRadius:6,border:"1px solid var(--border)"}}/>
+                <Line type="monotone" dataKey="overall" stroke="var(--navy)" strokeWidth={2.5} dot={{fill:"var(--gold)",stroke:"var(--navy)",r:4,strokeWidth:2}}/>
+              </LineChart>
+            </ResponsiveContainer>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+/* ─── EMPLOYEE SIMULATIONS ───────────────────────────────────────────────── */
+function EmpSimulations({emp,updateEmployee,showToast}){
+  const done=emp.eq?.simulations||[];
+  const pending=SIMULATIONS.filter(s=>!done.find(d=>d.id===s.id));
+  const [current,setCurrent]=useState(pending[0]||null);
+  const [selected,setSelected]=useState(null);
+  const [revealed,setRevealed]=useState(false);
+
+  function submit(){
+    if(!selected)return;
+    const opt=current.options.find(o=>o.letter===selected);
+    const result={id:current.id,category:current.category,title:current.title,chosen:selected,eqImpact:opt.eqMap,date:new Date().toLocaleDateString()};
+    const newSims=[...done,result];
+    const newEq={...(emp.eq||{}),simulations:newSims};
+    updateEmployee(emp.id,{eq:newEq});
+    showToast("Simulation recorded!");
+    setRevealed(true);
+  }
+
+  function next(){
+    const remaining=SIMULATIONS.filter(s=>![...done,{id:current.id}].find(d=>d.id===s.id));
+    if(remaining.length>0){setCurrent(remaining[0]);setSelected(null);setRevealed(false);}
+    else setCurrent(null);
+  }
+
+  function calcPattern(sims){
+    const totals={};let count={};
+    sims.forEach(s=>{Object.entries(s.eqImpact||{}).forEach(([k,v])=>{totals[k]=(totals[k]||0)+v;count[k]=(count[k]||0)+1;});});
+    return Object.entries(totals).map(([k,v])=>({dim:EQ_DIMS.find(d=>d.key===k)?.label||k,avg:Math.round(v/(count[k]||1)*10)/10})).sort((a,b)=>b.avg-a.avg);
+  }
+
+  const pattern=calcPattern(done);
+
+  return(
+    <div>
+      <div className="alert a-purple" style={{marginBottom:16,background:"var(--purple-light)",color:"var(--purple)",border:"1px solid rgba(90,45,143,0.12)"}}>
+        <span>⊛</span>These scenarios reveal your behavioural patterns — how you actually respond under pressure, not just how you think you would. Complete all 5 to build your full profile.
+      </div>
+      <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:16}}>
+        <div>
+          {current&&!revealed&&(
+            <div className="sim-card">
+              <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:12}}>
+                <span className="tag t-purple">{current.category}</span>
+                <span style={{fontSize:11,color:"var(--muted)"}}>{done.length+1} of {SIMULATIONS.length}</span>
+              </div>
+              <div className="sim-question">{current.title}</div>
+              <div className="sim-scenario">{current.scenario}</div>
+              <div style={{fontSize:12,fontWeight:600,color:"var(--navy)",marginBottom:10}}>{current.question}</div>
+              {current.options.map(o=>(
+                <button key={o.letter} className={`sim-opt ${selected===o.letter?"selected":""}`} onClick={()=>setSelected(o.letter)}>
+                  <span className="sim-opt-letter">{o.letter}</span><span>{o.text}</span>
+                </button>
+              ))}
+              <div style={{marginTop:16,display:"flex",justifyContent:"flex-end"}}>
+                <button className="btn btn-primary" onClick={submit} disabled={!selected}>Submit Response →</button>
+              </div>
+            </div>
+          )}
+          {current&&revealed&&(
+            <div className="sim-card">
+              <div className="alert a-success" style={{marginBottom:12}}><span>✓</span>Response recorded. Here's what it revealed about your EQ profile.</div>
+              <div className="sim-result">
+                <div className="sim-result-title">EQ Dimensions This Response Reflects</div>
+                {Object.entries(current.options.find(o=>o.letter===selected)?.eqMap||{}).sort(([,a],[,b])=>b-a).map(([k,v])=>(
+                  <div key={k} className="sim-result-body" style={{display:"flex",justifyContent:"space-between",padding:"4px 0"}}>
+                    <span>{EQ_DIMS.find(d=>d.key===k)?.label||k}</span><strong style={{color:v>=8?"var(--green)":v>=6?"var(--gold)":"var(--amber)"}}>{v}/10</strong>
+                  </div>
+                ))}
+              </div>
+              {pending.length>1&&<button className="btn btn-primary" style={{marginTop:16,width:"100%",justifyContent:"center"}} onClick={next}>Next Scenario →</button>}
+              {pending.length<=1&&<div className="alert a-success" style={{marginTop:12}}><span>🎉</span>All simulations complete! Your behavioural pattern is now visible on the right.</div>}
+            </div>
+          )}
+          {!current&&done.length>0&&(
+            <div className="card">
+              <div className="card-body" style={{textAlign:"center",padding:"36px 24px"}}>
+                <div style={{fontSize:36,marginBottom:12}}>⊛</div>
+                <div style={{fontFamily:"Syne",fontSize:16,fontWeight:700,color:"var(--navy)",marginBottom:8}}>All simulations complete</div>
+                <div style={{fontSize:13,color:"var(--muted)"}}>Your behavioural pattern profile is ready. Your mentor can now see how you respond under pressure.</div>
+              </div>
+            </div>
+          )}
+          {!current&&done.length===0&&<div className="empty"><div className="empty-icon">⊛</div><div className="empty-title">No simulations available</div></div>}
+        </div>
+
+        <div>
+          <div className="card" style={{marginBottom:12}}>
+            <div className="card-hd"><div className="card-title">Completed Simulations</div><span className="tag t-teal">{done.length}/{SIMULATIONS.length}</span></div>
+            <div className="card-body">
+              {done.length===0&&<div style={{fontSize:13,color:"var(--muted)",textAlign:"center",padding:"16px 0"}}>Complete simulations to build your profile</div>}
+              {done.map((s,i)=>(
+                <div key={i} style={{display:"flex",justifyContent:"space-between",padding:"8px 0",borderBottom:"1px solid var(--border)"}}>
+                  <div><div style={{fontSize:12,fontWeight:600}}>{s.title}</div><div style={{fontSize:10,color:"var(--muted)"}}>{s.category} · {s.date}</div></div>
+                  <span className="tag t-purple">Option {s.chosen}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+          {pattern.length>0&&(
+            <div className="card">
+              <div className="card-hd"><div className="card-title">Your Behavioural Pattern</div></div>
+              <div className="card-body">
+                <div className="alert a-gold" style={{marginBottom:12}}><span>◑</span>This profile is based on your actual choices — not self-reported preferences.</div>
+                {pattern.map((p,i)=>(
+                  <div key={p.dim} style={{marginBottom:10}}>
+                    <div style={{display:"flex",justifyContent:"space-between",marginBottom:4}}>
+                      <span style={{fontSize:12,fontWeight:600}}>{p.dim}</span>
+                      <div style={{display:"flex",gap:6,alignItems:"center"}}>
+                        {i===0&&<span className="tag t-gold" style={{fontSize:9}}>Strength</span>}
+                        {i===pattern.length-1&&pattern.length>1&&<span className="tag t-amber" style={{fontSize:9}}>Grow</span>}
+                        <span style={{fontSize:11,fontWeight:700,color:p.avg>=8?"var(--green)":p.avg>=6?"var(--gold)":"var(--amber)"}}>{p.avg}/10</span>
+                      </div>
+                    </div>
+                    <div className="prog"><div className="prog-fill" style={{width:`${p.avg*10}%`,background:p.avg>=8?"var(--green)":p.avg>=6?"var(--gold)":"var(--amber)"}}/></div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ─── EMPLOYEE MENTOR ─────────────────────────────────────────────────────── */
+function EmpMentor({emp,mentor,notifications,addNotification,showToast}){
+  const [msg,setMsg]=useState("");
+  const msgs=notifications.filter(n=>(n.to===emp.email&&n.from===mentor?.email)||(n.from===emp.email&&n.to===mentor?.email));
+
+  function sendMsg(){
+    if(!msg.trim()||!mentor)return;
+    addNotification(mentor.email,emp.email,"Message from "+emp.name,msg);
+    showToast("Message sent to "+mentor.name);setMsg("");
+  }
+
+  if(!mentor) return(
+    <div className="card"><div className="card-body" style={{textAlign:"center",padding:"48px 24px"}}>
+      <div style={{fontSize:40,marginBottom:16}}>⊕</div>
+      <div style={{fontFamily:"Syne",fontSize:18,fontWeight:700,color:"var(--navy)",marginBottom:8}}>No mentor match yet</div>
+      <div style={{fontSize:13,color:"var(--muted)",lineHeight:1.7,maxWidth:380,margin:"0 auto"}}>Your HR team will match you with a mentor based on your EQ profile and simulation results. Complete your EQ assessment and simulations first to get the best match.</div>
+    </div></div>
+  );
+
+  const pattern=emp.eq?.simulations?.length>0?[...emp.eq.simulations].sort((a,b)=>{
+    const avgA=Object.values(a.eqImpact||{}).reduce((x,y)=>x+y,0)/Math.max(1,Object.keys(a.eqImpact||{}).length);
+    const avgB=Object.values(b.eqImpact||{}).reduce((x,y)=>x+y,0)/Math.max(1,Object.keys(b.eqImpact||{}).length);
+    return avgB-avgA;
+  }):[];
+
+  return(
+    <div>
+      <div className="mentor-match-card top" style={{marginBottom:16}}>
+        <div style={{display:"flex",gap:16,alignItems:"flex-start"}}>
+          <div className="mentor-score-ring" style={{width:72,height:72}}>
+            <div className="mentor-score-num">{emp.eq?.matchScore||"—"}</div><div className="mentor-score-lbl">Match</div>
+          </div>
+          <div style={{flex:1}}>
+            <div style={{fontFamily:"Syne",fontSize:18,fontWeight:800,color:"var(--navy)",marginBottom:2}}>{mentor.name}</div>
+            <div style={{fontSize:12,color:"var(--muted)",marginBottom:8}}>{mentor.title} · {mentor.company} · {mentor.experience} experience</div>
+            <div style={{marginBottom:10}}>{mentor.strengthTags.map(t=><span key={t} className="mentor-tag">{t}</span>)}</div>
+            <div style={{fontSize:13,color:"var(--ink2)",lineHeight:1.6,fontStyle:"italic"}}>{mentor.bio}</div>
+          </div>
+        </div>
+        <div className="why-matched" style={{marginTop:16}}>
+          <div className="why-matched-title">Why You Were Matched</div>
+          {EQ_DIMS.filter(d=>{const s=(emp.eq?.self?.[d.key]||0+emp.eq?.manager?.[d.key]||0)/2;return s<6&&(mentor.strengthScores?.[d.key]||0)>=8;}).map(d=>(
+            <div key={d.key} className="why-matched-item"><span style={{color:"var(--gold)"}}>→</span>
+            <span><strong>{d.label}:</strong> Your average is {Math.round(((emp.eq?.self?.[d.key]||0)+(emp.eq?.manager?.[d.key]||0))/2*10)/10}/10. {mentor.name} scores {mentor.strengthScores?.[d.key]}/10 — a strong mentor for this dimension.</span></div>
+          ))}
+          {EQ_DIMS.filter(d=>{const s=(emp.eq?.self?.[d.key]||0+emp.eq?.manager?.[d.key]||0)/2;return s<6&&(mentor.strengthScores?.[d.key]||0)>=8;}).length===0&&
+            <div className="why-matched-item"><span style={{color:"var(--gold)"}}>→</span><span>Good overall EQ compatibility across all five dimensions.</span></div>}
+        </div>
+      </div>
+
+      <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:16}}>
+        <div className="card">
+          <div className="card-hd"><div className="card-title">What to Bring to Your First Session</div></div>
+          <div className="card-body">
+            <div style={{fontSize:12,color:"var(--muted)",marginBottom:12}}>Based on your EQ profile and simulation results, here are the areas to focus on:</div>
+            {EQ_DIMS.map(d=>{const s=emp.eq?.self?.[d.key]||0;const m=emp.eq?.manager?.[d.key]||0;const avg=(s+m)/2;
+              if(avg>=7)return null;
+              return(<div key={d.key} style={{padding:"8px 0",borderBottom:"1px solid var(--border)"}}>
+                <div style={{display:"flex",justifyContent:"space-between",marginBottom:3}}>
+                  <span style={{fontSize:12,fontWeight:600}}>{d.label}</span>
+                  <span style={{fontSize:11,fontWeight:700,color:"var(--amber)"}}>{Math.round(avg*10)/10}/10</span>
+                </div>
+                <div style={{fontSize:11,color:"var(--muted)"}}>{d.desc}</div>
+              </div>);
+            })}
+            {EQ_DIMS.every(d=>{const avg=((emp.eq?.self?.[d.key]||0)+(emp.eq?.manager?.[d.key]||0))/2;return avg>=7;})&&
+              <div className="alert a-success"><span>✓</span>Strong EQ profile! Focus your sessions on advanced leadership scenarios.</div>}
+          </div>
+        </div>
+        <div className="card">
+          <div className="card-hd"><div className="card-title">Send a Message</div></div>
+          <div className="card-body">
+            <textarea className="form-textarea" placeholder={`Write to ${mentor.name}…`} value={msg} onChange={e=>setMsg(e.target.value)} style={{minHeight:80,marginBottom:10}}/>
+            <button className="btn btn-primary btn-sm" onClick={sendMsg} disabled={!msg.trim()}>Send Message →</button>
+            {msgs.length>0&&<div style={{marginTop:16}}>
+              <div style={{fontSize:10,fontWeight:700,letterSpacing:"0.1em",textTransform:"uppercase",color:"var(--muted)",marginBottom:8}}>Recent Messages</div>
+              {msgs.slice(-4).map((n,i)=>(
+                <div key={i} style={{padding:"8px 0",borderBottom:"1px solid var(--border)"}}>
+                  <div style={{fontSize:11,fontWeight:600,color:n.from===emp.email?"var(--navy)":"var(--gold)"}}>{n.from===emp.email?"You":"Mentor"} · {n.time}</div>
+                  <div style={{fontSize:12,color:"var(--ink2)",marginTop:2}}>{n.body}</div>
+                </div>
+              ))}
+            </div>}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 /* ─── EMPLOYEE PROGRESS ───────────────────────────────────────────────────── */
 function EmpProgress({emp,pos,fit}){
   const log=emp.progressLog||[];
@@ -1871,6 +2600,433 @@ function EmpNotifications({notifications,email,markRead}){
             </div>
           ))
         }
+      </div>
+    </div>
+  );
+}
+
+/* ════════════ MENTOR APP ══════════════════════════════════════════════════ */
+function MentorApp({session,mentors,employees,updateMentor,updateEmployee,notifications,setNotifications,addNotification,showToast,logout}){
+  const [view,setView]=useState("dashboard");
+  const [selectedMentee,setSelectedMentee]=useState(null);
+  const mentor=mentors.find(m=>m.id===session.user.id)||session.user;
+  const mentees=employees.filter(e=>mentor.matchedMenteeIds?.includes(e.id));
+  const unread=notifications.filter(n=>n.to===mentor.email&&!n.read).length;
+  const markRead=()=>setNotifications(ns=>ns.map(n=>n.to===mentor.email?{...n,read:true}:n));
+
+  const NAV=[
+    {id:"dashboard",icon:"⊞",label:"My Dashboard"},
+    {id:"mentees",icon:"◎",label:"My Mentees",badge:mentees.length},
+    {id:"sessions",icon:"◈",label:"Log Session"},
+    {id:"impact",icon:"↗",label:"My Impact"},
+    {id:"notif",icon:"🔔",label:"Messages",badgeRed:unread},
+  ];
+
+  return(
+    <div className="app-shell fade-in">
+      <aside className="sidebar">
+        <div className="logo-wrap"><div className="logo-name">Talent<span>IQ</span></div><div className="logo-role">Mentor Portal</div></div>
+        <div className="nav-section">
+          <div className="nav-section-lbl">Mentoring</div>
+          {NAV.map(n=>(
+            <button key={n.id} className={`nav-item ${view===n.id?"active":""}`} onClick={()=>{setView(n.id);if(n.id!=="mentees")setSelectedMentee(null);}}>
+              <span className="nav-icon">{n.icon}</span>{n.label}
+              {n.badge>0&&<span className="nav-pill">{n.badge}</span>}
+              {n.badgeRed>0&&<span className="nav-pill-red">{n.badgeRed}</span>}
+            </button>
+          ))}
+        </div>
+        <div className="sidebar-foot">
+          <div className="s-user">
+            <div className="s-avatar" style={{background:avatarBg(mentor.name)}}>{initials(mentor.name)}</div>
+            <div><div className="s-name">{mentor.name}</div><div className="s-role">{mentor.title}</div></div>
+            <button className="logout-btn" onClick={logout}>⏻</button>
+          </div>
+        </div>
+      </aside>
+      <div className="main">
+        <div className="topbar">
+          <div><div className="topbar-title">{{dashboard:"Mentor Dashboard",mentees:"My Mentees",sessions:"Log a Session",impact:"My Mentoring Impact",notif:"Messages & Notifications"}[view]}</div><div className="topbar-sub">TalentIQ Mentor Portal</div></div>
+        </div>
+        <div className="page fade-in" key={view+selectedMentee?.id}>
+          {view==="dashboard"&&<MentorDashboard mentor={mentor} mentees={mentees} setView={setView} setSelectedMentee={setSelectedMentee}/>}
+          {view==="mentees"&&!selectedMentee&&<MentorMenteeList mentees={mentees} mentor={mentor} setSelectedMentee={setSelectedMentee}/>}
+          {view==="mentees"&&selectedMentee&&<MentorMenteeProfile mentee={selectedMentee} mentor={mentor} onBack={()=>setSelectedMentee(null)}/>}
+          {view==="sessions"&&<MentorLogSession mentor={mentor} mentees={mentees} updateMentor={updateMentor} showToast={showToast} addNotification={addNotification}/>}
+          {view==="impact"&&<MentorImpact mentor={mentor} mentees={mentees}/>}
+          {view==="notif"&&<MentorMessages notifications={notifications} mentor={mentor} mentees={mentees} markRead={markRead} addNotification={addNotification} showToast={showToast}/>}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function MentorDashboard({mentor,mentees,setView,setSelectedMentee}){
+  const totalSessions=(mentor.sessions||[]).length;
+  const eqOverall=mentor.strengthScores?Math.round(Object.values(mentor.strengthScores).reduce((a,b)=>a+b,0)/5*10)/10:0;
+  return(
+    <div>
+      <div className="emp-hero">
+        <div className="emp-hero-left">
+          <div className="emp-hero-greeting">Welcome back, mentor</div>
+          <div className="emp-hero-name">{mentor.name}</div>
+          <div className="emp-hero-role">{mentor.title} · {mentor.company} · {mentor.experience} experience</div>
+          <div style={{marginTop:14,display:"flex",gap:8,flexWrap:"wrap"}}>
+            {mentor.strengthTags?.map(t=><span key={t} className="tag" style={{background:"rgba(201,168,76,0.18)",color:"var(--gold)",borderRadius:20}}>{t}</span>)}
+          </div>
+        </div>
+        <div className="emp-hero-right">
+          <div className="emp-score-ring"><div className="emp-score-num">{mentees.length}</div><div className="emp-score-lbl">Mentees</div></div>
+          <div style={{fontSize:11,color:"rgba(255,255,255,0.35)",marginTop:8}}>Active matches</div>
+        </div>
+      </div>
+      <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:12,marginBottom:20}}>
+        {[
+          {val:mentees.length,lbl:"Active Mentees",color:"var(--navy)"},
+          {val:totalSessions,lbl:"Sessions Logged",color:"var(--gold)"},
+          {val:eqOverall,lbl:"Your EQ Score",color:"var(--green)"},
+          {val:mentor.strengthTags?.length||0,lbl:"EQ Strengths",color:"var(--purple)"},
+        ].map(s=>(
+          <div key={s.lbl} style={{background:"var(--surface)",border:"1px solid var(--border)",borderRadius:10,padding:"16px",textAlign:"center",boxShadow:"var(--shadow)"}}>
+            <div style={{fontFamily:"Syne",fontSize:24,fontWeight:800,color:s.color,marginBottom:4}}>{s.val}</div>
+            <div style={{fontSize:10,fontWeight:700,letterSpacing:"0.1em",textTransform:"uppercase",color:"var(--muted)"}}>{s.lbl}</div>
+          </div>
+        ))}
+      </div>
+      <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:16}}>
+        <div className="card">
+          <div className="card-hd"><div className="card-title">Your Mentees</div><button className="btn btn-ghost btn-sm" onClick={()=>setView("mentees")}>See All →</button></div>
+          <div className="card-body">
+            {mentees.length===0&&<div className="empty"><div className="empty-icon">◎</div><div className="empty-title">No mentees matched yet</div></div>}
+            {mentees.map(e=>{
+              const eqOverall=e.eq?.self?Math.round(Object.values(e.eq.self).reduce((a,b)=>a+b,0)/5*10)/10:null;
+              return(
+                <div key={e.id} className="mentee-profile-card" style={{marginBottom:8}} onClick={()=>{setSelectedMentee(e);setView("mentees");}}>
+                  <div className="s-avatar" style={{background:avatarBg(e.name),width:36,height:36,borderRadius:8,fontSize:12,flexShrink:0}}>{initials(e.name)}</div>
+                  <div style={{flex:1}}>
+                    <div style={{fontSize:13,fontWeight:600}}>{e.name}</div>
+                    <div style={{fontSize:11,color:"var(--muted)"}}>{e.role} · {e.department}</div>
+                    <div style={{marginTop:5,display:"flex",gap:6}}>
+                      {eqOverall&&<span className="tag t-gold">EQ {eqOverall}/10</span>}
+                      {e.eq?.simulations?.length>0&&<span className="tag t-purple">{e.eq.simulations.length} sims done</span>}
+                      {e.eq?.matchScore&&<span className="tag t-teal">Match {e.eq.matchScore}</span>}
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+        <div className="card">
+          <div className="card-hd"><div className="card-title">Your EQ Strengths</div></div>
+          <div className="card-body">
+            {EQ_DIMS.map(d=>(
+              <div key={d.key} style={{marginBottom:10}}>
+                <div style={{display:"flex",justifyContent:"space-between",marginBottom:4}}>
+                  <span style={{fontSize:12,fontWeight:600}}>{d.label}</span>
+                  <span style={{fontSize:11,fontWeight:700,color:(mentor.strengthScores?.[d.key]||0)>=8?"var(--green)":"var(--gold)"}}>{mentor.strengthScores?.[d.key]||0}/10</span>
+                </div>
+                <div className="prog"><div className="prog-fill" style={{width:`${(mentor.strengthScores?.[d.key]||0)*10}%`,background:(mentor.strengthScores?.[d.key]||0)>=8?"var(--green)":"var(--gold)"}}/></div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function MentorMenteeList({mentees,mentor,setSelectedMentee}){
+  if(mentees.length===0) return <div className="card"><div className="card-body" style={{textAlign:"center",padding:"48px 24px"}}><div style={{fontSize:40,marginBottom:12}}>◎</div><div style={{fontFamily:"Syne",fontSize:16,fontWeight:700,color:"var(--navy)",marginBottom:8}}>No mentees yet</div><div style={{fontSize:13,color:"var(--muted)"}}>HR will notify you when you're matched with a mentee.</div></div></div>;
+  return(
+    <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fill,minmax(320px,1fr))",gap:14}}>
+      {mentees.map(e=>{
+        const eqSelf=e.eq?.self;const eqMgr=e.eq?.manager;
+        const selfOverall=eqSelf?Math.round(Object.values(eqSelf).reduce((a,b)=>a+b,0)/5*10)/10:null;
+        return(
+          <div key={e.id} className="card" style={{cursor:"pointer"}} onClick={()=>setSelectedMentee(e)}>
+            <div className="card-body">
+              <div style={{display:"flex",gap:12,alignItems:"center",marginBottom:12}}>
+                <div className="s-avatar" style={{background:avatarBg(e.name),width:44,height:44,borderRadius:10,fontSize:14}}>{initials(e.name)}</div>
+                <div style={{flex:1}}><div style={{fontFamily:"Syne",fontSize:14,fontWeight:700,color:"var(--navy)"}}>{e.name}</div><div style={{fontSize:11,color:"var(--muted)"}}>{e.role} · {e.department}</div></div>
+                {selfOverall&&<div style={{textAlign:"center"}}><div style={{fontFamily:"Syne",fontSize:18,fontWeight:800,color:"var(--gold)"}}>{selfOverall}</div><div style={{fontSize:9,color:"var(--muted)"}}>EQ</div></div>}
+              </div>
+              <div style={{display:"flex",flexWrap:"wrap",gap:5,marginBottom:10}}>
+                <span className={`tag ${e.eq?.simulations?.length>0?"t-purple":"t-gray"}`}>{e.eq?.simulations?.length||0} simulations</span>
+                <span className={`tag ${selfOverall?"t-teal":"t-gray"}`}>{selfOverall?"EQ assessed":"No EQ yet"}</span>
+                <span className={`tag ${Object.values(eqMgr||{}).some(v=>v>0)?"t-blue":"t-gray"}`}>{Object.values(eqMgr||{}).some(v=>v>0)?"360° done":"Awaiting manager"}</span>
+              </div>
+              <button className="btn btn-primary btn-sm" style={{width:"100%",justifyContent:"center"}}>View Full Profile →</button>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
+function MentorMenteeProfile({mentee,mentor,onBack}){
+  const eqSelf=mentee.eq?.self||{};const eqMgr=mentee.eq?.manager||{};
+  const hasMgr=Object.values(eqMgr).some(v=>v>0);
+  const pattern=mentee.eq?.simulations||[];
+
+  return(
+    <div>
+      <button className="btn btn-ghost btn-sm" style={{marginBottom:16}} onClick={onBack}>← Back to Mentees</button>
+      <div className="mentor-match-card top" style={{marginBottom:16}}>
+        <div style={{display:"flex",gap:14,alignItems:"center"}}>
+          <div className="s-avatar" style={{background:avatarBg(mentee.name),width:56,height:56,borderRadius:12,fontSize:18}}>{initials(mentee.name)}</div>
+          <div>
+            <div style={{fontFamily:"Syne",fontSize:18,fontWeight:800,color:"var(--navy)"}}>{mentee.name}</div>
+            <div style={{fontSize:12,color:"var(--muted)",marginBottom:6}}>{mentee.role} · {mentee.department} · {mentee.experience}</div>
+            <div style={{display:"flex",gap:6}}>
+              <span className="tag t-teal">Match Score: {mentee.eq?.matchScore||"—"}</span>
+              <span className={`tag ${mentee.devPlan?"t-green":"t-gray"}`}>{mentee.devPlan?"Has Dev Plan":"No Dev Plan"}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:16}}>
+        <div className="card">
+          <div className="card-hd"><div className="card-title">360° EQ Profile</div></div>
+          <div className="card-body">
+            {!hasMgr&&<div className="alert a-gold" style={{marginBottom:12}}><span>◑</span>Manager EQ scores not yet submitted by HR.</div>}
+            {EQ_DIMS.map(d=>{
+              const s=eqSelf[d.key]||0;const m=eqMgr[d.key]||0;const ms=mentor.strengthScores?.[d.key]||0;
+              const gap=hasMgr?Math.abs(s-m):null;
+              return(
+                <div key={d.key} style={{marginBottom:14}}>
+                  <div style={{display:"flex",justifyContent:"space-between",marginBottom:5}}>
+                    <span style={{fontSize:12,fontWeight:600}}>{d.label}</span>
+                    <div style={{display:"flex",gap:8}}>
+                      {gap>=3&&<span className="eq-gap-badge t-amber">⚠ {gap}pt gap</span>}
+                      <span style={{fontSize:10,color:"var(--green)"}}>You: {ms}/10</span>
+                    </div>
+                  </div>
+                  <div style={{height:6,background:"var(--border)",borderRadius:3,overflow:"hidden",marginBottom:3}}>
+                    <div style={{height:"100%",width:`${s*10}%`,background:"var(--navy)",borderRadius:3}}/>
+                  </div>
+                  {hasMgr&&<div style={{height:4,background:"var(--border)",borderRadius:3,overflow:"hidden"}}>
+                    <div style={{height:"100%",width:`${m*10}%`,background:"var(--gold)",borderRadius:3}}/>
+                  </div>}
+                  <div style={{display:"flex",gap:12,marginTop:3,fontSize:10,color:"var(--muted)"}}>
+                    <span>Self: {s}/10</span>{hasMgr&&<span>Manager: {m}/10</span>}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+        <div>
+          <div className="card" style={{marginBottom:12}}>
+            <div className="card-hd"><div className="card-title">Simulation Behavioural Pattern</div></div>
+            <div className="card-body">
+              {pattern.length===0&&<div style={{fontSize:13,color:"var(--muted)",textAlign:"center",padding:"16px 0"}}>No simulations completed yet</div>}
+              {pattern.map((s,i)=>(
+                <div key={i} style={{padding:"8px 0",borderBottom:"1px solid var(--border)"}}>
+                  <div style={{display:"flex",justifyContent:"space-between",marginBottom:3}}>
+                    <span style={{fontSize:12,fontWeight:600}}>{s.title}</span><span className="tag t-purple">Option {s.chosen}</span>
+                  </div>
+                  <div style={{display:"flex",gap:6,flexWrap:"wrap"}}>
+                    {Object.entries(s.eqImpact||{}).sort(([,a],[,b])=>b-a).slice(0,2).map(([k,v])=>(
+                      <span key={k} style={{fontSize:10,color:v>=8?"var(--green)":v>=6?"var(--gold)":"var(--amber)"}}>{EQ_DIMS.find(d=>d.key===k)?.label}: {v}/10</span>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="card">
+            <div className="card-hd"><div className="card-title">Suggested Session Focus</div></div>
+            <div className="card-body">
+              <div style={{fontSize:12,color:"var(--muted)",marginBottom:10}}>Based on gaps where you score high and they score low:</div>
+              {EQ_DIMS.filter(d=>{const s=eqSelf[d.key]||0;const ms=mentor.strengthScores?.[d.key]||0;return ms>=8&&s<6;}).map(d=>(
+                <div key={d.key} style={{padding:"8px 0",borderBottom:"1px solid var(--border)"}}>
+                  <div style={{fontSize:12,fontWeight:600,color:"var(--navy)",marginBottom:2}}>{d.label}</div>
+                  <div style={{fontSize:11,color:"var(--muted)"}}>{d.desc}</div>
+                </div>
+              ))}
+              {EQ_DIMS.every(d=>{const s=eqSelf[d.key]||0;const ms=mentor.strengthScores?.[d.key]||0;return !(ms>=8&&s<6);})&&
+                <div className="alert a-success"><span>✓</span>Good overall EQ alignment. Focus on advanced leadership presence.</div>}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function MentorLogSession({mentor,mentees,updateMentor,showToast,addNotification}){
+  const [menteeId,setMenteeId]=useState(mentees[0]?.id||"");
+  const [dim,setDim]=useState("selfAwareness");
+  const [notes,setNotes]=useState("");
+  const [growth,setGrowth]=useState(5);
+
+  function save(){
+    if(!notes.trim())return;
+    const session={id:Date.now(),menteeId:Number(menteeId),menteeeName:mentees.find(m=>m.id===Number(menteeId))?.name||"",dimension:dim,notes,growthRating:growth,date:new Date().toLocaleDateString()};
+    updateMentor(mentor.id,{sessions:[...(mentor.sessions||[]),session]});
+    const m=mentees.find(x=>x.id===Number(menteeId));
+    if(m)addNotification(m.email,mentor.email,"Session Notes Ready",`${mentor.name} has logged notes from your latest session (${EQ_DIMS.find(d=>d.key===dim)?.label}).`);
+    showToast("Session logged!");setNotes("");setGrowth(5);
+  }
+
+  return(
+    <div style={{maxWidth:640}}>
+      <div className="card">
+        <div className="card-hd"><div className="card-title">Log a Mentoring Session</div></div>
+        <div className="card-body">
+          <div className="form-group">
+            <label className="form-lbl">Mentee</label>
+            <select className="form-select" value={menteeId} onChange={e=>setMenteeId(e.target.value)}>
+              {mentees.map(m=><option key={m.id} value={m.id}>{m.name}</option>)}
+              {mentees.length===0&&<option value="">No mentees yet</option>}
+            </select>
+          </div>
+          <div className="form-group">
+            <label className="form-lbl">EQ Dimension Focused On</label>
+            <select className="form-select" value={dim} onChange={e=>setDim(e.target.value)}>
+              {EQ_DIMS.map(d=><option key={d.key} value={d.key}>{d.label}</option>)}
+            </select>
+          </div>
+          <div className="form-group">
+            <label className="form-lbl">Session Notes</label>
+            <textarea className="form-textarea" placeholder="What did you work on? What did you observe? What did they commit to?" value={notes} onChange={e=>setNotes(e.target.value)} style={{minHeight:120}}/>
+          </div>
+          <div className="form-group">
+            <label className="form-lbl">Growth Observed (1–10): <strong style={{color:"var(--gold)"}}>{growth}/10</strong></label>
+            <input type="range" min={1} max={10} value={growth} className="eq-slider" onChange={e=>setGrowth(Number(e.target.value))}/>
+          </div>
+          <button className="btn btn-primary" onClick={save} disabled={!notes.trim()||mentees.length===0}>Save Session →</button>
+        </div>
+      </div>
+      {(mentor.sessions||[]).length>0&&(
+        <div className="card" style={{marginTop:16}}>
+          <div className="card-hd"><div className="card-title">Recent Sessions</div></div>
+          <div className="card-body">
+            {[...(mentor.sessions||[])].reverse().slice(0,5).map(s=>(
+              <div key={s.id} className="session-card">
+                <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:6}}>
+                  <div><span className="session-dim-tag">{EQ_DIMS.find(d=>d.key===s.dimension)?.label||s.dimension}</span><strong style={{fontSize:12}}>{s.menteeeName}</strong></div>
+                  <div style={{display:"flex",gap:8,alignItems:"center"}}><span className="tag t-gold">Growth: {s.growthRating}/10</span><span style={{fontSize:10,color:"var(--muted)"}}>{s.date}</span></div>
+                </div>
+                <div style={{fontSize:12,color:"var(--muted)",lineHeight:1.5}}>{s.notes}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+function MentorImpact({mentor,mentees}){
+  const sessions=mentor.sessions||[];
+  const avgGrowth=sessions.length?Math.round(sessions.reduce((a,s)=>a+s.growthRating,0)/sessions.length*10)/10:0;
+  const dimCounts={};sessions.forEach(s=>{dimCounts[s.dimension]=(dimCounts[s.dimension]||0)+1;});
+  const topDim=Object.entries(dimCounts).sort(([,a],[,b])=>b-a)[0];
+
+  return(
+    <div>
+      <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:12,marginBottom:20}}>
+        {[
+          {val:mentees.length,lbl:"Active Mentees",color:"var(--navy)"},
+          {val:sessions.length,lbl:"Sessions Logged",color:"var(--gold)"},
+          {val:avgGrowth||"—",lbl:"Avg Growth Rating",color:"var(--green)"},
+          {val:topDim?EQ_DIMS.find(d=>d.key===topDim[0])?.label.split(" ")[0]:"—",lbl:"Top Focus Area",color:"var(--purple)"},
+        ].map(s=>(
+          <div key={s.lbl} style={{background:"var(--surface)",border:"1px solid var(--border)",borderRadius:10,padding:"16px",textAlign:"center",boxShadow:"var(--shadow)"}}>
+            <div style={{fontFamily:"Syne",fontSize:22,fontWeight:800,color:s.color,marginBottom:4}}>{s.val}</div>
+            <div style={{fontSize:10,fontWeight:700,letterSpacing:"0.1em",textTransform:"uppercase",color:"var(--muted)"}}>{s.lbl}</div>
+          </div>
+        ))}
+      </div>
+      <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:16}}>
+        <div className="card">
+          <div className="card-hd"><div className="card-title">Sessions by EQ Dimension</div></div>
+          <div className="card-body">
+            {EQ_DIMS.map(d=>{const c=dimCounts[d.key]||0;return(
+              <div key={d.key} style={{marginBottom:10}}>
+                <div style={{display:"flex",justifyContent:"space-between",marginBottom:4}}><span style={{fontSize:12,fontWeight:600}}>{d.label}</span><span style={{fontSize:11,fontWeight:700,color:"var(--navy)"}}>{c}</span></div>
+                <div className="prog"><div className="prog-fill" style={{width:sessions.length?`${Math.round(c/sessions.length*100)}%`:"0%",background:"var(--navy)"}}/></div>
+              </div>
+            );})}
+            {sessions.length===0&&<div style={{fontSize:13,color:"var(--muted)",textAlign:"center",padding:"16px 0"}}>No sessions logged yet</div>}
+          </div>
+        </div>
+        <div className="card">
+          <div className="card-hd"><div className="card-title">Mentee EQ Progress</div></div>
+          <div className="card-body">
+            {mentees.map(e=>{
+              const overall=e.eq?.self?Math.round(Object.values(e.eq.self).reduce((a,b)=>a+b,0)/5*10)/10:null;
+              const hist=e.eq?.history||[];const first=hist[0]?.overall;const last=hist[hist.length-1]?.overall;const trend=first&&last?Math.round((last-first)*10)/10:null;
+              return(
+                <div key={e.id} style={{padding:"10px 0",borderBottom:"1px solid var(--border)"}}>
+                  <div style={{display:"flex",justifyContent:"space-between",marginBottom:4}}>
+                    <span style={{fontSize:12,fontWeight:600}}>{e.name}</span>
+                    <div style={{display:"flex",gap:8}}>
+                      {overall&&<span style={{fontFamily:"Syne",fontSize:14,fontWeight:800,color:"var(--gold)"}}>{overall}/10</span>}
+                      {trend!==null&&<span className={`tag ${trend>0?"t-green":trend<0?"t-red":"t-gray"}`}>{trend>0?"+":""}{trend}</span>}
+                    </div>
+                  </div>
+                  {hist.length>1&&<ResponsiveContainer width="100%" height={40}>
+                    <LineChart data={hist}><Line type="monotone" dataKey="overall" stroke="var(--navy)" strokeWidth={1.5} dot={false}/></LineChart>
+                  </ResponsiveContainer>}
+                </div>
+              );
+            })}
+            {mentees.length===0&&<div style={{fontSize:13,color:"var(--muted)",textAlign:"center",padding:"16px 0"}}>No mentees yet</div>}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function MentorMessages({notifications,mentor,mentees,markRead,addNotification,showToast}){
+  const [selectedMentee,setSelectedMentee]=useState(mentees[0]||null);
+  const [msg,setMsg]=useState("");
+  const mine=notifications.filter(n=>n.to===mentor.email);
+
+  function send(){
+    if(!msg.trim()||!selectedMentee)return;
+    addNotification(selectedMentee.email,mentor.email,"Message from "+mentor.name,msg);
+    showToast("Message sent");setMsg("");
+  }
+
+  return(
+    <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:16}}>
+      <div className="card">
+        <div className="card-hd"><div className="card-title">All Notifications</div><button className="btn btn-ghost btn-sm" onClick={markRead}>Mark all read</button></div>
+        <div className="card-body" style={{padding:0}}>
+          {mine.length===0&&<div className="empty"><div className="empty-icon">🔔</div><div className="empty-title">No messages yet</div></div>}
+          {mine.map(n=>(
+            <div key={n.id} className={`notif-item ${n.read?"":"unread"}`}>
+              <div className={`notif-dot ${n.read?"read":""}`}/>
+              <div style={{flex:1}}><div className="notif-title">{n.title}</div><div className="notif-sub">{n.body}</div><div className="notif-time">{n.time} · From: {n.from}</div></div>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="card">
+        <div className="card-hd"><div className="card-title">Message a Mentee</div></div>
+        <div className="card-body">
+          {mentees.length===0&&<div style={{fontSize:13,color:"var(--muted)"}}>No mentees to message yet.</div>}
+          {mentees.length>0&&<>
+            <div className="form-group">
+              <label className="form-lbl">To</label>
+              <select className="form-select" value={selectedMentee?.id||""} onChange={e=>setSelectedMentee(mentees.find(m=>m.id===Number(e.target.value)))}>
+                {mentees.map(m=><option key={m.id} value={m.id}>{m.name}</option>)}
+              </select>
+            </div>
+            <div className="form-group">
+              <label className="form-lbl">Message</label>
+              <textarea className="form-textarea" placeholder="Write your message…" value={msg} onChange={e=>setMsg(e.target.value)} style={{minHeight:100}}/>
+            </div>
+            <button className="btn btn-primary btn-sm" onClick={send} disabled={!msg.trim()}>Send →</button>
+          </>}
+        </div>
       </div>
     </div>
   );
